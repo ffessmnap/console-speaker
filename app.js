@@ -63,6 +63,7 @@ let state = {
   sex: "F",
   search: "",
   category: "all",
+  series: "all",
   selectedSwimmerId: "",
   selectedRecordKey: ""
 };
@@ -70,10 +71,14 @@ let state = {
 const eventSelect = document.querySelector("#eventSelect");
 const searchInput = document.querySelector("#searchInput");
 const categorySelect = document.querySelector("#categorySelect");
+const seriesControls = document.querySelector("#seriesControls");
+const nextSeriesBtn = document.querySelector("#nextSeriesBtn");
 const entrantsBody = document.querySelector("#entrantsBody");
 const entrantCount = document.querySelector("#entrantCount");
 const filteredCount = document.querySelector("#filteredCount");
 const bestEntry = document.querySelector("#bestEntry");
+const entrantsTitle = document.querySelector("#entrantsTitle");
+const rankHeader = document.querySelector("#rankHeader");
 const raceTitle = document.querySelector("#raceTitle");
 const raceMeta = document.querySelector("#raceMeta");
 const raceSexBadge = document.querySelector("#raceSexBadge");
@@ -100,6 +105,7 @@ function normalizeData(nextData) {
     meet: nextData.meet || sampleData.meet,
     events: Array.isArray(nextData.events) ? nextData.events : [],
     entrants: Array.isArray(nextData.entrants) ? nextData.entrants : [],
+    series: Array.isArray(nextData.series) ? nextData.series : [],
     qualifications: Array.isArray(nextData.qualifications) ? nextData.qualifications : [],
     top2025: Array.isArray(nextData.top2025) ? nextData.top2025 : [],
     records: Array.isArray(nextData.records) ? nextData.records : [],
@@ -150,8 +156,12 @@ function matchesRace(item) {
 
 function raceEntrants() {
   const query = state.search.trim().toLowerCase();
+  const seriesRows = currentSeriesRows();
+  const seriesMap = new Map(seriesRows.map((row) => [row.swimmerId || entrantKey(row), row]));
+  const hasSeriesFilter = state.series !== "all";
   return data.entrants
     .filter(matchesRace)
+    .filter((entrant) => !hasSeriesFilter || seriesMap.has(entrant.swimmerId || entrantKey(entrant)))
     .filter((entrant) => state.category === "all" || sameCategory(entrant.category, state.category))
     .filter((entrant) => {
       const haystack = [
@@ -166,7 +176,13 @@ function raceEntrants() {
       ].join(" ").toLowerCase();
       return haystack.includes(query);
     })
-    .sort((a, b) => timeToMs(a.seedTime) - timeToMs(b.seedTime));
+    .map((entrant) => ({ ...entrant, seriesInfo: seriesMap.get(entrant.swimmerId || entrantKey(entrant)) }))
+    .sort((a, b) => {
+      if (hasSeriesFilter) {
+        return Number(a.seriesInfo?.line || 99) - Number(b.seriesInfo?.line || 99);
+      }
+      return timeToMs(a.seedTime) - timeToMs(b.seedTime);
+    });
 }
 
 function updateEventSelect() {
@@ -174,6 +190,36 @@ function updateEventSelect() {
     `<option value="${escapeHtml(event.id)}">${escapeHtml(event.label)}</option>`
   )).join("");
   eventSelect.value = state.eventId;
+}
+
+function raceSeries() {
+  const officialRows = (data.series || []).filter((row) => row.eventId === state.eventId && row.sex === state.sex);
+  if (officialRows.length) return officialRows;
+  const entrants = data.entrants
+    .filter(matchesRace)
+    .sort((a, b) => timeToMs(b.seedTime) - timeToMs(a.seedTime));
+  const total = Math.max(1, Math.ceil(entrants.length / 8));
+  return entrants.map((entrant, index) => {
+    const zeroBasedSeries = Math.floor(index / 8);
+    const inSeriesIndex = index % 8;
+    return {
+      ...entrant,
+      series: zeroBasedSeries + 1,
+      seriesCount: total,
+      line: inSeriesIndex + 1,
+      isPreview: true
+    };
+  });
+}
+
+function availableSeriesNumbers() {
+  return [...new Set(raceSeries().map((row) => Number(row.series)).filter(Number.isFinite))].sort((a, b) => a - b);
+}
+
+function currentSeriesRows() {
+  if (state.series === "all") return [];
+  const selected = Number(state.series);
+  return raceSeries().filter((row) => Number(row.series) === selected);
 }
 
 function render() {
@@ -186,6 +232,7 @@ function render() {
   }
 
   updateEventSelect();
+  renderSeriesControls();
   renderCategorySelect();
   renderHeader();
   renderHeaderReferences();
@@ -210,6 +257,23 @@ function renderDataStatus(message = "") {
   dataStatus.hidden = false;
   dataStatus.textContent = "Données officielles non chargées. Sur GitHub Pages, vérifie que data.generated.js et donnees-speaker-france-2026.json sont bien publiés.";
   dataStatus.classList.add("warning");
+}
+
+function renderSeriesControls() {
+  const numbers = availableSeriesNumbers();
+  if (state.series !== "all" && !numbers.includes(Number(state.series))) {
+    state.series = "all";
+  }
+  const preview = raceSeries().some((row) => row.isPreview);
+  seriesControls.innerHTML = [
+    `<button class="series-chip ${state.series === "all" ? "active" : ""}" type="button" data-series="all">Toutes</button>`,
+    ...numbers.map((number) => (
+      `<button class="series-chip ${Number(state.series) === number ? "active" : ""}" type="button" data-series="${number}">${number}</button>`
+    ))
+  ].join("");
+  nextSeriesBtn.disabled = !numbers.length || state.series === "all" || Number(state.series) >= numbers[numbers.length - 1];
+  nextSeriesBtn.textContent = state.series === "all" ? "Choisir une série" : "Série suivante";
+  seriesControls.title = preview ? "Aperçu généré automatiquement en attendant le fichier officiel des séries" : "";
 }
 
 function renderCategorySelect() {
@@ -296,17 +360,25 @@ function renderEntrants() {
   const entrants = raceEntrants();
   const allRaceEntrants = data.entrants.filter(matchesRace);
   const visibleEntrants = entrants;
+  const seriesNumbers = availableSeriesNumbers();
+  const selectedSeries = Number(state.series);
+  const hasSeriesFilter = state.series !== "all";
   entrantCount.textContent = allRaceEntrants.length;
-  filteredCount.textContent = `${visibleEntrants.length} affichés`;
+  filteredCount.textContent = hasSeriesFilter ? `${visibleEntrants.length} nageurs` : `${visibleEntrants.length} affichés`;
+  entrantsTitle.textContent = hasSeriesFilter
+    ? `Série ${selectedSeries} / ${seriesNumbers.length || selectedSeries}`
+    : "Engagés 2026";
+  rankHeader.textContent = hasSeriesFilter ? "Ligne" : "Rang";
   const best = [...allRaceEntrants].sort((a, b) => timeToMs(a.seedTime) - timeToMs(b.seedTime))[0];
   bestEntry.textContent = best?.seedTime || "--";
 
   entrantsBody.innerHTML = visibleEntrants.length ? visibleEntrants.map((entrant, index) => {
     const reference = getEntrantReference(entrant);
     const swimmerId = entrant.swimmerId || entrantKey(entrant);
+    const lineLabel = hasSeriesFilter ? (entrant.seriesInfo?.line || "-") : index + 1;
     return `
       <tr class="${state.selectedSwimmerId === swimmerId ? "selected-row" : ""} category-row ${categoryClass(entrant.category)}" data-swimmer-id="${escapeHtml(swimmerId)}">
-        <td><span class="lane">${index + 1}</span></td>
+        <td><span class="lane">${escapeHtml(lineLabel)}</span></td>
         <td class="name-cell">
           <button class="swimmer-button" data-swimmer-id="${escapeHtml(swimmerId)}">${escapeHtml(formatName(entrant))} <span class="birth-year">(${escapeHtml(getBirthYearLabel(entrant.birthDate))})</span>${renderEdfBadges(entrant)}</button>
           <span>${escapeHtml(entrant.club || "-")}</span>
@@ -704,6 +776,7 @@ eventSelect.addEventListener("change", () => {
   state.eventId = eventSelect.value;
   state.search = "";
   state.category = "all";
+  state.series = "all";
   state.selectedSwimmerId = "";
   state.selectedRecordKey = "";
   searchInput.value = "";
@@ -717,6 +790,7 @@ document.querySelectorAll(".segment").forEach((button) => {
     state.sex = button.dataset.sex;
     state.search = "";
     state.category = "all";
+    state.series = "all";
     state.selectedSwimmerId = "";
     state.selectedRecordKey = "";
     searchInput.value = "";
@@ -735,6 +809,28 @@ headerRefDetails.addEventListener("click", (event) => {
   if (!event.target.closest(".close-ref-details")) return;
   state.selectedRecordKey = "";
   renderHeaderReferences();
+});
+
+seriesControls.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-series]");
+  if (!button) return;
+  state.series = button.dataset.series;
+  state.selectedSwimmerId = "";
+  render();
+});
+
+nextSeriesBtn.addEventListener("click", () => {
+  const numbers = availableSeriesNumbers();
+  if (!numbers.length) return;
+  if (state.series === "all") {
+    state.series = String(numbers[0]);
+  } else {
+    const currentIndex = numbers.indexOf(Number(state.series));
+    const next = numbers[Math.min(currentIndex + 1, numbers.length - 1)];
+    state.series = String(next);
+  }
+  state.selectedSwimmerId = "";
+  render();
 });
 
 searchInput.addEventListener("input", () => {
@@ -771,10 +867,16 @@ async function fetchGeneratedData() {
   try {
     const response = await fetch(`donnees-speaker-france-2026.json?v=${Date.now()}`);
     if (response.ok) {
-      return normalizeData(await response.json());
+      const freshData = normalizeData(await response.json());
+      if (freshData.sourceVersion) {
+        renderDataStatus();
+      }
+      return freshData;
     }
   } catch {
-    renderDataStatus("Impossible de charger donnees-speaker-france-2026.json. Vérifie que le fichier est publié au même niveau que index.html.");
+    if (!data.sourceVersion) {
+      renderDataStatus("Impossible de charger donnees-speaker-france-2026.json. Vérifie que le fichier est publié au même niveau que index.html.");
+    }
     return null;
   }
   return null;
@@ -788,6 +890,7 @@ function applyFreshData(freshData, resetView = false) {
     state.eventId = data.events[0]?.id || "";
     state.sex = "F";
     state.category = "all";
+    state.series = "all";
     state.selectedSwimmerId = "";
     state.selectedRecordKey = "";
     document.querySelectorAll(".segment").forEach((item) => item.classList.toggle("active", item.dataset.sex === "F"));
@@ -802,13 +905,26 @@ function applyFreshData(freshData, resetView = false) {
 }
 
 async function reloadBaseData() {
+  renderDataStatus("Régénération des données en cours...");
+  try {
+    const response = await fetch("regenerate", { method: "POST" });
+    if (!response.ok) {
+      renderDataStatus("La régénération automatique n'est pas disponible ici. En local, lance la console avec Demarrer la console.bat.");
+    }
+  } catch {
+    renderDataStatus("La régénération automatique n'est pas disponible ici. En local, lance la console avec Demarrer la console.bat.");
+  }
   const freshData = await fetchGeneratedData();
   applyFreshData(freshData || structuredClone(sampleData), true);
 }
 
 async function checkForGeneratedUpdates() {
   const freshData = await fetchGeneratedData();
-  if (!freshData?.sourceVersion || freshData.sourceVersion === data.sourceVersion) return;
+  if (!freshData?.sourceVersion) return;
+  if (freshData.sourceVersion === data.sourceVersion) {
+    renderDataStatus();
+    return;
+  }
   applyFreshData(freshData, false);
 }
 
@@ -822,6 +938,7 @@ jsonInput.addEventListener("change", async () => {
   const text = await file.text();
   data = normalizeData(JSON.parse(text));
   state.eventId = data.events[0]?.id || sampleData.events[0].id;
+  state.series = "all";
   saveData();
   render();
   jsonInput.value = "";

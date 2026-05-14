@@ -215,6 +215,37 @@ textarea {
   box-shadow: 0 2px 8px rgba(18, 38, 48, 0.08);
 }
 
+.series-field {
+  gap: 8px;
+}
+
+.series-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.series-chip {
+  min-width: 34px;
+  min-height: 32px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--muted);
+  font-weight: 850;
+}
+
+.series-chip.active {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.series-chip:hover {
+  border-color: var(--accent-dark);
+}
+
 .stat-strip {
   display: grid;
   grid-template-columns: 1fr 1fr;

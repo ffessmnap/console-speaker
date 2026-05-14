@@ -15,7 +15,7 @@
       <div class="top-actions">
         <button id="printBtn" class="icon-button" title="Imprimer la fiche course" aria-label="Imprimer la fiche course">⎙</button>
         <button id="exportBtn" class="ghost-button">Exporter</button>
-        <button id="reloadDataBtn" class="ghost-button">Recharger les données</button>
+        <button id="reloadDataBtn" class="ghost-button">Régénérer les données</button>
         <label class="file-button">
           Importer
           <input id="jsonInput" type="file" accept="application/json">
@@ -30,6 +30,11 @@
         <div class="field">
           <label for="eventSelect">Course</label>
           <select id="eventSelect"></select>
+        </div>
+        <div class="field series-field">
+          <label>Séries</label>
+          <div id="seriesControls" class="series-controls"></div>
+          <button id="nextSeriesBtn" class="ghost-button compact" type="button">Série suivante</button>
         </div>
         <div class="segmented" role="group" aria-label="Sexe">
           <button class="segment active" data-sex="F">Femmes</button>
@@ -72,7 +77,7 @@
         <div class="grid-two">
           <article class="panel entrants-panel">
             <div class="panel-title">
-              <h3>Engagés 2026</h3>
+              <h3 id="entrantsTitle">Engagés 2026</h3>
               <div class="panel-actions">
                 <span id="filteredCount" class="soft-count">0 affichés</span>
               </div>
@@ -82,7 +87,7 @@
                 <table>
                   <thead>
                     <tr>
-                      <th>Rang</th>
+                      <th id="rankHeader">Rang</th>
                       <th>Nageur</th>
                       <th>Cat.</th>
                       <th>Temps</th>
