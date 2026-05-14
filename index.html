@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Speaker Nage avec Palmes - France 2026 Limoges</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Championnat de France 2026 - Limoges</p>
+        <h1>Console speaker</h1>
+      </div>
+      <div class="top-actions">
+        <button id="printBtn" class="icon-button" title="Imprimer la fiche course" aria-label="Imprimer la fiche course">⎙</button>
+        <button id="exportBtn" class="ghost-button">Exporter</button>
+        <button id="reloadDataBtn" class="ghost-button">Recharger les données</button>
+        <label class="file-button">
+          Importer
+          <input id="jsonInput" type="file" accept="application/json">
+        </label>
+      </div>
+    </header>
+
+    <div id="dataStatus" class="data-status" hidden></div>
+
+    <main class="app-shell">
+      <aside class="sidebar" aria-label="Choix de la course">
+        <div class="field">
+          <label for="eventSelect">Course</label>
+          <select id="eventSelect"></select>
+        </div>
+        <div class="segmented" role="group" aria-label="Sexe">
+          <button class="segment active" data-sex="F">Femmes</button>
+          <button class="segment" data-sex="M">Hommes</button>
+        </div>
+        <div class="field">
+          <label for="searchInput">Recherche engagé</label>
+          <input id="searchInput" type="search" placeholder="Nom, club, ligne...">
+        </div>
+        <div class="field">
+          <label for="categorySelect">Catégorie</label>
+          <select id="categorySelect"></select>
+        </div>
+        <div class="stat-strip">
+          <div>
+            <span id="entrantCount">0</span>
+            <small>engagés</small>
+          </div>
+          <div>
+            <span id="bestEntry">--</span>
+            <small>meilleur temps</small>
+          </div>
+        </div>
+      </aside>
+
+      <section class="race-panel">
+        <div class="race-header">
+          <div>
+            <p id="raceMeta" class="eyebrow">Toutes catégories</p>
+            <h2 id="raceTitle">Course</h2>
+            <div id="headerRefs" class="header-refs"></div>
+            <div id="headerRefDetails" class="header-ref-details" hidden></div>
+          </div>
+          <div class="badge-row">
+            <span id="raceSexBadge" class="badge">Femmes</span>
+            <span class="badge muted">Toutes catégories</span>
+          </div>
+        </div>
+
+        <div class="grid-two">
+          <article class="panel entrants-panel">
+            <div class="panel-title">
+              <h3>Engagés 2026</h3>
+              <div class="panel-actions">
+                <span id="filteredCount" class="soft-count">0 affichés</span>
+              </div>
+            </div>
+            <div class="entrants-layout">
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Rang</th>
+                      <th>Nageur</th>
+                      <th>Cat.</th>
+                      <th>Temps</th>
+                      <th>Repère</th>
+                    </tr>
+                  </thead>
+                  <tbody id="entrantsBody"></tbody>
+                </table>
+              </div>
+              <div id="swimmerDetails" class="swimmer-details" hidden></div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="reference-grid single-reference">
+          <article class="panel">
+            <div class="panel-title">
+              <h3>Top 5 Championnat de France 2025</h3>
+            </div>
+            <div id="top2025Box" class="ranking-columns"></div>
+          </article>
+        </div>
+
+        <article class="panel import-panel">
+          <div class="panel-title">
+            <h3>Préparer les données</h3>
+            <button id="loadSampleBtn" class="ghost-button compact">Recharger les données</button>
+          </div>
+          <p>Quand les PDF/résultats seront extraits, importe un fichier JSON au même format que l'export. Tu peux aussi coller les engagements d'une course au format CSV.</p>
+          <div class="csv-tools">
+            <textarea id="csvInput" rows="5" placeholder="ligne;nom;prenom;club;categorie;temps&#10;4;DURAND;Camille;Club Limoges;Junior;00:42.81"></textarea>
+            <button id="importCsvBtn" class="primary-button">Ajouter ces engagés à la course affichée</button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="data.generated.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
