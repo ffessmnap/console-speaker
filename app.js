@@ -532,11 +532,12 @@ function renderSwimmerDetails() {
     ${internationalMedals.length ? `
       <div class="detail-section">
         <h5>International</h5>
-        <div class="detail-list">
+        <div class="compact-achievement-list">
           ${internationalMedals.map((medal) => `
-            <div class="detail-row ${categoryClass(swimmer.category)}">
-              <span><strong>${escapeHtml(medal.medal || "Médaille")}</strong> ${escapeHtml(shortChampionshipLabel(medal.championship))}</span>
-              <span>${escapeHtml(medal.eventLabel || eventLabel(medal.eventId))}${medal.time ? ` - ${escapeHtml(medal.time)}` : ""}</span>
+            <div class="compact-achievement ${categoryClass(swimmer.category)}">
+              <span class="medal-dot ${medalClass(medal.medal)}" aria-label="${escapeHtml(medal.medal || "Médaille")}"></span>
+              <span><strong>${escapeHtml(shortChampionshipLabel(medal.championship))}</strong> ${escapeHtml(medal.eventLabel || eventLabel(medal.eventId))}</span>
+              <span>${escapeHtml(medal.time || "")}</span>
             </div>
           `).join("")}
         </div>
@@ -545,11 +546,12 @@ function renderSwimmerDetails() {
     ${france2025.length ? `
       <div class="detail-section">
         <h5>France 2025</h5>
-        <div class="detail-list">
+        <div class="compact-achievement-list france-compact">
           ${france2025.map((row) => `
-            <div class="detail-row ${categoryClass(row.category)}">
-              <span><strong>${escapeHtml(medalForRank(row.rank))}</strong> ${escapeHtml(eventLabel(row.eventId))}</span>
-              <span>${escapeHtml(formatRank(row.rank))} ${escapeHtml(row.category || "")} - ${escapeHtml(row.time || "-")}</span>
+            <div class="compact-achievement ${categoryClass(row.category)}">
+              <span><strong>${escapeHtml(formatRank(row.rank))}</strong> ${escapeHtml(row.category || "")}</span>
+              <span>${escapeHtml(eventLabel(row.eventId))}</span>
+              <span>${escapeHtml(row.time || "-")}</span>
             </div>
           `).join("")}
         </div>
@@ -585,6 +587,14 @@ function medalForRank(rank) {
   if (value === 2) return "Argent";
   if (value === 3) return "Bronze";
   return "Finaliste";
+}
+
+function medalClass(value) {
+  const text = String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  if (text.includes("or")) return "medal-gold";
+  if (text.includes("argent")) return "medal-silver";
+  if (text.includes("bronze")) return "medal-bronze";
+  return "medal-neutral";
 }
 
 function sameCategory(a, b) {
