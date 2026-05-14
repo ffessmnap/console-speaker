@@ -535,7 +535,7 @@ function renderSwimmerDetails() {
         <div class="compact-achievement-list">
           ${internationalMedals.map((medal) => `
             <div class="compact-achievement ${categoryClass(swimmer.category)}">
-              <span class="medal-dot ${medalClass(medal.medal)}" aria-label="${escapeHtml(medal.medal || "Médaille")}"></span>
+              <span class="medal-dot ${medalClass(medal.medal)}" aria-label="${escapeHtml(medal.medal || "Médaille")}">●</span>
               <span><strong>${escapeHtml(shortChampionshipLabel(medal.championship))}</strong> ${escapeHtml(medal.eventLabel || eventLabel(medal.eventId))}</span>
               <span>${escapeHtml(medal.time || "")}</span>
             </div>
