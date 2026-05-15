@@ -1,5 +1,6 @@
-const STORAGE_KEY = "napSpeakerFrance2026:v15";
-
+﻿const STORAGE_KEY = "napSpeakerFrance2026:v15";
+const ALERTS_KEY = "napSpeakerFrance2026:alerts:v1";
+const LIVE_DISMISSED_ALERTS_KEY = "napSpeakerFrance2026:live-dismissed-alerts:v1";
 const fallbackData = {
   meet: {
     name: "Championnat de France 2026",
@@ -58,7 +59,8 @@ const fallbackData = {
 const sampleData = window.SPEAKER_DATA || fallbackData;
 
 let data = loadData();
-let state = {
+function createRoleState(role = "speaker") {
+  return {
   eventId: data.events[0]?.id || "",
   sex: "F",
   search: "",
@@ -69,8 +71,43 @@ let state = {
   lineOrder: "asc",
   selectedSwimmerId: "",
   selectedRecordKey: "",
-  liveMode: true
+  liveMode: true,
+    role
+  };
+}
+
+function cloneRoleState(nextState) {
+  return { ...nextState, search: "", selectedSwimmerId: "", selectedRecordKey: "" };
+}
+
+function saveCurrentRoleState() {
+  roleStates[state.role] = cloneRoleState(state);
+}
+
+function switchRole(nextRole) {
+  if (!ROLE_LABELS[nextRole]) return;
+  saveCurrentRoleState();
+  state = cloneRoleState(roleStates[nextRole] || createRoleState(nextRole));
+  state.role = nextRole;
+  if (!isSpeakerView() && state.series === "all") {
+    state.series = firstSeriesSelectionForCurrentRace();
+  }
+  state.selectedSwimmerId = "";
+  state.selectedRecordKey = "";
+}
+
+let state = createRoleState("live");
+let roleStates = {
+  speaker: createRoleState("speaker"),
+  live: cloneRoleState(state),
+  referee: createRoleState("referee"),
+  video: createRoleState("video"),
+  computer: createRoleState("computer")
 };
+
+let alerts = loadAlerts();
+let liveDismissedAlertIds = loadLiveDismissedAlerts();
+let decisionDraft = createDecisionDraft();
 
 const eventSelect = document.querySelector("#eventSelect");
 const searchInput = document.querySelector("#searchInput");
@@ -100,6 +137,14 @@ const headerRefs = document.querySelector("#headerRefs");
 const headerRefDetails = document.querySelector("#headerRefDetails");
 const top2025Box = document.querySelector("#top2025Box");
 const dataStatus = document.querySelector("#dataStatus");
+const officialAlerts = document.querySelector("#officialAlerts");
+const decisionPanel = document.querySelector("#decisionPanel");
+const decisionModal = document.querySelector("#decisionModal");
+const alertDetailModal = document.querySelector("#alertDetailModal");
+const roleQueue = document.querySelector("#roleQueue");
+const roleHistory = document.querySelector("#roleHistory");
+const speakerHistory = document.querySelector("#speakerHistory");
+const roleBadge = document.querySelector("#roleBadge");
 const jsonInput = document.querySelector("#jsonInput");
 const csvInput = document.querySelector("#csvInput");
 const swimmerDetails = document.querySelector("#swimmerDetails");
@@ -114,6 +159,53 @@ function loadData() {
   } catch {
     return structuredClone(sampleData);
   }
+}
+
+function loadAlerts() {
+  const saved = localStorage.getItem(ALERTS_KEY);
+  if (!saved) return [];
+  try {
+    return JSON.parse(saved);
+  } catch {
+    return [];
+  }
+}
+
+function saveAlerts() {
+  localStorage.setItem(ALERTS_KEY, JSON.stringify(alerts));
+}
+
+function loadLiveDismissedAlerts() {
+  const saved = localStorage.getItem(LIVE_DISMISSED_ALERTS_KEY);
+  if (!saved) return [];
+  try {
+    const parsed = JSON.parse(saved);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveLiveDismissedAlerts() {
+  localStorage.setItem(LIVE_DISMISSED_ALERTS_KEY, JSON.stringify(liveDismissedAlertIds));
+}
+
+function resetHistory() {
+  const ok = window.confirm("Effacer tout l'historique DSQ, forfaits, abandons et requalifications sur cet ordinateur ? Cette action est irréversible.");
+  if (!ok) return;
+  alerts = [];
+  liveDismissedAlertIds = [];
+  saveAlerts();
+  saveLiveDismissedAlerts();
+  render();
+}
+
+function dismissLiveAlert(alertId) {
+  if (!liveDismissedAlertIds.includes(alertId)) {
+    liveDismissedAlertIds.push(alertId);
+    saveLiveDismissedAlerts();
+  }
+  renderOfficialAlerts();
 }
 
 function normalizeData(nextData) {
@@ -169,6 +261,38 @@ function clearSearch() {
   state.search = "";
   if (searchInput) searchInput.value = "";
 }
+
+const ROLE_LABELS = {
+  speaker: "Speaker",
+  live: "Live",
+  referee: "Juge arbitre",
+  video: "Juge vidéo",
+  computer: "Informatique"
+};
+
+function isSpeakerView() {
+  return state.role === "speaker" || state.role === "live";
+}
+
+const DECISION_LABELS = {
+  forfait: "Forfait",
+  abandon: "Abandon",
+  false_start: "DSQ - faux départ",
+  relay_early_start: "DSQ - départ anticipé",
+  underwater_15m: "DSQ - coulée supérieure à 15 m",
+  immersion: "DSQ - passage en immersion",
+  interference: "DSQ - gêne d'un concurrent",
+  other_dsq: "DSQ - autre motif"
+};
+
+const SPEAKER_DECISION_REASONS = {
+  false_start: "faux départ",
+  relay_early_start: "départ anticipé",
+  underwater_15m: "coulée supérieure à 15 m",
+  immersion: "passage en immersion",
+  interference: "gêne d'un concurrent",
+  other_dsq: "autre motif"
+};
 
 function shortClubName(entrant) {
   if (entrant.clubCode) return String(entrant.clubCode).toUpperCase();
@@ -559,6 +683,15 @@ function syncSexSegments() {
 
 function render() {
   document.body.classList.add("live-mode");
+  document.body.classList.toggle("role-speaker", state.role === "speaker");
+  document.body.classList.toggle("role-live", state.role === "live");
+  document.body.classList.toggle("role-referee", state.role === "referee");
+  document.body.classList.toggle("role-video", state.role === "video");
+  document.body.classList.toggle("role-computer", state.role === "computer");
+  document.querySelectorAll(".role-chip").forEach((button) => {
+    button.classList.toggle("active", button.dataset.role === state.role);
+  });
+  if (roleBadge) roleBadge.textContent = ROLE_LABELS[state.role] || "Console";
   if (!data.events.length) {
     data.events = structuredClone(sampleData.events);
     state.eventId = data.events[0].id;
@@ -583,7 +716,9 @@ function render() {
   renderHeaderReferences();
   renderEntrants();
   renderTop2025();
+  renderRolePanels();
   renderDataStatus();
+  saveCurrentRoleState();
 }
 
 function renderSessionControls() {
@@ -607,6 +742,798 @@ function renderSessionControls() {
       </button>
     `)
   ].join("");
+}
+
+function currentRoleAlertFilter(alert) {
+  if (alert.cancelledAt) return false;
+  if (state.role === "live") {
+    return alert.speakerStatus !== "none" && !liveDismissedAlertIds.includes(alert.id);
+  }
+  if (state.role === "speaker") {
+    return alert.speakerStatus === "pending";
+  }
+  if (state.role === "video") {
+    return alert.requiresVideo && alert.videoStatus === "pending";
+  }
+  if (state.role === "computer") {
+    return alert.informaticsStatus === "pending";
+  }
+  return false;
+}
+
+function isRequalificationAlert(alert) {
+  return alert.type === "requalification" || alert.type === "ja_cancellation";
+}
+
+function alertRaceLabel(alert) {
+  const event = data.events.find((item) => item.id === alert.eventId);
+  const sex = alert.sex === "F" ? "Femmes" : (alert.sex === "M" ? "Hommes" : "Mixte");
+  const series = alert.stage && isFinalStage(alert.stage)
+    ? finalStageLabel(alert.stage)
+    : `Série ${alert.series || "-"}`;
+  return `${event?.label || alert.eventId} - ${sex} - ${series} - ligne ${alert.line || "-"}`;
+}
+
+function alertSwimmerLabel(alert) {
+  return `${alert.displayName || "Concurrent"}${alert.club ? ` - ${alert.club}` : ""}`;
+}
+
+function alertClubShortLabel(alert) {
+  return String(alert.clubCode || alert.club || "").toUpperCase();
+}
+
+function alertDetailLabel(alert) {
+  const parts = [];
+  if (alert.relayLeg) parts.push(`relayeur ${alert.relayLeg}`);
+  if (alert.lengthType === "start") parts.push("au départ");
+  if (alert.lengthType === "length" && alert.lengthNumber) parts.push(`longueur n° ${alert.lengthNumber}`);
+  return parts.join(" - ");
+}
+
+function alertCommentLabel(alert) {
+  return alert.comment || "";
+}
+
+function decisionMotifLabel(alert) {
+  if (alert.type === "requalification") return "Requalification - décision du délégué";
+  if (alert.type === "ja_cancellation") return "Requalification - annulation par le JA";
+  const motif = DECISION_LABELS[alert.type] || alert.type;
+  const detail = alertDetailLabel(alert);
+  return detail ? `${motif} - ${detail}` : motif;
+}
+
+function speakerAlertSentence(alert) {
+  const event = data.events.find((item) => item.id === alert.eventId);
+  const sexLabel = alert.sex === "F" ? "Femmes" : (alert.sex === "M" ? "Hommes" : "Mixte");
+  const personLabel = alert.sex === "F" ? "la nageuse" : "le nageur";
+  const agreement = alert.sex === "F" ? "e" : "";
+  const seriesLabel = alert.stage && isFinalStage(alert.stage)
+    ? finalStageLabel(alert.stage)
+    : `série ${alert.series || "-"}`;
+  const reason = SPEAKER_DECISION_REASONS[alert.type] || (DECISION_LABELS[alert.type] || alert.type).replace(/^DSQ -\s*/i, "");
+  const detail = alertDetailLabel(alert);
+  const comment = alertCommentLabel(alert);
+  const club = alertClubShortLabel(alert);
+  if (isRequalificationAlert(alert)) {
+    const source = alert.type === "requalification" ? "suite à la décision du délégué de la compétition" : "suite à l'annulation de la décision par le juge arbitre";
+    return {
+      text: `${source}, ${personLabel} de la ligne ${alert.line || "-"} sur ${event?.label || alert.eventId} ${sexLabel} a été requalifié${agreement}.`,
+      identity: `${alert.displayName || "Concurrent"}${club ? ` - ${club}` : ""}`
+    };
+  }
+  return {
+    text: `Lors de la ${seriesLabel} du ${event?.label || alert.eventId} ${sexLabel}, ${personLabel} de la ligne ${alert.line || "-"} a été disqualifié${agreement} pour ${reason}${detail ? ` - ${detail}` : ""}${comment ? ` (${comment})` : ""}.`,
+    identity: `${alert.displayName || "Concurrent"}${club ? ` - ${club}` : ""}`
+  };
+}
+
+function isDsqAlert(alert) {
+  return !["forfait", "abandon", "requalification", "ja_cancellation"].includes(alert.type);
+}
+
+function activeDsqAlertsForEntrant(entrant) {
+  const swimmerId = entrant.swimmerId || entrantKey(entrant);
+  return alerts.filter((alert) => (
+    isDsqAlert(alert) &&
+    !alert.cancelledAt &&
+    alert.videoStatus !== "rejected" &&
+    alert.eventId === entrant.eventId &&
+    alert.sex === entrant.sex &&
+    alert.swimmerId === swimmerId
+  ));
+}
+
+function activeLineAlertsForEntrant(entrant) {
+  const swimmerId = entrant.swimmerId || entrantKey(entrant);
+  return alerts.filter((alert) => (
+    !isRequalificationAlert(alert) &&
+    !alert.cancelledAt &&
+    alert.videoStatus !== "rejected" &&
+    alert.eventId === entrant.eventId &&
+    alert.sex === entrant.sex &&
+    alert.swimmerId === swimmerId
+  ));
+}
+
+function alertLineCode(alert) {
+  const codes = {
+    forfait: "ABS",
+    abandon: "ABD",
+    false_start: "FD",
+    relay_early_start: "DA",
+    underwater_15m: "+15m",
+    immersion: "FSTYLE",
+    interference: "GENE",
+    other_dsq: "AUTRE"
+  };
+  return codes[alert.type] || "";
+}
+
+function renderLineAlertBadges(lineAlerts) {
+  if (!lineAlerts.length) return "";
+  const terminalStatus = lineAlerts
+    .filter((alert) => alert.type === "forfait" || alert.type === "abandon")
+    .sort((a, b) => String(b.updatedAt || b.createdAt).localeCompare(String(a.updatedAt || a.createdAt)))[0];
+  const dsqAlerts = lineAlerts.filter(isDsqAlert);
+  const title = lineAlerts.map(decisionMotifLabel).join(" / ");
+  if (terminalStatus) {
+    const code = terminalStatus.type === "abandon" ? "ABD" : "ABS";
+    const className = terminalStatus.type === "abandon" ? "abd-line-badge" : "abs-line-badge";
+    return `<span class="line-alert-badges" title="${escapeHtml(title)}"><span class="line-alert-badge ${className}">${code}</span></span>`;
+  }
+  const codes = [...new Set(dsqAlerts.map(alertLineCode).filter(Boolean))];
+  return `
+    <span class="line-alert-badges" title="${escapeHtml(title)}">
+      <span class="line-alert-badge dsq-line-badge">DSQ</span>
+      ${codes.length ? `<span class="line-alert-reasons">${escapeHtml(codes.join(" / "))}</span>` : ""}
+    </span>
+  `;
+}
+
+function historySentence(alert) {
+  if (isDsqAlert(alert)) return speakerAlertSentence(alert);
+  const event = data.events.find((item) => item.id === alert.eventId);
+  const sexLabel = alert.sex === "F" ? "Femmes" : (alert.sex === "M" ? "Hommes" : "Mixte");
+  const seriesLabel = alert.stage && isFinalStage(alert.stage)
+    ? finalStageLabel(alert.stage)
+    : `série ${alert.series || "-"}`;
+  const reason = DECISION_LABELS[alert.type] || alert.type;
+  const club = alertClubShortLabel(alert);
+  return {
+    text: `Lors de la ${seriesLabel} du ${event?.label || alert.eventId} ${sexLabel}, ligne ${alert.line || "-"} : ${reason}.`,
+    identity: `${alert.displayName || "Concurrent"}${club ? ` - ${club}` : ""}`
+  };
+}
+
+function renderAlertCard(alert, actionLabel = "") {
+  const detail = alertDetailLabel(alert);
+  if (isSpeakerView()) {
+    const sentence = speakerAlertSentence(alert);
+    const alertTitle = isRequalificationAlert(alert) ? "Requalification à annoncer" : "Disqualification à annoncer";
+    return `
+      <div class="alert-card speaker-alert-card" data-alert-id="${escapeHtml(alert.id)}">
+        <div>
+          <strong class="alert-title"><span aria-hidden="true">!</span> ${escapeHtml(alertTitle)}</strong>
+          <span class="speaker-alert-line">
+            <span class="speaker-alert-text">${escapeHtml(sentence.text)}</span>
+            <span class="speaker-alert-identity">- ${escapeHtml(sentence.identity)}</span>
+          </span>
+        </div>
+        ${actionLabel ? `<button class="ghost-button compact" type="button" data-alert-action="${escapeHtml(actionLabel)}">${escapeHtml(actionLabel)}</button>` : ""}
+      </div>
+    `;
+  }
+  return `
+    <div class="alert-card" data-alert-id="${escapeHtml(alert.id)}">
+      <div>
+        <strong>${escapeHtml(DECISION_LABELS[alert.type] || (isRequalificationAlert(alert) ? "Requalification / annulation" : alert.type))}</strong>
+        <span>${escapeHtml(alertRaceLabel(alert))}</span>
+        <span>${escapeHtml(alertSwimmerLabel(alert))}${detail ? ` - ${escapeHtml(detail)}` : ""}</span>
+      </div>
+      ${actionLabel ? `<button class="ghost-button compact" type="button" data-alert-action="${escapeHtml(actionLabel)}">${escapeHtml(actionLabel)}</button>` : ""}
+    </div>
+  `;
+}
+
+function renderRolePanels() {
+  renderOfficialAlerts();
+  renderDecisionPanel();
+  renderRoleQueue();
+  renderRoleHistory();
+  renderSpeakerHistory();
+}
+
+function renderOfficialAlerts() {
+  if (!officialAlerts) return;
+  if (!isSpeakerView()) {
+    officialAlerts.hidden = true;
+    officialAlerts.innerHTML = "";
+    return;
+  }
+  const official = alerts
+    .filter(currentRoleAlertFilter)
+    .sort((a, b) => String(a.createdAt).localeCompare(String(b.createdAt)));
+  if (!official.length) {
+    officialAlerts.hidden = true;
+    officialAlerts.innerHTML = "";
+    return;
+  }
+  const action = state.role === "speaker" ? "Annoncé" : (state.role === "live" ? "Masquer" : "");
+  officialAlerts.hidden = false;
+  officialAlerts.innerHTML = official.map((alert) => renderAlertCard(alert, action)).join("");
+}
+
+function formatAlertTime(value) {
+  if (!value) return "";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "";
+  return date.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" });
+}
+
+function formatAlertDateTime(value) {
+  if (!value) return "";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "";
+  return date.toLocaleString("fr-FR", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
+}
+
+function alertStatusLabel(alert) {
+  if (alert.cancelledAt) {
+    const time = formatAlertTime(alert.cancelledAt);
+    const suffix = time ? ` à ${time}` : "";
+    return alert.cancelledBy === "delegate" ? `Annulée par le délégué${suffix}` : `Annulée par le JA${suffix}`;
+  }
+  if (alert.requiresVideo && alert.videoStatus === "pending") return "En attente vidéo";
+  if (alert.videoStatus === "rejected") return "Invalidée vidéo";
+  if (alert.speakerStatus === "pending" && alert.informaticsStatus === "pending") return "À annoncer / à traiter";
+  if (alert.speakerStatus === "pending") return "À annoncer";
+  if (alert.informaticsStatus === "pending") return "À traiter informatique";
+  if (alert.speakerStatus === "done" || alert.informaticsStatus === "done") return "Terminée";
+  return "Envoyée";
+}
+
+function alertStatusClass(alert) {
+  if (alert.cancelledAt) return "status-rejected";
+  if (alert.requiresVideo && alert.videoStatus === "pending") return "status-video";
+  if (alert.videoStatus === "rejected") return "status-rejected";
+  if (alert.speakerStatus === "pending" || alert.informaticsStatus === "pending") return "status-pending";
+  if (alert.speakerStatus === "done" || alert.informaticsStatus === "done") return "status-done";
+  return "status-sent";
+}
+
+function alertTimeline(alert) {
+  const items = [
+    ["JA", alert.createdAt],
+    ["Vidéo confirmée", alert.videoConfirmedAt],
+    ["Vidéo invalidée", alert.videoRejectedAt],
+    ["Speaker", alert.speakerAnnouncedAt],
+    ["Informatique", alert.informaticsDoneAt],
+    [alert.cancelledBy === "delegate" ? "Délégué" : "Annulation", alert.cancelledAt]
+  ].filter(([, value]) => value);
+  return items.map(([label, value]) => `${label} ${formatAlertTime(value)}`).join(" - ");
+}
+
+function alertTimelineItems(alert) {
+  const related = alerts
+    .filter((item) => item.originalAlertId === alert.id)
+    .sort((a, b) => String(a.createdAt).localeCompare(String(b.createdAt)));
+  const items = [
+    ["Créée par le JA", alert.createdAt],
+    ["Vidéo confirmée", alert.videoConfirmedAt],
+    ["Vidéo invalidée", alert.videoRejectedAt],
+    ["Annonce speaker", alert.speakerAnnouncedAt],
+    ["Traitée informatique", alert.informaticsDoneAt],
+    [alert.cancelledBy === "delegate" ? "Annulée par le délégué" : "Annulée par le JA", alert.cancelledAt]
+  ].filter(([, value]) => value);
+  related.forEach((item) => {
+    const source = item.type === "requalification" ? "délégué" : "JA";
+    items.push([`Alerte requalification créée (${source})`, item.createdAt]);
+    if (item.speakerAnnouncedAt) items.push(["Requalification annoncée speaker", item.speakerAnnouncedAt]);
+    if (item.informaticsDoneAt) items.push(["Requalification traitée informatique", item.informaticsDoneAt]);
+  });
+  return items;
+}
+
+function renderHistoryItem(alert, options = {}) {
+  const status = alertStatusLabel(alert);
+  const timeline = alertTimeline(alert);
+  const event = data.events.find((item) => item.id === alert.eventId);
+  const sexLabel = alert.sex === "F" ? "Femmes" : (alert.sex === "M" ? "Hommes" : "Mixte");
+  const seriesLabel = alert.stage && isFinalStage(alert.stage)
+    ? finalStageLabel(alert.stage)
+    : `Série ${alert.series || "-"}`;
+  const courseLine = `${event?.label || alert.eventId} ${sexLabel} - ${seriesLabel} - Ligne ${alert.line || "-"}`;
+  const motif = decisionMotifLabel(alert);
+  const identity = `${alert.displayName || "Concurrent"}${alertClubShortLabel(alert) ? ` - ${alertClubShortLabel(alert)}` : ""}`;
+  const action = historyActionForAlert(alert);
+  return `
+    <div class="history-item ${alertStatusClass(alert)} ${options.compact ? "compact-history-item" : ""}" data-history-alert-id="${escapeHtml(alert.id)}">
+      <time>${escapeHtml(formatAlertTime(options.timeValue || alert.cancelledAt || alert.createdAt) || "--:--")}</time>
+      <span>${escapeHtml(courseLine)}</span>
+      <strong>${escapeHtml(motif)}</strong>
+      <small>${escapeHtml(identity)}</small>
+      <em>${escapeHtml(status)}${timeline ? ` - ${escapeHtml(timeline)}` : ""}</em>
+      ${action ? `<button class="history-action ${escapeHtml(action.className)}" type="button" data-history-action="${escapeHtml(action.action)}">${escapeHtml(action.label)}</button>` : ""}
+    </div>
+  `;
+}
+
+function openAlertDetail(alertId) {
+  const clickedAlert = alerts.find((item) => item.id === alertId);
+  if (!clickedAlert || !alertDetailModal) return;
+  const alert = clickedAlert.originalAlertId
+    ? (alerts.find((item) => item.id === clickedAlert.originalAlertId) || clickedAlert)
+    : clickedAlert;
+  const status = alertStatusLabel(alert);
+  const event = data.events.find((item) => item.id === alert.eventId);
+  const sexLabel = alert.sex === "F" ? "Femmes" : (alert.sex === "M" ? "Hommes" : "Mixte");
+  const seriesLabel = alert.stage && isFinalStage(alert.stage)
+    ? finalStageLabel(alert.stage)
+    : `Série ${alert.series || "-"}`;
+  const identity = `${alert.displayName || "Concurrent"}${alertClubShortLabel(alert) ? ` - ${alertClubShortLabel(alert)}` : ""}`;
+  const comment = alertCommentLabel(alert);
+  const timeline = alertTimelineItems(alert);
+  const speakerSentence = isSpeakerView() || alert.speakerStatus !== "none" ? speakerAlertSentence(alert) : null;
+  const clickedSentence = clickedAlert.id !== alert.id ? speakerAlertSentence(clickedAlert) : null;
+  alertDetailModal.hidden = false;
+  alertDetailModal.innerHTML = `
+    <div class="decision-dialog alert-detail-dialog" role="dialog" aria-modal="true" aria-label="Détail de décision">
+      <div class="decision-modal-head">
+        <div>
+          <span>Fiche décision</span>
+          <h2>${escapeHtml(decisionMotifLabel(alert))}</h2>
+          <p>${escapeHtml(identity)}</p>
+          <p class="decision-race-info">${escapeHtml(event?.label || alert.eventId)} ${escapeHtml(sexLabel)} - ${escapeHtml(seriesLabel)} - Ligne ${escapeHtml(alert.line || "-")}</p>
+        </div>
+        <button class="icon-button decision-close" type="button" data-close-alert-detail aria-label="Fermer">×</button>
+      </div>
+      <div class="alert-detail-status ${alertStatusClass(alert)}">
+        <strong>${escapeHtml(status)}</strong>
+      </div>
+      <div class="alert-detail-grid">
+        <div><span>Course</span><strong>${escapeHtml(event?.label || alert.eventId)}</strong></div>
+        <div><span>Sexe</span><strong>${escapeHtml(sexLabel)}</strong></div>
+        <div><span>Série</span><strong>${escapeHtml(seriesLabel)}</strong></div>
+        <div><span>Ligne</span><strong>${escapeHtml(alert.line || "-")}</strong></div>
+        <div><span>Concurrent</span><strong>${escapeHtml(identity)}</strong></div>
+        <div><span>Motif</span><strong>${escapeHtml(decisionMotifLabel(alert))}</strong></div>
+      </div>
+      ${comment ? `<div class="alert-detail-note"><span>Remarque</span><strong>${escapeHtml(comment)}</strong></div>` : ""}
+      ${speakerSentence ? `<div class="alert-detail-note"><span>Texte speaker DSQ</span><strong>${escapeHtml(speakerSentence.text)} - ${escapeHtml(speakerSentence.identity)}</strong></div>` : ""}
+      ${clickedSentence ? `<div class="alert-detail-note"><span>Alerte en cours</span><strong>${escapeHtml(clickedSentence.text)} - ${escapeHtml(clickedSentence.identity)}</strong></div>` : ""}
+      <div class="alert-detail-timeline">
+        <h3>Historique</h3>
+        ${timeline.length ? timeline.map(([label, value]) => `
+          <div class="alert-timeline-row">
+            <time>${escapeHtml(formatAlertDateTime(value) || "--")}</time>
+            <strong>${escapeHtml(label)}</strong>
+          </div>
+        `).join("") : `<p class="panel-subtitle">Aucun historique disponible.</p>`}
+      </div>
+    </div>
+  `;
+}
+
+function closeAlertDetail() {
+  if (!alertDetailModal) return;
+  alertDetailModal.hidden = true;
+  alertDetailModal.innerHTML = "";
+}
+
+function historyActionForAlert(alert) {
+  if (alert.cancelledAt || isRequalificationAlert(alert)) return null;
+  if (state.role === "referee" && alert.roleSource === "referee") {
+    return { action: "cancel-ja", label: "Annuler", className: "danger-button" };
+  }
+  if (state.role === "video" && isDsqAlert(alert)) {
+    return { action: "delegate-cancel", label: "Annulation délégué", className: "danger-button" };
+  }
+  return null;
+}
+
+function renderSpeakerHistory() {
+  if (!speakerHistory) return;
+  if (!isSpeakerView()) {
+    speakerHistory.hidden = true;
+    speakerHistory.innerHTML = "";
+    return;
+  }
+  const doneAlerts = alerts
+    .filter((alert) => !isRequalificationAlert(alert))
+    .filter((alert) => alert.speakerStatus === "done" || (alert.cancelledAt && alert.speakerAnnouncedAt))
+    .sort((a, b) => String(b.speakerAnnouncedAt || b.updatedAt).localeCompare(String(a.speakerAnnouncedAt || a.updatedAt)))
+    .slice(0, 8);
+  if (!doneAlerts.length) {
+    speakerHistory.hidden = true;
+    speakerHistory.innerHTML = "";
+    return;
+  }
+  speakerHistory.hidden = false;
+  speakerHistory.innerHTML = `
+    <div class="panel-title">
+      <h3>Disqualifications annoncées</h3>
+    </div>
+    <div class="history-list">
+      ${doneAlerts.map((alert) => {
+        return renderHistoryItem(alert, { compact: false, timeValue: alert.cancelledAt || alert.speakerAnnouncedAt || alert.updatedAt });
+      }).join("")}
+    </div>
+  `;
+}
+
+function renderRoleHistory() {
+  if (!roleHistory) return;
+  if (isSpeakerView()) {
+    roleHistory.hidden = true;
+    roleHistory.innerHTML = "";
+    return;
+  }
+  let rows = [];
+  let title = "Historique";
+  if (state.role === "referee") {
+    title = "Historique des décisions JA";
+    rows = alerts.filter((alert) => alert.roleSource === "referee" && !isRequalificationAlert(alert));
+  } else if (state.role === "video") {
+    title = "Historique vidéo";
+    rows = alerts.filter((alert) => isDsqAlert(alert));
+  } else if (state.role === "computer") {
+    title = "Historique informatique";
+    rows = alerts.filter((alert) => alert.informaticsStatus === "done" && !isRequalificationAlert(alert));
+  }
+  rows = rows
+    .sort((a, b) => String(b.updatedAt || b.createdAt).localeCompare(String(a.updatedAt || a.createdAt)))
+    .slice(0, 12);
+  if (!rows.length) {
+    roleHistory.hidden = true;
+    roleHistory.innerHTML = "";
+    return;
+  }
+  roleHistory.hidden = false;
+  roleHistory.innerHTML = `
+    <div class="panel-title">
+      <h3>${escapeHtml(title)}</h3>
+    </div>
+    <div class="history-list">
+      ${rows.map((alert) => renderHistoryItem(alert, { timeValue: alert.cancelledAt || alert.createdAt })).join("")}
+    </div>
+  `;
+}
+
+function selectedEntrant() {
+  if (!state.selectedSwimmerId) return null;
+  return raceEntrants().find((entrant) => (entrant.swimmerId || entrantKey(entrant)) === state.selectedSwimmerId) ||
+    data.entrants.find((entrant) => (entrant.swimmerId || entrantKey(entrant)) === state.selectedSwimmerId);
+}
+
+function entrantSeriesRow(entrant) {
+  const swimmerId = entrant.swimmerId || entrantKey(entrant);
+  const rows = (data.series || [])
+    .filter((row) => row.eventId === entrant.eventId && row.sex === entrant.sex && row.swimmerId === swimmerId)
+    .sort((a, b) => Number(a.heatOrder || a.series || 999) - Number(b.heatOrder || b.series || 999));
+  if (state.series !== "all") {
+    const current = rows.find((row) => isFinalStage(state.series) ? row.stage === state.series : Number(row.series) === Number(state.series));
+    if (current) return current;
+  }
+  return rows[0] || null;
+}
+
+function relayLegCount(entrant) {
+  const event = data.events.find((item) => item.id === entrant.eventId);
+  const label = `${entrant.eventId || ""} ${event?.label || ""}`;
+  const match = label.match(/(\d+)x/i);
+  return match ? Number(match[1]) : 4;
+}
+
+function decisionOptionsForEntrant(entrant) {
+  const relay = isRelayEntrant(entrant);
+  return [
+    ["forfait", "Forfait"],
+    ["abandon", "Abandon"],
+    ["false_start", "DSQ - faux départ"],
+    ...(relay ? [["relay_early_start", "DSQ - départ anticipé"]] : []),
+    ["underwater_15m", "DSQ - coulée supérieure à 15 m"],
+    ["immersion", "DSQ - passage en immersion"],
+    ["interference", "DSQ - gêne d'un concurrent"],
+    ["other_dsq", "DSQ - autre motif"]
+  ];
+}
+
+function renderDecisionPanel() {
+  if (!decisionPanel) return;
+  if (state.role !== "referee") {
+    decisionPanel.hidden = true;
+    decisionPanel.innerHTML = "";
+    closeDecisionModal();
+    return;
+  }
+  const entrant = selectedEntrant();
+  decisionPanel.hidden = false;
+  decisionPanel.innerHTML = `
+    <h3>Décision juge arbitre</h3>
+    <p class="panel-subtitle">${entrant ? `${escapeHtml(formatDisplayName(entrant))} sélectionné. La fenêtre de décision est ouverte.` : "Clique sur une ligne de la série pour créer une décision."}</p>
+  `;
+}
+
+function createDecisionDraft() {
+  return {
+    type: "",
+    relayLeg: "",
+    lengthType: "start",
+    lengthNumber: "1",
+    comment: ""
+  };
+}
+
+function openDecisionModal() {
+  const entrant = selectedEntrant();
+  if (!decisionModal || state.role !== "referee" || !entrant) return;
+  decisionDraft = createDecisionDraft();
+  renderDecisionModal();
+}
+
+function closeDecisionModal() {
+  if (!decisionModal) return;
+  decisionModal.hidden = true;
+  decisionModal.innerHTML = "";
+}
+
+function decisionNeedsDetail(type) {
+  return type === "relay_early_start" || type === "underwater_15m";
+}
+
+function decisionNeedsRelayLeg(type, entrant) {
+  return isRelayEntrant(entrant) && ["relay_early_start", "underwater_15m", "immersion", "interference", "other_dsq"].includes(type);
+}
+
+function decisionNeedsLengthPosition(type) {
+  return type === "underwater_15m";
+}
+
+function decisionDraftIsReady(entrant) {
+  if (!decisionDraft.type) return false;
+  if (decisionNeedsRelayLeg(decisionDraft.type, entrant) && !decisionDraft.relayLeg) return false;
+  if (decisionNeedsLengthPosition(decisionDraft.type)) {
+    return decisionDraft.lengthType === "start" || Boolean(String(decisionDraft.lengthNumber || "").trim());
+  }
+  return true;
+}
+
+function defaultDecisionDetail(type, entrant) {
+  if (decisionNeedsRelayLeg(type, entrant)) {
+    decisionDraft.relayLeg = "2";
+  } else if (type === "underwater_15m" && isRelayEntrant(entrant)) {
+    decisionDraft.relayLeg = "1";
+  } else {
+    decisionDraft.relayLeg = "";
+  }
+  if (type === "underwater_15m" && isRelayEntrant(entrant)) {
+    decisionDraft.relayLeg = "1";
+  }
+  decisionDraft.lengthType = "start";
+  decisionDraft.lengthNumber = "1";
+}
+
+function renderDecisionModal() {
+  const entrant = selectedEntrant();
+  if (!decisionModal || !entrant) return;
+  const relay = isRelayEntrant(entrant);
+  const legCount = relayLegCount(entrant);
+  const row = entrantSeriesRow(entrant);
+  const event = data.events.find((item) => item.id === entrant.eventId);
+  const sexLabel = entrant.sex === "F" ? "Femmes" : (entrant.sex === "M" ? "Hommes" : "Mixte");
+  const modalSeriesLabel = row?.stage && isFinalStage(row.stage)
+    ? finalStageLabel(row.stage)
+    : `Série ${row?.series || (state.series === "all" ? "-" : state.series)}`;
+  const modalLineLabel = row?.line || entrant.lane || entrant.seriesInfo?.line || "-";
+  const modalRaceInfo = `${event?.label || entrant.eventId} ${sexLabel} - ${modalSeriesLabel} - Ligne ${modalLineLabel}`;
+  const options = decisionOptionsForEntrant(entrant)
+    .map(([value, label]) => `
+      <button class="decision-choice ${decisionDraft.type === value ? "active" : ""}" type="button" data-decision-type="${escapeHtml(value)}">
+        ${escapeHtml(label)}
+      </button>
+    `)
+    .join("");
+  const relayLegButtons = (from, to) => Array.from({ length: Math.max(0, to - from + 1) }, (_, index) => from + index)
+    .map((leg) => `<button class="decision-extra-button ${String(decisionDraft.relayLeg) === String(leg) ? "active" : ""}" type="button" data-relay-leg="${leg}">Relayeur ${leg}</button>`)
+    .join("");
+  const lengthSelector = `
+    <div class="decision-extra">
+      <p>${relay ? "Où la coulée du relayeur a-t-elle été constatée ?" : "Où la coulée a-t-elle été constatée ?"}</p>
+      <div class="decision-extra-buttons">
+        <button class="decision-extra-button ${decisionDraft.lengthType === "start" ? "active" : ""}" type="button" data-length-type="start">Au départ</button>
+        <button class="decision-extra-button ${decisionDraft.lengthType === "length" ? "active" : ""}" type="button" data-length-type="length">Longueur n°</button>
+      </div>
+      <label class="decision-length-input ${decisionDraft.lengthType === "length" ? "" : "muted-field"}">
+        Numéro de longueur
+        <span class="length-stepper">
+          <button class="stepper-button" type="button" data-length-step="-1" ${decisionDraft.lengthType === "length" ? "" : "disabled"}>−</button>
+          <input id="modalLengthNumber" type="text" inputmode="numeric" pattern="[0-9]*" value="${escapeHtml(decisionDraft.lengthNumber || "1")}" ${decisionDraft.lengthType === "length" ? "" : "disabled"}>
+          <button class="stepper-button" type="button" data-length-step="1" ${decisionDraft.lengthType === "length" ? "" : "disabled"}>+</button>
+        </span>
+      </label>
+    </div>
+  `;
+  let extra = "";
+  if (decisionNeedsRelayLeg(decisionDraft.type, entrant)) {
+    const firstLeg = decisionDraft.type === "relay_early_start" ? 2 : 1;
+    extra = `
+      <div class="decision-extra">
+        <p>Quel relayeur est concerné ?</p>
+        <div class="decision-extra-buttons">${relayLegButtons(firstLeg, legCount)}</div>
+      </div>
+      ${decisionDraft.type === "underwater_15m" ? lengthSelector : ""}
+    `;
+  } else if (decisionDraft.type === "underwater_15m") {
+    extra = lengthSelector;
+  }
+  decisionModal.hidden = false;
+  decisionModal.innerHTML = `
+    <div class="decision-dialog" role="dialog" aria-modal="true" aria-label="Décision juge arbitre">
+      <div class="decision-modal-head">
+        <div>
+          <span>Décision JA</span>
+          <h2>${escapeHtml(formatDisplayName(entrant))}</h2>
+          <p>${escapeHtml(shortClubName(entrant) || entrant.club || "")}</p>
+          <p class="decision-race-info">${escapeHtml(modalRaceInfo)}</p>
+        </div>
+        <button class="icon-button decision-close" type="button" data-close-decision aria-label="Fermer">×</button>
+      </div>
+      <div class="decision-choice-grid">${options}</div>
+      ${extra}
+      <label class="decision-comment">
+        Remarque optionnelle
+        <textarea id="modalDecisionComment" placeholder="Précision utile si besoin">${escapeHtml(decisionDraft.comment)}</textarea>
+      </label>
+      <div class="decision-modal-actions">
+        <button class="ghost-button" type="button" data-close-decision>Annuler</button>
+        <button class="primary-button" type="button" data-submit-decision ${decisionDraftIsReady(entrant) ? "" : "disabled"}>Valider la décision</button>
+      </div>
+    </div>
+  `;
+}
+
+function decisionRoute(type) {
+  if (type === "forfait" || type === "abandon") return "computer";
+  if (type === "false_start" || type === "relay_early_start" || type === "underwater_15m") return "video";
+  return "official";
+}
+
+function createDecisionAlert(decision) {
+  const entrant = selectedEntrant();
+  if (!entrant) return;
+  const type = decision.type || "";
+  const route = decisionRoute(type);
+  const row = entrantSeriesRow(entrant);
+  const now = new Date().toISOString();
+  const alert = {
+    id: `${Date.now()}-${Math.random().toString(16).slice(2)}`,
+    competitionId: "local",
+    roleSource: "referee",
+    eventId: entrant.eventId,
+    sex: entrant.sex,
+    session: row?.session || state.session,
+    series: row?.series || (state.series === "all" ? "" : state.series),
+    stage: row?.stage || (isFinalStage(state.series) ? state.series : "series"),
+    line: row?.line || entrant.lane || entrant.seriesInfo?.line || "",
+    swimmerId: entrant.swimmerId || entrantKey(entrant),
+    displayName: formatDisplayName(entrant),
+    club: isRelayEntrant(entrant) ? (entrant.clubCode || entrant.club || "") : (entrant.club || ""),
+    clubCode: shortClubName(entrant),
+    type,
+    comment: decision.comment?.trim() || "",
+    relayLeg: decisionNeedsRelayLeg(type, entrant) ? (decision.relayLeg || "") : "",
+    lengthType: type === "underwater_15m" ? (decision.lengthType || "") : "",
+    lengthNumber: type === "underwater_15m" && decision.lengthType === "length" ? (decision.lengthNumber || "") : "",
+    requiresVideo: route === "video",
+    videoStatus: route === "video" ? "pending" : "none",
+    speakerStatus: route === "official" ? "pending" : "none",
+    informaticsStatus: route === "computer" || route === "official" ? "pending" : "none",
+    createdAt: now,
+    updatedAt: now
+  };
+  alerts.unshift(alert);
+  saveAlerts();
+  state.selectedSwimmerId = "";
+  render();
+}
+
+function renderRoleQueue() {
+  if (!roleQueue) return;
+  if (isSpeakerView() || state.role === "referee") {
+    roleQueue.hidden = true;
+    roleQueue.innerHTML = "";
+    return;
+  }
+  const rows = alerts
+    .filter(currentRoleAlertFilter)
+    .sort((a, b) => String(a.createdAt).localeCompare(String(b.createdAt)));
+  const title = state.role === "video" ? "Demandes vidéo à vérifier" : "Décisions à saisir";
+  roleQueue.hidden = false;
+  roleQueue.innerHTML = `
+    <h3>${title}</h3>
+    <div class="queue-list">
+      ${rows.length ? rows.map(renderQueueItem).join("") : `<p class="panel-subtitle">Aucune alerte en attente.</p>`}
+    </div>
+  `;
+}
+
+function renderQueueItem(alert) {
+  const videoActions = state.role === "video"
+    ? `<button class="ghost-button compact confirm-button" type="button" data-queue-action="confirm-video">Confirmer DSQ</button>
+       <button class="ghost-button compact danger-button" type="button" data-queue-action="reject-video">Invalider</button>`
+    : "";
+  const computerActions = state.role === "computer"
+    ? `<button class="ghost-button compact confirm-button" type="button" data-queue-action="done-computer">Traité</button>`
+    : "";
+  const title = state.role === "video" ? "Demande arbitrage vidéo à traiter" : "Décision à saisir";
+  const detail = alertCommentLabel(alert);
+  return `
+    <div class="queue-item urgent-queue-item" data-alert-id="${escapeHtml(alert.id)}">
+      <div>
+        <strong class="alert-title"><span aria-hidden="true">!</span> ${escapeHtml(title)}</strong>
+        <strong>${escapeHtml(decisionMotifLabel(alert))}</strong>
+        <span>${escapeHtml(alertRaceLabel(alert))}</span>
+        <span>${escapeHtml(alertSwimmerLabel(alert))}${detail ? ` - ${escapeHtml(detail)}` : ""}</span>
+      </div>
+      <div class="queue-actions">${videoActions}${computerActions}</div>
+    </div>
+  `;
+}
+
+function updateAlert(alertId, changes) {
+  const index = alerts.findIndex((alert) => alert.id === alertId);
+  if (index === -1) return;
+  alerts[index] = { ...alerts[index], ...changes, updatedAt: new Date().toISOString() };
+  saveAlerts();
+  render();
+}
+
+function cloneAlertForCancellation(source, type, by) {
+  const now = new Date().toISOString();
+  return {
+    ...source,
+    id: `${Date.now()}-${Math.random().toString(16).slice(2)}`,
+    originalAlertId: source.id,
+    type,
+    roleSource: by,
+    requiresVideo: false,
+    videoStatus: "none",
+    speakerStatus: isDsqAlert(source) ? "pending" : "none",
+    informaticsStatus: "pending",
+    createdAt: now,
+    updatedAt: now,
+    speakerAnnouncedAt: "",
+    informaticsDoneAt: "",
+    videoConfirmedAt: "",
+    videoRejectedAt: "",
+    cancelledAt: "",
+    cancelledBy: ""
+  };
+}
+
+function cancelDecision(alertId, cancelledBy = "referee") {
+  const index = alerts.findIndex((alert) => alert.id === alertId);
+  if (index === -1 || alerts[index].cancelledAt || isRequalificationAlert(alerts[index])) return;
+  const source = alerts[index];
+  const now = new Date().toISOString();
+  const updates = {
+    cancelledAt: now,
+    cancelledBy,
+    speakerStatus: source.speakerStatus === "pending" ? "none" : source.speakerStatus,
+    informaticsStatus: source.informaticsStatus === "pending" ? "none" : source.informaticsStatus
+  };
+  alerts[index] = { ...source, ...updates, updatedAt: now };
+  const shouldNotifySpeaker = isDsqAlert(source) && (source.speakerStatus === "done" || cancelledBy === "delegate");
+  const shouldNotifyComputer = source.informaticsStatus === "done" || cancelledBy === "delegate";
+  if (shouldNotifySpeaker || shouldNotifyComputer) {
+    const type = cancelledBy === "delegate" ? "requalification" : "ja_cancellation";
+    const cancellationAlert = cloneAlertForCancellation(source, type, cancelledBy);
+    cancellationAlert.speakerStatus = shouldNotifySpeaker ? "pending" : "none";
+    cancellationAlert.informaticsStatus = shouldNotifyComputer ? "pending" : "none";
+    alerts.unshift(cancellationAlert);
+  }
+  saveAlerts();
+  render();
 }
 
 function renderDataStatus(message = "") {
@@ -807,7 +1734,7 @@ function renderEntrants() {
     : `Série ${selectedSeries} / ${selectedSeriesCount}`;
   entrantsTitle.textContent = hasSeriesFilter
     ? seriesLabel
-    : `${entrantWord(2).replace(/^./, (letter) => letter.toUpperCase())} 2026`;
+    : (state.role === "referee" ? "Participants" : `${entrantWord(2).replace(/^./, (letter) => letter.toUpperCase())} 2026`);
   if (entrantsSubtitle) {
     entrantsSubtitle.textContent = hasSeriesFilter
       ? [seriesTime ? `Horaire ${seriesTime}` : "", `${visibleEntrants.length} ${swimmerWord(visibleEntrants.length)}`].filter(Boolean).join(" - ")
@@ -832,27 +1759,40 @@ function renderEntrants() {
   }
 
   entrantsBody.innerHTML = visibleEntrants.length ? visibleEntrants.map((entrant, index) => {
-    const reference = getEntrantReference(entrant);
+    const reference = state.role === "referee"
+      ? `<span class="badge muted">Cliquer pour décider</span>`
+      : (isSpeakerView() ? getEntrantReference(entrant) : "");
     const swimmerId = entrant.swimmerId || entrantKey(entrant);
     const lineLabel = hasSeriesFilter ? (entrant.seriesInfo?.line || "-") : index + 1;
+    const clubLabel = state.role === "referee" ? shortClubName(entrant) : (entrant.club || "-");
+    const displayName = state.role === "referee" && isRelayEntrant(entrant)
+      ? (shortClubName(entrant) || formatDisplayName(entrant))
+      : formatDisplayName(entrant);
+    const lineAlerts = activeLineAlertsForEntrant(entrant);
+    const alertBadges = renderLineAlertBadges(lineAlerts);
     return `
-      <tr class="${state.selectedSwimmerId === swimmerId ? "selected-row" : ""} category-row ${categoryClass(entrant.category)}" data-swimmer-id="${escapeHtml(swimmerId)}">
+      <tr class="${state.selectedSwimmerId === swimmerId ? "selected-row" : ""} ${lineAlerts.length ? "dsq-row" : ""} category-row ${categoryClass(entrant.category)}" data-swimmer-id="${escapeHtml(swimmerId)}">
         <td><span class="lane">${escapeHtml(lineLabel)}</span></td>
         <td class="name-cell">
-          <button class="swimmer-button" data-swimmer-id="${escapeHtml(swimmerId)}">${escapeHtml(formatDisplayName(entrant))}${!isRelayEntrant(entrant) ? ` <span class="birth-year">(${escapeHtml(getBirthYearLabel(entrant.birthDate))})</span>` : ""}${renderEdfBadges(entrant)}</button>
-          ${!isRelayEntrant(entrant) ? `<span class="club-name">${escapeHtml(entrant.club || "-")}</span>` : ""}
+          <button class="swimmer-button" data-swimmer-id="${escapeHtml(swimmerId)}">${escapeHtml(displayName)}${!isRelayEntrant(entrant) ? ` <span class="birth-year">(${escapeHtml(getBirthYearLabel(entrant.birthDate))})</span>` : ""}${isSpeakerView() ? renderEdfBadges(entrant) : ""}${alertBadges}</button>
+          ${!isRelayEntrant(entrant) || state.role === "referee" ? `<span class="club-name">${escapeHtml(clubLabel || "-")}</span>` : ""}
         </td>
         <td><span class="category-pill">${escapeHtml(categoryLabel(entrant.category, entrant.sex))}</span></td>
         <td class="time-cell">
           <span class="time">${escapeHtml(entrant.seedTime || "-")}</span>
-          ${renderRecordGapAlert(entrant)}
-          ${entrant.seedSource ? `<span class="seed-source">${escapeHtml(entrant.seedSource)}</span>` : ""}
+          ${isSpeakerView() ? renderRecordGapAlert(entrant) : ""}
+          ${isSpeakerView() && entrant.seedSource ? `<span class="seed-source">${escapeHtml(entrant.seedSource)}</span>` : ""}
         </td>
         <td>${reference}</td>
       </tr>
     `;
   }).join("") : `<tr><td colspan="5" class="empty">${programRow?.hasEntrants === false ? `Finale à afficher, ${entrantWord(2)} non disponibles pour le moment.` : `Aucun${isFemaleContext() ? "e" : ""} ${entrantWord(1)} pour cette sélection.`}</td></tr>`;
-  renderSwimmerDetails();
+  if (isSpeakerView()) {
+    renderSwimmerDetails();
+  } else {
+    swimmerDetails.hidden = true;
+    swimmerDetails.innerHTML = "";
+  }
 }
 
 function getEntrantReference(entrant) {
@@ -965,7 +1905,7 @@ function findRecordByTime(entrant, time, category) {
 }
 
 function isRelayEntrant(entrant) {
-  return String(entrant.eventId || "").startsWith("4x");
+  return /^\d+x/i.test(String(entrant.eventId || ""));
 }
 
 function isBestClubRelayEntry(entrant) {
@@ -1309,6 +2249,80 @@ function downloadJson() {
   URL.revokeObjectURL(url);
 }
 
+function dsqReportRows() {
+  return alerts
+    .filter((alert) => isDsqAlert(alert) && !alert.originalAlertId)
+    .sort((a, b) => String(a.createdAt).localeCompare(String(b.createdAt)));
+}
+
+function buildDsqReportHtml() {
+  const rows = dsqReportRows();
+  const generatedAt = new Date().toLocaleString("fr-FR", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
+  const meetName = `${data.meet?.name || "Compétition"}${data.meet?.city ? ` - ${data.meet.city}` : ""}`;
+  const body = rows.length ? rows.map((alert, index) => {
+    const event = data.events.find((item) => item.id === alert.eventId);
+    const sexLabel = alert.sex === "F" ? "Femmes" : (alert.sex === "M" ? "Hommes" : "Mixte");
+    const seriesLabel = alert.stage && isFinalStage(alert.stage) ? finalStageLabel(alert.stage) : `Série ${alert.series || "-"}`;
+    const identity = `${alert.displayName || "Concurrent"}${alertClubShortLabel(alert) ? ` - ${alertClubShortLabel(alert)}` : ""}`;
+    const timeline = alertTimelineItems(alert).map(([label, value]) => `${label} ${formatAlertDateTime(value)}`).join(" | ");
+    return `
+      <tr>
+        <td>${index + 1}</td>
+        <td>${escapeHtml(event?.label || alert.eventId)} ${escapeHtml(sexLabel)}<br><small>${escapeHtml(seriesLabel)} - ligne ${escapeHtml(alert.line || "-")}</small></td>
+        <td>${escapeHtml(identity)}</td>
+        <td>${escapeHtml(decisionMotifLabel(alert))}<br><small>${escapeHtml(alertStatusLabel(alert))}</small></td>
+        <td>${escapeHtml(timeline || "-")}</td>
+      </tr>
+    `;
+  }).join("") : `<tr><td colspan="5" class="empty">Aucune DSQ enregistrée.</td></tr>`;
+  return `<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Historique DSQ</title>
+  <style>
+    @page { margin: 12mm; }
+    body { font-family: Arial, sans-serif; color: #15232d; font-size: 11px; }
+    h1 { margin: 0 0 4px; font-size: 18px; }
+    p { margin: 0 0 10px; color: #52616b; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #d8e0e6; padding: 5px 6px; vertical-align: top; text-align: left; }
+    th { background: #eef4f7; font-size: 10px; text-transform: uppercase; }
+    td:first-child { width: 24px; text-align: center; font-weight: 700; }
+    small { color: #60717c; font-size: 10px; }
+    .empty { text-align: center; color: #60717c; }
+    .print-actions { margin-bottom: 10px; }
+    button { min-height: 32px; padding: 0 10px; border: 1px solid #b9c8d1; border-radius: 6px; background: #eef4f7; font-weight: 700; cursor: pointer; }
+    @media print { .print-actions { display: none; } body { font-size: 10px; } }
+  </style>
+</head>
+<body>
+  <div class="print-actions"><button onclick="window.print()">Enregistrer en PDF</button></div>
+  <h1>Historique DSQ</h1>
+  <p>${escapeHtml(meetName)} - généré le ${escapeHtml(generatedAt)} - ${rows.length} DSQ</p>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Course</th><th>Nageur / relais</th><th>Décision</th><th>Vie de la DSQ</th></tr>
+    </thead>
+    <tbody>${body}</tbody>
+  </table>
+</body>
+</html>`;
+}
+
+function exportDsqPdf() {
+  const reportWindow = window.open("", "_blank");
+  if (!reportWindow) {
+    window.alert("La fenêtre PDF a été bloquée par le navigateur.");
+    return;
+  }
+  reportWindow.document.open();
+  reportWindow.document.write(buildDsqReportHtml());
+  reportWindow.document.close();
+  reportWindow.focus();
+  setTimeout(() => reportWindow.print(), 250);
+}
+
 function escapeHtml(value) {
   return String(value)
     .replaceAll("&", "&amp;")
@@ -1359,6 +2373,14 @@ document.querySelectorAll(".segment").forEach((button) => {
   });
 });
 
+document.querySelectorAll(".role-chip").forEach((button) => {
+  button.addEventListener("click", () => {
+    const nextRole = button.dataset.role || "speaker";
+    switchRole(nextRole);
+    render();
+  });
+});
+
 headerRefs.addEventListener("click", (event) => {
   const button = event.target.closest(".ref-chip-button");
   if (!button) return;
@@ -1378,6 +2400,128 @@ seriesControls.addEventListener("click", (event) => {
   state.series = button.dataset.series;
   state.selectedSwimmerId = "";
   render();
+});
+
+officialAlerts?.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-alert-action]");
+  const card = event.target.closest("[data-alert-id]");
+  if (!card) return;
+  if (state.role === "live") {
+    dismissLiveAlert(card.dataset.alertId);
+    return;
+  }
+  if (!button) {
+    openAlertDetail(card.dataset.alertId);
+    return;
+  }
+  if (button.dataset.alertAction === "Annoncé") {
+    updateAlert(card.dataset.alertId, { speakerStatus: "done", speakerAnnouncedAt: new Date().toISOString() });
+  }
+});
+
+alertDetailModal?.addEventListener("click", (event) => {
+  if (event.target === alertDetailModal || event.target.closest("[data-close-alert-detail]")) {
+    closeAlertDetail();
+  }
+});
+
+decisionModal?.addEventListener("click", (event) => {
+  if (event.target === decisionModal || event.target.closest("[data-close-decision]")) {
+    closeDecisionModal();
+    return;
+  }
+  const entrant = selectedEntrant();
+  if (!entrant) return;
+  const typeButton = event.target.closest("[data-decision-type]");
+  if (typeButton) {
+    decisionDraft.comment = document.querySelector("#modalDecisionComment")?.value || decisionDraft.comment;
+    decisionDraft.type = typeButton.dataset.decisionType || "";
+    defaultDecisionDetail(decisionDraft.type, entrant);
+    renderDecisionModal();
+    return;
+  }
+  const relayButton = event.target.closest("[data-relay-leg]");
+  if (relayButton) {
+    decisionDraft.comment = document.querySelector("#modalDecisionComment")?.value || decisionDraft.comment;
+    decisionDraft.relayLeg = relayButton.dataset.relayLeg || "";
+    renderDecisionModal();
+    return;
+  }
+  const lengthButton = event.target.closest("[data-length-type]");
+  if (lengthButton) {
+    decisionDraft.comment = document.querySelector("#modalDecisionComment")?.value || decisionDraft.comment;
+    decisionDraft.lengthType = lengthButton.dataset.lengthType || "start";
+    renderDecisionModal();
+    return;
+  }
+  const stepButton = event.target.closest("[data-length-step]");
+  if (stepButton) {
+    decisionDraft.comment = document.querySelector("#modalDecisionComment")?.value || decisionDraft.comment;
+    const current = Math.max(1, Number.parseInt(decisionDraft.lengthNumber || "1", 10) || 1);
+    const step = Number.parseInt(stepButton.dataset.lengthStep || "0", 10) || 0;
+    decisionDraft.lengthNumber = String(Math.max(1, current + step));
+    decisionDraft.lengthType = "length";
+    renderDecisionModal();
+    return;
+  }
+  if (event.target.closest("[data-submit-decision]")) {
+    decisionDraft.comment = document.querySelector("#modalDecisionComment")?.value || "";
+    decisionDraft.lengthNumber = document.querySelector("#modalLengthNumber")?.value || decisionDraft.lengthNumber;
+    if (!decisionDraftIsReady(entrant)) return;
+    createDecisionAlert(decisionDraft);
+    closeDecisionModal();
+  }
+});
+
+decisionModal?.addEventListener("input", (event) => {
+  if (event.target?.id === "modalDecisionComment") {
+    decisionDraft.comment = event.target.value;
+  } else if (event.target?.id === "modalLengthNumber") {
+    decisionDraft.lengthNumber = event.target.value;
+  }
+});
+
+roleQueue?.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-queue-action]");
+  const item = event.target.closest("[data-alert-id]");
+  if (!item) return;
+  if (!button) {
+    openAlertDetail(item.dataset.alertId);
+    return;
+  }
+  const id = item.dataset.alertId;
+  if (button.dataset.queueAction === "confirm-video") {
+    updateAlert(id, { videoStatus: "confirmed", videoConfirmedAt: new Date().toISOString(), speakerStatus: "pending", informaticsStatus: "pending" });
+  } else if (button.dataset.queueAction === "reject-video") {
+    updateAlert(id, { videoStatus: "rejected", videoRejectedAt: new Date().toISOString(), speakerStatus: "none", informaticsStatus: "none" });
+  } else if (button.dataset.queueAction === "done-computer") {
+    updateAlert(id, { informaticsStatus: "done", informaticsDoneAt: new Date().toISOString() });
+  }
+});
+
+roleHistory?.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-history-action]");
+  const item = event.target.closest("[data-history-alert-id]");
+  if (!item) return;
+  const alert = alerts.find((row) => row.id === item.dataset.historyAlertId);
+  if (!alert) return;
+  if (!button) {
+    openAlertDetail(alert.id);
+    return;
+  }
+  if (button.dataset.historyAction === "cancel-ja") {
+    const ok = window.confirm("Annuler cette décision ? Une alerte sera envoyée si le speaker ou l'informatique doit corriger l'information.");
+    if (ok) cancelDecision(alert.id, "referee");
+  } else if (button.dataset.historyAction === "delegate-cancel") {
+    const ok = window.confirm("Confirmer l'annulation par le délégué de la compétition ? Le speaker et l'informatique recevront une alerte de requalification.");
+    if (ok) cancelDecision(alert.id, "delegate");
+  }
+});
+
+speakerHistory?.addEventListener("click", (event) => {
+  const item = event.target.closest("[data-history-alert-id]");
+  if (!item) return;
+  openAlertDetail(item.dataset.historyAlertId);
 });
 
 function goToNextSeries() {
@@ -1489,6 +2633,10 @@ entrantsBody.addEventListener("click", (event) => {
   if (!row) return;
   state.selectedSwimmerId = row.dataset.swimmerId;
   renderEntrants();
+  renderRolePanels();
+  if (state.role === "referee") {
+    openDecisionModal();
+  }
 });
 
 swimmerDetails.addEventListener("click", (event) => {
@@ -1499,6 +2647,7 @@ swimmerDetails.addEventListener("click", (event) => {
 
 document.querySelector("#printBtn")?.addEventListener("click", () => window.print());
 document.querySelector("#exportBtn")?.addEventListener("click", downloadJson);
+document.querySelector("#exportDsqPdfBtn")?.addEventListener("click", exportDsqPdf);
 
 async function fetchGeneratedData() {
   try {
@@ -1522,13 +2671,19 @@ async function fetchGeneratedData() {
 function applyFreshData(freshData, resetView = false) {
   data = normalizeData(freshData || sampleData);
   if (resetView) {
-    state.eventId = data.events[0]?.id || "";
-    state.sex = "F";
-    state.programKey = "";
-    state.category = "all";
-    state.series = "all";
-    state.selectedSwimmerId = "";
-    state.selectedRecordKey = "";
+    const currentRole = state.role;
+    roleStates = {
+      speaker: createRoleState("speaker"),
+      live: createRoleState("live"),
+      referee: createRoleState("referee"),
+      video: createRoleState("video"),
+      computer: createRoleState("computer")
+    };
+    state = cloneRoleState(roleStates[currentRole] || roleStates.speaker);
+    state.role = currentRole;
+    if (!isSpeakerView()) {
+      state.series = firstSeriesSelectionForCurrentRace();
+    }
     document.querySelectorAll(".segment").forEach((item) => item.classList.toggle("active", item.dataset.sex === "F"));
   } else {
     if (!data.events.some((event) => event.id === state.eventId)) {
@@ -1574,6 +2729,7 @@ async function checkForGeneratedUpdates() {
 
 document.querySelector("#reloadDataBtn")?.addEventListener("click", reloadBaseData);
 document.querySelector("#loadSampleBtn")?.addEventListener("click", reloadBaseData);
+document.querySelector("#resetHistoryBtn")?.addEventListener("click", resetHistory);
 setInterval(checkForGeneratedUpdates, 5000);
 
 jsonInput?.addEventListener("change", async () => {
@@ -1599,3 +2755,4 @@ document.querySelector("#importCsvBtn")?.addEventListener("click", () => {
 
 render();
 checkForGeneratedUpdates();
+
