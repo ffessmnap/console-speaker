@@ -12,18 +12,14 @@
         <p id="meetEyebrow" class="eyebrow">Championnat de France 2026 - Limoges</p>
         <h1>Console speaker</h1>
       </div>
+      <div class="top-session-field">
+        <span>Sessions</span>
+        <div id="sessionControls" class="session-controls"></div>
+      </div>
       <div class="top-actions">
-        <button id="printBtn" class="icon-button" title="Imprimer la fiche course" aria-label="Imprimer la fiche course">⎙</button>
-        <button id="exportBtn" class="ghost-button">Exporter</button>
-        <button id="reloadDataBtn" class="ghost-button">Régénérer les données</button>
-        <label class="file-button">
-          Importer
-          <input id="jsonInput" type="file" accept="application/json">
-        </label>
+        <button id="reloadDataBtn" class="ghost-button">R&eacute;g&eacute;n&eacute;rer les donn&eacute;es</button>
       </div>
     </header>
-
-    <div id="dataStatus" class="data-status" hidden></div>
 
     <main class="app-shell">
       <aside class="sidebar" aria-label="Choix de la course">
@@ -31,61 +27,53 @@
           <label for="eventSelect">Course</label>
           <select id="eventSelect"></select>
         </div>
-        <div class="field session-field">
-          <label>Sessions</label>
-          <div id="sessionControls" class="session-controls"></div>
-        </div>
         <div class="field series-field">
-          <label>Séries</label>
+          <label>S&eacute;ries</label>
           <div id="seriesControls" class="series-controls"></div>
-          <button id="nextSeriesBtn" class="ghost-button compact" type="button">Série suivante</button>
+          <button id="nextSeriesBtn" class="ghost-button compact" type="button">S&eacute;rie suivante</button>
         </div>
         <div class="segmented" role="group" aria-label="Sexe">
           <button class="segment active" data-sex="F">Femmes</button>
           <button class="segment" data-sex="M">Hommes</button>
           <button class="segment" data-sex="X">Mixte</button>
         </div>
-        <div class="field">
-          <label for="searchInput">Recherche engagé</label>
-          <input id="searchInput" type="search" placeholder="Nom, club, ligne...">
-        </div>
-        <div class="field">
-          <label for="categorySelect">Catégorie</label>
+        <div class="field category-field">
+          <label for="categorySelect">Cat&eacute;gorie</label>
           <select id="categorySelect"></select>
-        </div>
-        <div class="stat-strip">
-          <div>
-            <span id="entrantCount">0</span>
-            <small>engagés</small>
-          </div>
-          <div>
-            <span id="bestEntry">--</span>
-            <small>meilleur temps</small>
-          </div>
         </div>
       </aside>
 
       <section class="race-panel">
         <div class="race-header">
           <div>
-            <p id="raceMeta" class="eyebrow">Toutes catégories</p>
+            <div class="race-meta-line">
+              <p id="raceMeta" class="eyebrow">Toutes cat&eacute;gories</p>
+              <div class="race-stats">
+                <span class="entry-count-stat"><strong id="entrantCount">0</strong> <span id="entrantCountLabel">engag&eacute;s</span></span>
+                <span class="best-entry-stat"><small class="stat-label">meilleur engagement :</small> <strong id="bestEntry">--</strong> <small id="bestEntryName"></small></span>
+              </div>
+            </div>
             <h2 id="raceTitle">Course</h2>
             <div id="headerRefs" class="header-refs"></div>
             <div id="headerRefDetails" class="header-ref-details" hidden></div>
           </div>
           <div class="badge-row">
             <span id="raceSexBadge" class="badge">Femmes</span>
-            <span class="badge muted">Toutes catégories</span>
+            <span class="badge muted">Toutes cat&eacute;gories</span>
           </div>
         </div>
 
         <div class="grid-two">
           <article class="panel entrants-panel">
             <div class="panel-title">
-              <h3 id="entrantsTitle">Engagés 2026</h3>
+              <div class="entrant-heading">
+                <h3 id="entrantsTitle">Engag&eacute;s 2026</h3>
+                <p id="entrantsSubtitle" class="panel-subtitle"></p>
+              </div>
               <div class="panel-actions">
-                <button id="lineOrderBtn" class="line-order-button" type="button" title="Inverser l'ordre des lignes">Lignes 1→8</button>
-                <span id="filteredCount" class="soft-count">0 affichés</span>
+                <button id="nextSeriesInlineBtn" class="ghost-button compact" type="button">S&eacute;rie suivante</button>
+                <button id="lineOrderBtn" class="line-order-button" type="button" title="Inverser l'ordre des lignes">Lignes 1-8</button>
+                <span id="filteredCount" class="soft-count">0 affich&eacute;s</span>
               </div>
             </div>
             <div class="entrants-layout">
@@ -94,10 +82,10 @@
                   <thead>
                     <tr>
                       <th id="rankHeader">Rang</th>
-                      <th>Nageur</th>
+                      <th id="swimmerHeader">Nageur</th>
                       <th>Cat.</th>
                       <th>Temps</th>
-                      <th>Repère</th>
+                      <th>Rep&egrave;re</th>
                     </tr>
                   </thead>
                   <tbody id="entrantsBody"></tbody>
@@ -106,7 +94,6 @@
               <div id="swimmerDetails" class="swimmer-details" hidden></div>
             </div>
           </article>
-
         </div>
 
         <div class="reference-grid single-reference">
@@ -117,20 +104,17 @@
             <div id="top2025Box" class="ranking-columns"></div>
           </article>
         </div>
-
-        <article class="panel import-panel">
-          <div class="panel-title">
-            <h3>Préparer les données</h3>
-            <button id="loadSampleBtn" class="ghost-button compact">Recharger les données</button>
-          </div>
-          <p>Quand les PDF/résultats seront extraits, importe un fichier JSON au même format que l'export. Tu peux aussi coller les engagements d'une course au format CSV.</p>
-          <div class="csv-tools">
-            <textarea id="csvInput" rows="5" placeholder="ligne;nom;prenom;club;categorie;temps&#10;4;DURAND;Camille;Club Limoges;Junior;00:42.81"></textarea>
-            <button id="importCsvBtn" class="primary-button">Ajouter ces engagés à la course affichée</button>
-          </div>
-        </article>
       </section>
     </main>
+
+    <footer class="footer-status">
+      <div id="dataStatus" class="data-status" hidden></div>
+    </footer>
+
+    <button id="nextSeriesFloatBtn" class="floating-next" type="button">S&eacute;rie suivante</button>
+    <div id="antoineOverlay" class="antoine-overlay" hidden>
+      <div>Vive Antoine Fauveau</div>
+    </div>
 
     <script src="data.generated.js?v=20260515-speaker"></script>
     <script src="app.js?v=20260515-speaker"></script>

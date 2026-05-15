@@ -14317,7 +14317,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:00",
       "heatOrder": 1,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14329,7 +14330,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:00",
       "heatOrder": 1,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14341,7 +14343,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:00",
       "heatOrder": 1,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14353,7 +14356,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:00",
       "heatOrder": 1,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14365,7 +14369,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:00",
       "heatOrder": 1,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14377,7 +14382,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:00",
       "heatOrder": 1,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14389,7 +14395,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:00",
       "heatOrder": 1,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14401,7 +14408,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:00",
       "heatOrder": 1,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14413,7 +14421,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:01",
       "heatOrder": 2,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14425,7 +14434,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:01",
       "heatOrder": 2,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14437,7 +14447,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:01",
       "heatOrder": 2,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14449,7 +14460,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:01",
       "heatOrder": 2,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14461,7 +14473,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:01",
       "heatOrder": 2,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14473,7 +14486,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:01",
       "heatOrder": 2,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14485,7 +14499,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:01",
       "heatOrder": 2,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14497,7 +14512,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:01",
       "heatOrder": 2,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14509,7 +14525,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:03",
       "heatOrder": 3,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14521,7 +14538,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:03",
       "heatOrder": 3,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14533,7 +14551,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:03",
       "heatOrder": 3,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14545,7 +14564,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:03",
       "heatOrder": 3,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14557,7 +14577,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:03",
       "heatOrder": 3,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14569,7 +14590,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:03",
       "heatOrder": 3,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14581,7 +14603,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:03",
       "heatOrder": 3,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14593,7 +14616,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:03",
       "heatOrder": 3,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14605,7 +14629,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:04",
       "heatOrder": 4,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14617,7 +14642,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:04",
       "heatOrder": 4,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14629,7 +14655,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:04",
       "heatOrder": 4,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14641,7 +14668,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:04",
       "heatOrder": 4,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14653,7 +14681,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:04",
       "heatOrder": 4,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14665,7 +14694,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:04",
       "heatOrder": 4,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14677,7 +14707,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:04",
       "heatOrder": 4,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14689,7 +14720,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:04",
       "heatOrder": 4,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14701,7 +14733,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:06",
       "heatOrder": 5,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14713,7 +14746,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:06",
       "heatOrder": 5,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14725,7 +14759,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:06",
       "heatOrder": 5,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14737,7 +14772,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:06",
       "heatOrder": 5,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14749,7 +14785,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:06",
       "heatOrder": 5,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14761,7 +14798,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:06",
       "heatOrder": 5,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14773,7 +14811,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:06",
       "heatOrder": 5,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14785,7 +14824,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:06",
       "heatOrder": 5,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14797,7 +14837,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:08",
       "heatOrder": 6,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14809,7 +14850,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:08",
       "heatOrder": 6,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14821,7 +14863,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:08",
       "heatOrder": 6,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14833,7 +14876,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:08",
       "heatOrder": 6,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14845,7 +14889,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:09",
       "heatOrder": 7,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14857,7 +14902,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:09",
       "heatOrder": 7,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14869,7 +14915,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:09",
       "heatOrder": 7,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14881,7 +14928,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:09",
       "heatOrder": 7,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14893,7 +14941,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:09",
       "heatOrder": 7,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14905,7 +14954,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:09",
       "heatOrder": 7,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14917,7 +14967,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:09",
       "heatOrder": 7,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14929,7 +14980,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:11",
       "heatOrder": 8,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14941,7 +14993,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:11",
       "heatOrder": 8,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14953,7 +15006,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:11",
       "heatOrder": 8,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14965,7 +15019,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:11",
       "heatOrder": 8,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14977,7 +15032,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:11",
       "heatOrder": 8,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -14989,7 +15045,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:11",
       "heatOrder": 8,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15001,7 +15058,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:11",
       "heatOrder": 8,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15013,7 +15071,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:11",
       "heatOrder": 8,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15025,7 +15084,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:12",
       "heatOrder": 9,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15037,7 +15097,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:12",
       "heatOrder": 9,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15049,7 +15110,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:12",
       "heatOrder": 9,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15061,7 +15123,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:12",
       "heatOrder": 9,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15073,7 +15136,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:12",
       "heatOrder": 9,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15085,7 +15149,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:12",
       "heatOrder": 9,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15097,7 +15162,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:12",
       "heatOrder": 9,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15109,7 +15175,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:12",
       "heatOrder": 9,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15121,7 +15188,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:14",
       "heatOrder": 10,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15133,7 +15201,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:14",
       "heatOrder": 10,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15145,7 +15214,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:14",
       "heatOrder": 10,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15157,7 +15227,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:14",
       "heatOrder": 10,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15169,7 +15240,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:14",
       "heatOrder": 10,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15181,7 +15253,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:14",
       "heatOrder": 10,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15193,7 +15266,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:14",
       "heatOrder": 10,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15205,7 +15279,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:14",
       "heatOrder": 10,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15217,7 +15292,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:15",
       "heatOrder": 11,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15229,7 +15305,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:15",
       "heatOrder": 11,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15241,7 +15318,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:15",
       "heatOrder": 11,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15253,7 +15331,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:15",
       "heatOrder": 11,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15265,7 +15344,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:15",
       "heatOrder": 11,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15277,7 +15357,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:15",
       "heatOrder": 11,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15289,7 +15370,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:15",
       "heatOrder": 11,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50ap",
@@ -15301,7 +15383,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:15",
       "heatOrder": 11,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15313,7 +15396,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:17",
       "heatOrder": 12,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15325,7 +15409,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:17",
       "heatOrder": 12,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15337,7 +15422,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:17",
       "heatOrder": 12,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15349,7 +15435,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:17",
       "heatOrder": 12,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15361,7 +15448,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:17",
       "heatOrder": 12,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15373,7 +15461,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:17",
       "heatOrder": 12,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15385,7 +15474,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:20",
       "heatOrder": 13,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15397,7 +15487,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:20",
       "heatOrder": 13,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15409,7 +15500,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:20",
       "heatOrder": 13,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15421,7 +15513,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:20",
       "heatOrder": 13,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15433,7 +15526,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:20",
       "heatOrder": 13,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15445,7 +15539,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:20",
       "heatOrder": 13,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15457,7 +15552,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:24",
       "heatOrder": 14,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15469,7 +15565,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:24",
       "heatOrder": 14,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15481,7 +15578,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:24",
       "heatOrder": 14,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15493,7 +15591,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:24",
       "heatOrder": 14,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15505,7 +15604,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:24",
       "heatOrder": 14,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15517,7 +15617,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:24",
       "heatOrder": 14,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15529,7 +15630,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:24",
       "heatOrder": 14,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15541,7 +15643,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:27",
       "heatOrder": 15,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15553,7 +15656,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:27",
       "heatOrder": 15,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15565,7 +15669,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:27",
       "heatOrder": 15,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15577,7 +15682,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:27",
       "heatOrder": 15,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15589,7 +15695,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:27",
       "heatOrder": 15,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15601,7 +15708,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:30",
       "heatOrder": 16,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15613,7 +15721,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:30",
       "heatOrder": 16,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15625,7 +15734,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:30",
       "heatOrder": 16,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15637,7 +15747,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:30",
       "heatOrder": 16,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15649,7 +15760,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:30",
       "heatOrder": 16,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15661,7 +15773,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:30",
       "heatOrder": 16,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15673,7 +15786,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:34",
       "heatOrder": 17,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15685,7 +15799,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:34",
       "heatOrder": 17,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15697,7 +15812,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:34",
       "heatOrder": 17,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15709,7 +15825,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:34",
       "heatOrder": 17,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15721,7 +15838,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:34",
       "heatOrder": 17,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200sf",
@@ -15733,7 +15851,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:34",
       "heatOrder": 17,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -15745,7 +15864,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:37",
       "heatOrder": 18,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -15757,7 +15877,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:37",
       "heatOrder": 18,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -15769,7 +15890,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:37",
       "heatOrder": 18,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -15781,7 +15903,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:37",
       "heatOrder": 18,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -15793,7 +15916,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:44",
       "heatOrder": 19,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -15805,7 +15929,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:44",
       "heatOrder": 19,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -15817,7 +15942,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:44",
       "heatOrder": 19,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -15829,7 +15955,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:44",
       "heatOrder": 19,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -15841,7 +15968,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:44",
       "heatOrder": 19,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -15853,7 +15981,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:44",
       "heatOrder": 19,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -15865,7 +15994,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:44",
       "heatOrder": 19,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -15877,7 +16007,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:50",
       "heatOrder": 20,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -15889,7 +16020,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:50",
       "heatOrder": 20,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -15901,7 +16033,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:50",
       "heatOrder": 20,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -15913,7 +16046,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:50",
       "heatOrder": 20,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -15925,7 +16059,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:50",
       "heatOrder": 20,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -15937,7 +16072,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:50",
       "heatOrder": 20,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -15949,7 +16085,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:50",
       "heatOrder": 20,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -15961,7 +16098,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:56",
       "heatOrder": 21,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -15973,7 +16111,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:56",
       "heatOrder": 21,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -15985,7 +16124,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:56",
       "heatOrder": 21,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -15997,7 +16137,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:56",
       "heatOrder": 21,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -16009,7 +16150,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:56",
       "heatOrder": 21,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -16021,7 +16163,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:56",
       "heatOrder": 21,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -16033,7 +16176,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:56",
       "heatOrder": 21,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -16045,7 +16189,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:01",
       "heatOrder": 22,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -16057,7 +16202,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:01",
       "heatOrder": 22,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -16069,7 +16215,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:01",
       "heatOrder": 22,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -16081,7 +16228,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:01",
       "heatOrder": 22,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -16093,7 +16241,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:01",
       "heatOrder": 22,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -16105,7 +16254,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:01",
       "heatOrder": 22,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -16117,7 +16267,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:08",
       "heatOrder": 23,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -16129,7 +16280,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:08",
       "heatOrder": 23,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -16141,7 +16293,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:08",
       "heatOrder": 23,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -16153,7 +16306,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:08",
       "heatOrder": 23,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -16165,7 +16319,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:08",
       "heatOrder": 23,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -16177,7 +16332,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:08",
       "heatOrder": 23,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -16189,7 +16345,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:08",
       "heatOrder": 23,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -16201,7 +16358,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:14",
       "heatOrder": 24,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -16213,7 +16371,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:14",
       "heatOrder": 24,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -16225,7 +16384,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:14",
       "heatOrder": 24,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -16237,7 +16397,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:14",
       "heatOrder": 24,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -16249,7 +16410,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:14",
       "heatOrder": 24,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -16261,7 +16423,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:14",
       "heatOrder": 24,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400bi",
@@ -16273,7 +16436,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:14",
       "heatOrder": 24,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "1500sf",
@@ -16285,7 +16449,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:20",
       "heatOrder": 25,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "1500sf",
@@ -16297,7 +16462,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:20",
       "heatOrder": 25,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "1500sf",
@@ -16309,7 +16475,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:20",
       "heatOrder": 25,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "1500sf",
@@ -16321,7 +16488,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:40",
       "heatOrder": 26,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "1500sf",
@@ -16333,7 +16501,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:40",
       "heatOrder": 26,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "1500sf",
@@ -16345,7 +16514,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:40",
       "heatOrder": 26,
       "session": "1",
-      "sessionLabel": "Jeudi 29 mai - Session du matin"
+      "sessionLabel": "Jeudi 29 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "1500sf",
@@ -16357,7 +16527,8 @@ window.SPEAKER_DATA = {
       "startTime": "18:23",
       "heatOrder": 27,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "1500sf",
@@ -16369,7 +16540,8 @@ window.SPEAKER_DATA = {
       "startTime": "18:23",
       "heatOrder": 27,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "1500sf",
@@ -16381,7 +16553,8 @@ window.SPEAKER_DATA = {
       "startTime": "18:23",
       "heatOrder": 27,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "1500sf",
@@ -16393,7 +16566,8 @@ window.SPEAKER_DATA = {
       "startTime": "18:23",
       "heatOrder": 27,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "1500sf",
@@ -16405,7 +16579,8 @@ window.SPEAKER_DATA = {
       "startTime": "18:23",
       "heatOrder": 27,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "1500sf",
@@ -16417,7 +16592,8 @@ window.SPEAKER_DATA = {
       "startTime": "18:23",
       "heatOrder": 27,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "1500sf",
@@ -16429,7 +16605,8 @@ window.SPEAKER_DATA = {
       "startTime": "18:23",
       "heatOrder": 27,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "1500sf",
@@ -16441,7 +16618,8 @@ window.SPEAKER_DATA = {
       "startTime": "18:23",
       "heatOrder": 27,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "1500sf",
@@ -16453,7 +16631,8 @@ window.SPEAKER_DATA = {
       "startTime": "18:44",
       "heatOrder": 28,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "1500sf",
@@ -16465,7 +16644,8 @@ window.SPEAKER_DATA = {
       "startTime": "18:44",
       "heatOrder": 28,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "1500sf",
@@ -16477,7 +16657,8 @@ window.SPEAKER_DATA = {
       "startTime": "18:44",
       "heatOrder": 28,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "1500sf",
@@ -16489,7 +16670,8 @@ window.SPEAKER_DATA = {
       "startTime": "18:44",
       "heatOrder": 28,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "1500sf",
@@ -16501,7 +16683,8 @@ window.SPEAKER_DATA = {
       "startTime": "18:44",
       "heatOrder": 28,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "1500sf",
@@ -16513,7 +16696,8 @@ window.SPEAKER_DATA = {
       "startTime": "18:44",
       "heatOrder": 28,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "1500sf",
@@ -16525,7 +16709,8 @@ window.SPEAKER_DATA = {
       "startTime": "18:44",
       "heatOrder": 28,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "1500sf",
@@ -16537,7 +16722,8 @@ window.SPEAKER_DATA = {
       "startTime": "18:44",
       "heatOrder": 28,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x100sf",
@@ -16549,7 +16735,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:05",
       "heatOrder": 29,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x100sf",
@@ -16561,7 +16748,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:05",
       "heatOrder": 29,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x100sf",
@@ -16573,7 +16761,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:05",
       "heatOrder": 29,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x100sf",
@@ -16585,7 +16774,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:05",
       "heatOrder": 29,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x100sf",
@@ -16597,7 +16787,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:05",
       "heatOrder": 29,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x100sf",
@@ -16609,7 +16800,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:13",
       "heatOrder": 30,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x100sf",
@@ -16621,7 +16813,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:13",
       "heatOrder": 30,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x100sf",
@@ -16633,7 +16826,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:13",
       "heatOrder": 30,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x100sf",
@@ -16645,7 +16839,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:13",
       "heatOrder": 30,
       "session": "2",
-      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi"
+      "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16657,7 +16852,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:00",
       "heatOrder": 31,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16669,7 +16865,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:00",
       "heatOrder": 31,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16681,7 +16878,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:00",
       "heatOrder": 31,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16693,7 +16891,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:00",
       "heatOrder": 31,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16705,7 +16904,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:02",
       "heatOrder": 32,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16717,7 +16917,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:02",
       "heatOrder": 32,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16729,7 +16930,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:02",
       "heatOrder": 32,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16741,7 +16943,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:02",
       "heatOrder": 32,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16753,7 +16956,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:02",
       "heatOrder": 32,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16765,7 +16969,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:02",
       "heatOrder": 32,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16777,7 +16982,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:03",
       "heatOrder": 33,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16789,7 +16995,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:03",
       "heatOrder": 33,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16801,7 +17008,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:03",
       "heatOrder": 33,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16813,7 +17021,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:03",
       "heatOrder": 33,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16825,7 +17034,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:03",
       "heatOrder": 33,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16837,7 +17047,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:03",
       "heatOrder": 33,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16849,7 +17060,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:03",
       "heatOrder": 33,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16861,7 +17073,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:03",
       "heatOrder": 33,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16873,7 +17086,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:05",
       "heatOrder": 34,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16885,7 +17099,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:05",
       "heatOrder": 34,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16897,7 +17112,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:05",
       "heatOrder": 34,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16909,7 +17125,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:05",
       "heatOrder": 34,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16921,7 +17138,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:05",
       "heatOrder": 34,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16933,7 +17151,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:05",
       "heatOrder": 34,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16945,7 +17164,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:05",
       "heatOrder": 34,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16957,7 +17177,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:05",
       "heatOrder": 34,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16969,7 +17190,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:07",
       "heatOrder": 35,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16981,7 +17203,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:07",
       "heatOrder": 35,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -16993,7 +17216,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:07",
       "heatOrder": 35,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17005,7 +17229,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:07",
       "heatOrder": 35,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17017,7 +17242,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:07",
       "heatOrder": 35,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17029,7 +17255,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:07",
       "heatOrder": 35,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17041,7 +17268,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:07",
       "heatOrder": 35,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17053,7 +17281,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:07",
       "heatOrder": 35,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17065,7 +17294,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:09",
       "heatOrder": 36,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17077,7 +17307,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:09",
       "heatOrder": 36,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17089,7 +17320,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:09",
       "heatOrder": 36,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17101,7 +17333,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:09",
       "heatOrder": 36,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17113,7 +17346,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:09",
       "heatOrder": 36,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17125,7 +17359,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:09",
       "heatOrder": 36,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17137,7 +17372,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:09",
       "heatOrder": 36,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17149,7 +17385,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:09",
       "heatOrder": 36,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17161,7 +17398,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:14",
       "heatOrder": 37,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17173,7 +17411,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:14",
       "heatOrder": 37,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17185,7 +17424,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:14",
       "heatOrder": 37,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17197,7 +17437,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:14",
       "heatOrder": 37,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17209,7 +17450,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:16",
       "heatOrder": 38,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17221,7 +17463,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:16",
       "heatOrder": 38,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17233,7 +17476,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:16",
       "heatOrder": 38,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17245,7 +17489,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:16",
       "heatOrder": 38,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17257,7 +17502,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:16",
       "heatOrder": 38,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17269,7 +17515,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:18",
       "heatOrder": 39,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17281,7 +17528,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:18",
       "heatOrder": 39,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17293,7 +17541,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:18",
       "heatOrder": 39,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17305,7 +17554,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:18",
       "heatOrder": 39,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17317,7 +17567,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:18",
       "heatOrder": 39,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17329,7 +17580,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:18",
       "heatOrder": 39,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17341,7 +17593,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:18",
       "heatOrder": 39,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17353,7 +17606,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:18",
       "heatOrder": 39,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17365,7 +17619,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:19",
       "heatOrder": 40,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17377,7 +17632,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:19",
       "heatOrder": 40,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17389,7 +17645,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:19",
       "heatOrder": 40,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17401,7 +17658,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:19",
       "heatOrder": 40,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17413,7 +17671,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:19",
       "heatOrder": 40,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17425,7 +17684,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:19",
       "heatOrder": 40,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17437,7 +17697,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:19",
       "heatOrder": 40,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17449,7 +17710,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:19",
       "heatOrder": 40,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17461,7 +17723,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:21",
       "heatOrder": 41,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17473,7 +17736,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:21",
       "heatOrder": 41,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17485,7 +17749,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:21",
       "heatOrder": 41,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17497,7 +17762,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:21",
       "heatOrder": 41,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17509,7 +17775,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:21",
       "heatOrder": 41,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17521,7 +17788,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:21",
       "heatOrder": 41,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17533,7 +17801,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:21",
       "heatOrder": 41,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50bi",
@@ -17545,7 +17814,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:21",
       "heatOrder": 41,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17557,7 +17827,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:26",
       "heatOrder": 42,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17569,7 +17840,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:26",
       "heatOrder": 42,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17581,7 +17853,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:26",
       "heatOrder": 42,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17593,7 +17866,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:26",
       "heatOrder": 42,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17605,7 +17879,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:26",
       "heatOrder": 42,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17617,7 +17892,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:26",
       "heatOrder": 42,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17629,7 +17905,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:32",
       "heatOrder": 43,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17641,7 +17918,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:32",
       "heatOrder": 43,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17653,7 +17931,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:32",
       "heatOrder": 43,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17665,7 +17944,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:32",
       "heatOrder": 43,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17677,7 +17957,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:32",
       "heatOrder": 43,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17689,7 +17970,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:32",
       "heatOrder": 43,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17701,7 +17983,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:38",
       "heatOrder": 44,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17713,7 +17996,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:38",
       "heatOrder": 44,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17725,7 +18009,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:38",
       "heatOrder": 44,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17737,7 +18022,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:38",
       "heatOrder": 44,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17749,7 +18035,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:38",
       "heatOrder": 44,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17761,7 +18048,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:38",
       "heatOrder": 44,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17773,7 +18061,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:38",
       "heatOrder": 44,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17785,7 +18074,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:47",
       "heatOrder": 45,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17797,7 +18087,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:47",
       "heatOrder": 45,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17809,7 +18100,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:47",
       "heatOrder": 45,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17821,7 +18113,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:47",
       "heatOrder": 45,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17833,7 +18126,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:47",
       "heatOrder": 45,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17845,7 +18139,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:47",
       "heatOrder": 45,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17857,7 +18152,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:47",
       "heatOrder": 45,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17869,7 +18165,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:54",
       "heatOrder": 46,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17881,7 +18178,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:54",
       "heatOrder": 46,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17893,7 +18191,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:54",
       "heatOrder": 46,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17905,7 +18204,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:54",
       "heatOrder": 46,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17917,7 +18217,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:54",
       "heatOrder": 46,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17929,7 +18230,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:54",
       "heatOrder": 46,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17941,7 +18243,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:54",
       "heatOrder": 46,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17953,7 +18256,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:00",
       "heatOrder": 47,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17965,7 +18269,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:00",
       "heatOrder": 47,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17977,7 +18282,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:00",
       "heatOrder": 47,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -17989,7 +18295,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:00",
       "heatOrder": 47,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -18001,7 +18308,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:00",
       "heatOrder": 47,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -18013,7 +18321,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:00",
       "heatOrder": 47,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400sf",
@@ -18025,7 +18334,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:00",
       "heatOrder": 47,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18037,7 +18347,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:09",
       "heatOrder": 48,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18049,7 +18360,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:09",
       "heatOrder": 48,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18061,7 +18373,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:09",
       "heatOrder": 48,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18073,7 +18386,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:09",
       "heatOrder": 48,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18085,7 +18399,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:09",
       "heatOrder": 48,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18097,7 +18412,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:12",
       "heatOrder": 49,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18109,7 +18425,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:12",
       "heatOrder": 49,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18121,7 +18438,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:12",
       "heatOrder": 49,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18133,7 +18451,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:12",
       "heatOrder": 49,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18145,7 +18464,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:12",
       "heatOrder": 49,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18157,7 +18477,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:12",
       "heatOrder": 49,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18169,7 +18490,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:12",
       "heatOrder": 49,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18181,7 +18503,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:12",
       "heatOrder": 49,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18193,7 +18516,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:15",
       "heatOrder": 50,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18205,7 +18529,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:15",
       "heatOrder": 50,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18217,7 +18542,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:15",
       "heatOrder": 50,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18229,7 +18555,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:15",
       "heatOrder": 50,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18241,7 +18568,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:15",
       "heatOrder": 50,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18253,7 +18581,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:15",
       "heatOrder": 50,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18265,7 +18594,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:15",
       "heatOrder": 50,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18277,7 +18607,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:15",
       "heatOrder": 50,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18289,7 +18620,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:17",
       "heatOrder": 51,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18301,7 +18633,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:17",
       "heatOrder": 51,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18313,7 +18646,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:17",
       "heatOrder": 51,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18325,7 +18659,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:17",
       "heatOrder": 51,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18337,7 +18672,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:17",
       "heatOrder": 51,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18349,7 +18685,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:17",
       "heatOrder": 51,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18361,7 +18698,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:17",
       "heatOrder": 51,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18373,7 +18711,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:17",
       "heatOrder": 51,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18385,7 +18724,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:22",
       "heatOrder": 52,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18397,7 +18737,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:22",
       "heatOrder": 52,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18409,7 +18750,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:22",
       "heatOrder": 52,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18421,7 +18763,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:22",
       "heatOrder": 52,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18433,7 +18776,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:25",
       "heatOrder": 53,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18445,7 +18789,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:25",
       "heatOrder": 53,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18457,7 +18802,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:25",
       "heatOrder": 53,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18469,7 +18815,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:25",
       "heatOrder": 53,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18481,7 +18828,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:25",
       "heatOrder": 53,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18493,7 +18841,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:25",
       "heatOrder": 53,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18505,7 +18854,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:27",
       "heatOrder": 54,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18517,7 +18867,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:27",
       "heatOrder": 54,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18529,7 +18880,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:27",
       "heatOrder": 54,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18541,7 +18893,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:27",
       "heatOrder": 54,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18553,7 +18906,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:27",
       "heatOrder": 54,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18565,7 +18919,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:27",
       "heatOrder": 54,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18577,7 +18932,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:27",
       "heatOrder": 54,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18589,7 +18945,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:27",
       "heatOrder": 54,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18601,7 +18958,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:29",
       "heatOrder": 55,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18613,7 +18971,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:29",
       "heatOrder": 55,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18625,7 +18984,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:29",
       "heatOrder": 55,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18637,7 +18997,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:29",
       "heatOrder": 55,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18649,7 +19010,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:29",
       "heatOrder": 55,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18661,7 +19023,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:29",
       "heatOrder": 55,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18673,7 +19036,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:29",
       "heatOrder": 55,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18685,7 +19049,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:29",
       "heatOrder": 55,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18697,7 +19062,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:32",
       "heatOrder": 56,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18709,7 +19075,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:32",
       "heatOrder": 56,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18721,7 +19088,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:32",
       "heatOrder": 56,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18733,7 +19101,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:32",
       "heatOrder": 56,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18745,7 +19114,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:32",
       "heatOrder": 56,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18757,7 +19127,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:32",
       "heatOrder": 56,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18769,7 +19140,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:32",
       "heatOrder": 56,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100is",
@@ -18781,7 +19153,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:32",
       "heatOrder": 56,
       "session": "3",
-      "sessionLabel": "Vendredi 30 mai - Session du matin"
+      "sessionLabel": "Vendredi 30 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "4x200sf",
@@ -18793,7 +19166,8 @@ window.SPEAKER_DATA = {
       "startTime": "18:27",
       "heatOrder": 57,
       "session": "4",
-      "sessionLabel": "Vendredi 30 mai - Session de l'après-midi"
+      "sessionLabel": "Vendredi 30 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x200sf",
@@ -18805,7 +19179,8 @@ window.SPEAKER_DATA = {
       "startTime": "18:27",
       "heatOrder": 57,
       "session": "4",
-      "sessionLabel": "Vendredi 30 mai - Session de l'après-midi"
+      "sessionLabel": "Vendredi 30 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x200sf",
@@ -18817,7 +19192,8 @@ window.SPEAKER_DATA = {
       "startTime": "18:27",
       "heatOrder": 57,
       "session": "4",
-      "sessionLabel": "Vendredi 30 mai - Session de l'après-midi"
+      "sessionLabel": "Vendredi 30 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x200sf",
@@ -18829,7 +19205,8 @@ window.SPEAKER_DATA = {
       "startTime": "18:27",
       "heatOrder": 57,
       "session": "4",
-      "sessionLabel": "Vendredi 30 mai - Session de l'après-midi"
+      "sessionLabel": "Vendredi 30 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x200sf",
@@ -18841,7 +19218,8 @@ window.SPEAKER_DATA = {
       "startTime": "18:27",
       "heatOrder": 57,
       "session": "4",
-      "sessionLabel": "Vendredi 30 mai - Session de l'après-midi"
+      "sessionLabel": "Vendredi 30 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x200sf",
@@ -18853,7 +19231,8 @@ window.SPEAKER_DATA = {
       "startTime": "18:40",
       "heatOrder": 58,
       "session": "4",
-      "sessionLabel": "Vendredi 30 mai - Session de l'après-midi"
+      "sessionLabel": "Vendredi 30 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x200sf",
@@ -18865,7 +19244,8 @@ window.SPEAKER_DATA = {
       "startTime": "18:40",
       "heatOrder": 58,
       "session": "4",
-      "sessionLabel": "Vendredi 30 mai - Session de l'après-midi"
+      "sessionLabel": "Vendredi 30 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -18877,7 +19257,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:00",
       "heatOrder": 59,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -18889,7 +19270,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:00",
       "heatOrder": 59,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -18901,7 +19283,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:00",
       "heatOrder": 59,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -18913,7 +19296,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:00",
       "heatOrder": 59,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -18925,7 +19309,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:00",
       "heatOrder": 59,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -18937,7 +19322,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:00",
       "heatOrder": 59,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -18949,7 +19335,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:02",
       "heatOrder": 60,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -18961,7 +19348,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:02",
       "heatOrder": 60,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -18973,7 +19361,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:02",
       "heatOrder": 60,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -18985,7 +19374,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:02",
       "heatOrder": 60,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -18997,7 +19387,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:02",
       "heatOrder": 60,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19009,7 +19400,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:02",
       "heatOrder": 60,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19021,7 +19413,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:02",
       "heatOrder": 60,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19033,7 +19426,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:02",
       "heatOrder": 60,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19045,7 +19439,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:03",
       "heatOrder": 61,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19057,7 +19452,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:03",
       "heatOrder": 61,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19069,7 +19465,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:03",
       "heatOrder": 61,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19081,7 +19478,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:03",
       "heatOrder": 61,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19093,7 +19491,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:03",
       "heatOrder": 61,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19105,7 +19504,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:03",
       "heatOrder": 61,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19117,7 +19517,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:03",
       "heatOrder": 61,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19129,7 +19530,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:03",
       "heatOrder": 61,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19141,7 +19543,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:05",
       "heatOrder": 62,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19153,7 +19556,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:05",
       "heatOrder": 62,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19165,7 +19569,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:05",
       "heatOrder": 62,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19177,7 +19582,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:05",
       "heatOrder": 62,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19189,7 +19595,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:05",
       "heatOrder": 62,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19201,7 +19608,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:05",
       "heatOrder": 62,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19213,7 +19621,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:05",
       "heatOrder": 62,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19225,7 +19634,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:05",
       "heatOrder": 62,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19237,7 +19647,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:07",
       "heatOrder": 63,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19249,7 +19660,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:07",
       "heatOrder": 63,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19261,7 +19673,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:07",
       "heatOrder": 63,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19273,7 +19686,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:07",
       "heatOrder": 63,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19285,7 +19699,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:07",
       "heatOrder": 63,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19297,7 +19712,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:07",
       "heatOrder": 63,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19309,7 +19725,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:07",
       "heatOrder": 63,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19321,7 +19738,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:07",
       "heatOrder": 63,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19333,7 +19751,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:12",
       "heatOrder": 64,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19345,7 +19764,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:12",
       "heatOrder": 64,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19357,7 +19777,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:12",
       "heatOrder": 64,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19369,7 +19790,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:12",
       "heatOrder": 64,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19381,7 +19803,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:12",
       "heatOrder": 64,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19393,7 +19816,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:12",
       "heatOrder": 64,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19405,7 +19829,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:14",
       "heatOrder": 65,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19417,7 +19842,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:14",
       "heatOrder": 65,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19429,7 +19855,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:14",
       "heatOrder": 65,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19441,7 +19868,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:14",
       "heatOrder": 65,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19453,7 +19881,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:14",
       "heatOrder": 65,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19465,7 +19894,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:14",
       "heatOrder": 65,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19477,7 +19907,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:14",
       "heatOrder": 65,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19489,7 +19920,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:14",
       "heatOrder": 65,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19501,7 +19933,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:15",
       "heatOrder": 66,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19513,7 +19946,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:15",
       "heatOrder": 66,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19525,7 +19959,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:15",
       "heatOrder": 66,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19537,7 +19972,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:15",
       "heatOrder": 66,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19549,7 +19985,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:15",
       "heatOrder": 66,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19561,7 +19998,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:15",
       "heatOrder": 66,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19573,7 +20011,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:15",
       "heatOrder": 66,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19585,7 +20024,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:15",
       "heatOrder": 66,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19597,7 +20037,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:17",
       "heatOrder": 67,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19609,7 +20050,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:17",
       "heatOrder": 67,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19621,7 +20063,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:17",
       "heatOrder": 67,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19633,7 +20076,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:17",
       "heatOrder": 67,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19645,7 +20089,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:17",
       "heatOrder": 67,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19657,7 +20102,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:17",
       "heatOrder": 67,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19669,7 +20115,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:17",
       "heatOrder": 67,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19681,7 +20128,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:17",
       "heatOrder": 67,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19693,7 +20141,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:19",
       "heatOrder": 68,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19705,7 +20154,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:19",
       "heatOrder": 68,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19717,7 +20167,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:19",
       "heatOrder": 68,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19729,7 +20180,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:19",
       "heatOrder": 68,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19741,7 +20193,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:19",
       "heatOrder": 68,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19753,7 +20206,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:19",
       "heatOrder": 68,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19765,7 +20219,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:19",
       "heatOrder": 68,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "50sf",
@@ -19777,7 +20232,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:19",
       "heatOrder": 68,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -19789,7 +20245,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:23",
       "heatOrder": 69,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -19801,7 +20258,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:23",
       "heatOrder": 69,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -19813,7 +20271,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:23",
       "heatOrder": 69,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -19825,7 +20284,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:23",
       "heatOrder": 69,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -19837,7 +20297,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:26",
       "heatOrder": 70,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -19849,7 +20310,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:26",
       "heatOrder": 70,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -19861,7 +20323,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:26",
       "heatOrder": 70,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -19873,7 +20336,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:26",
       "heatOrder": 70,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -19885,7 +20349,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:26",
       "heatOrder": 70,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -19897,7 +20362,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:26",
       "heatOrder": 70,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -19909,7 +20375,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:26",
       "heatOrder": 70,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -19921,7 +20388,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:26",
       "heatOrder": 70,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -19933,7 +20401,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:28",
       "heatOrder": 71,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -19945,7 +20414,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:28",
       "heatOrder": 71,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -19957,7 +20427,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:28",
       "heatOrder": 71,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -19969,7 +20440,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:28",
       "heatOrder": 71,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -19981,7 +20453,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:28",
       "heatOrder": 71,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -19993,7 +20466,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:28",
       "heatOrder": 71,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20005,7 +20479,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:28",
       "heatOrder": 71,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20017,7 +20492,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:28",
       "heatOrder": 71,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20029,7 +20505,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:31",
       "heatOrder": 72,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20041,7 +20518,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:31",
       "heatOrder": 72,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20053,7 +20531,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:31",
       "heatOrder": 72,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20065,7 +20544,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:31",
       "heatOrder": 72,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20077,7 +20557,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:31",
       "heatOrder": 72,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20089,7 +20570,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:31",
       "heatOrder": 72,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20101,7 +20583,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:31",
       "heatOrder": 72,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20113,7 +20596,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:31",
       "heatOrder": 72,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20125,7 +20609,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:33",
       "heatOrder": 73,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20137,7 +20622,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:33",
       "heatOrder": 73,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20149,7 +20635,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:33",
       "heatOrder": 73,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20161,7 +20648,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:33",
       "heatOrder": 73,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20173,7 +20661,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:33",
       "heatOrder": 73,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20185,7 +20674,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:33",
       "heatOrder": 73,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20197,7 +20687,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:33",
       "heatOrder": 73,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20209,7 +20700,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:33",
       "heatOrder": 73,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20221,7 +20713,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:38",
       "heatOrder": 74,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20233,7 +20726,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:38",
       "heatOrder": 74,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20245,7 +20739,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:38",
       "heatOrder": 74,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20257,7 +20752,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:38",
       "heatOrder": 74,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20269,7 +20765,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:38",
       "heatOrder": 74,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20281,7 +20778,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:38",
       "heatOrder": 74,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20293,7 +20791,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:38",
       "heatOrder": 74,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20305,7 +20804,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:41",
       "heatOrder": 75,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20317,7 +20817,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:41",
       "heatOrder": 75,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20329,7 +20830,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:41",
       "heatOrder": 75,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20341,7 +20843,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:41",
       "heatOrder": 75,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20353,7 +20856,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:41",
       "heatOrder": 75,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20365,7 +20869,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:41",
       "heatOrder": 75,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20377,7 +20882,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:41",
       "heatOrder": 75,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20389,7 +20895,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:41",
       "heatOrder": 75,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20401,7 +20908,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:43",
       "heatOrder": 76,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20413,7 +20921,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:43",
       "heatOrder": 76,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20425,7 +20934,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:43",
       "heatOrder": 76,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20437,7 +20947,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:43",
       "heatOrder": 76,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20449,7 +20960,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:43",
       "heatOrder": 76,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20461,7 +20973,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:43",
       "heatOrder": 76,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20473,7 +20986,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:43",
       "heatOrder": 76,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20485,7 +20999,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:43",
       "heatOrder": 76,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20497,7 +21012,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:46",
       "heatOrder": 77,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20509,7 +21025,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:46",
       "heatOrder": 77,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20521,7 +21038,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:46",
       "heatOrder": 77,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20533,7 +21051,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:46",
       "heatOrder": 77,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20545,7 +21064,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:46",
       "heatOrder": 77,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20557,7 +21077,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:46",
       "heatOrder": 77,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20569,7 +21090,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:46",
       "heatOrder": 77,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100bi",
@@ -20581,7 +21103,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:46",
       "heatOrder": 77,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20593,7 +21116,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:51",
       "heatOrder": 78,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20605,7 +21129,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:51",
       "heatOrder": 78,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20617,7 +21142,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:51",
       "heatOrder": 78,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20629,7 +21155,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:51",
       "heatOrder": 78,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20641,7 +21168,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:51",
       "heatOrder": 78,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20653,7 +21181,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:51",
       "heatOrder": 78,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20665,7 +21194,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:51",
       "heatOrder": 78,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20677,7 +21207,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:51",
       "heatOrder": 78,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20689,7 +21220,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:55",
       "heatOrder": 79,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20701,7 +21233,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:55",
       "heatOrder": 79,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20713,7 +21246,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:55",
       "heatOrder": 79,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20725,7 +21259,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:55",
       "heatOrder": 79,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20737,7 +21272,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:55",
       "heatOrder": 79,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20749,7 +21285,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:55",
       "heatOrder": 79,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20761,7 +21298,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:55",
       "heatOrder": 79,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20773,7 +21311,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:55",
       "heatOrder": 79,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20785,7 +21324,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:59",
       "heatOrder": 80,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20797,7 +21337,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:59",
       "heatOrder": 80,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20809,7 +21350,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:59",
       "heatOrder": 80,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20821,7 +21363,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:59",
       "heatOrder": 80,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20833,7 +21376,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:59",
       "heatOrder": 80,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20845,7 +21389,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:59",
       "heatOrder": 80,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20857,7 +21402,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:59",
       "heatOrder": 80,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20869,7 +21415,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:59",
       "heatOrder": 80,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20881,7 +21428,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:05",
       "heatOrder": 81,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20893,7 +21441,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:05",
       "heatOrder": 81,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20905,7 +21454,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:05",
       "heatOrder": 81,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20917,7 +21467,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:05",
       "heatOrder": 81,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20929,7 +21480,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:05",
       "heatOrder": 81,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20941,7 +21493,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:05",
       "heatOrder": 81,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20953,7 +21506,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:09",
       "heatOrder": 82,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20965,7 +21519,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:09",
       "heatOrder": 82,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20977,7 +21532,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:09",
       "heatOrder": 82,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -20989,7 +21545,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:09",
       "heatOrder": 82,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -21001,7 +21558,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:09",
       "heatOrder": 82,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -21013,7 +21571,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:09",
       "heatOrder": 82,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -21025,7 +21584,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:09",
       "heatOrder": 82,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -21037,7 +21597,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:13",
       "heatOrder": 83,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -21049,7 +21610,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:13",
       "heatOrder": 83,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -21061,7 +21623,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:13",
       "heatOrder": 83,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -21073,7 +21636,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:13",
       "heatOrder": 83,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -21085,7 +21649,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:13",
       "heatOrder": 83,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -21097,7 +21662,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:13",
       "heatOrder": 83,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200is",
@@ -21109,7 +21675,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:13",
       "heatOrder": 83,
       "session": "5",
-      "sessionLabel": "Samedi 31 mai - Session du matin"
+      "sessionLabel": "Samedi 31 mai - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "4x100bix",
@@ -21121,7 +21688,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:25",
       "heatOrder": 84,
       "session": "6",
-      "sessionLabel": "Samedi 31 mai - Session de l'après-midi"
+      "sessionLabel": "Samedi 31 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x100bix",
@@ -21133,7 +21701,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:25",
       "heatOrder": 84,
       "session": "6",
-      "sessionLabel": "Samedi 31 mai - Session de l'après-midi"
+      "sessionLabel": "Samedi 31 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x100bix",
@@ -21145,7 +21714,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:25",
       "heatOrder": 84,
       "session": "6",
-      "sessionLabel": "Samedi 31 mai - Session de l'après-midi"
+      "sessionLabel": "Samedi 31 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x100bix",
@@ -21157,7 +21727,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:25",
       "heatOrder": 84,
       "session": "6",
-      "sessionLabel": "Samedi 31 mai - Session de l'après-midi"
+      "sessionLabel": "Samedi 31 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x100bix",
@@ -21169,7 +21740,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:25",
       "heatOrder": 84,
       "session": "6",
-      "sessionLabel": "Samedi 31 mai - Session de l'après-midi"
+      "sessionLabel": "Samedi 31 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x100bix",
@@ -21181,7 +21753,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:25",
       "heatOrder": 84,
       "session": "6",
-      "sessionLabel": "Samedi 31 mai - Session de l'après-midi"
+      "sessionLabel": "Samedi 31 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x100bix",
@@ -21193,7 +21766,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:25",
       "heatOrder": 84,
       "session": "6",
-      "sessionLabel": "Samedi 31 mai - Session de l'après-midi"
+      "sessionLabel": "Samedi 31 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x100bix",
@@ -21205,7 +21779,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:25",
       "heatOrder": 84,
       "session": "6",
-      "sessionLabel": "Samedi 31 mai - Session de l'après-midi"
+      "sessionLabel": "Samedi 31 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x50sf",
@@ -21217,7 +21792,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:33",
       "heatOrder": 85,
       "session": "6",
-      "sessionLabel": "Samedi 31 mai - Session de l'après-midi"
+      "sessionLabel": "Samedi 31 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x50sf",
@@ -21229,7 +21805,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:33",
       "heatOrder": 85,
       "session": "6",
-      "sessionLabel": "Samedi 31 mai - Session de l'après-midi"
+      "sessionLabel": "Samedi 31 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x50sf",
@@ -21241,7 +21818,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:33",
       "heatOrder": 85,
       "session": "6",
-      "sessionLabel": "Samedi 31 mai - Session de l'après-midi"
+      "sessionLabel": "Samedi 31 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x50sf",
@@ -21253,7 +21831,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:33",
       "heatOrder": 85,
       "session": "6",
-      "sessionLabel": "Samedi 31 mai - Session de l'après-midi"
+      "sessionLabel": "Samedi 31 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x50sf",
@@ -21265,7 +21844,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:33",
       "heatOrder": 85,
       "session": "6",
-      "sessionLabel": "Samedi 31 mai - Session de l'après-midi"
+      "sessionLabel": "Samedi 31 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x50sf",
@@ -21277,7 +21857,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:33",
       "heatOrder": 85,
       "session": "6",
-      "sessionLabel": "Samedi 31 mai - Session de l'après-midi"
+      "sessionLabel": "Samedi 31 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x50sf",
@@ -21289,7 +21870,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:39",
       "heatOrder": 86,
       "session": "6",
-      "sessionLabel": "Samedi 31 mai - Session de l'après-midi"
+      "sessionLabel": "Samedi 31 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x50sf",
@@ -21301,7 +21883,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:39",
       "heatOrder": 86,
       "session": "6",
-      "sessionLabel": "Samedi 31 mai - Session de l'après-midi"
+      "sessionLabel": "Samedi 31 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x50sf",
@@ -21313,7 +21896,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:39",
       "heatOrder": 86,
       "session": "6",
-      "sessionLabel": "Samedi 31 mai - Session de l'après-midi"
+      "sessionLabel": "Samedi 31 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x50sf",
@@ -21325,7 +21909,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:39",
       "heatOrder": 86,
       "session": "6",
-      "sessionLabel": "Samedi 31 mai - Session de l'après-midi"
+      "sessionLabel": "Samedi 31 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x50sf",
@@ -21337,7 +21922,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:39",
       "heatOrder": 86,
       "session": "6",
-      "sessionLabel": "Samedi 31 mai - Session de l'après-midi"
+      "sessionLabel": "Samedi 31 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x50sf",
@@ -21349,7 +21935,8 @@ window.SPEAKER_DATA = {
       "startTime": "19:39",
       "heatOrder": 86,
       "session": "6",
-      "sessionLabel": "Samedi 31 mai - Session de l'après-midi"
+      "sessionLabel": "Samedi 31 mai - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21361,7 +21948,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:00",
       "heatOrder": 87,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21373,7 +21961,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:00",
       "heatOrder": 87,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21385,7 +21974,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:00",
       "heatOrder": 87,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21397,7 +21987,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:00",
       "heatOrder": 87,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21409,7 +22000,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:02",
       "heatOrder": 88,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21421,7 +22013,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:02",
       "heatOrder": 88,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21433,7 +22026,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:02",
       "heatOrder": 88,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21445,7 +22039,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:02",
       "heatOrder": 88,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21457,7 +22052,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:02",
       "heatOrder": 88,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21469,7 +22065,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:04",
       "heatOrder": 89,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21481,7 +22078,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:04",
       "heatOrder": 89,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21493,7 +22091,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:04",
       "heatOrder": 89,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21505,7 +22104,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:04",
       "heatOrder": 89,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21517,7 +22117,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:04",
       "heatOrder": 89,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21529,7 +22130,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:04",
       "heatOrder": 89,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21541,7 +22143,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:04",
       "heatOrder": 89,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21553,7 +22156,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:04",
       "heatOrder": 89,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21565,7 +22169,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:07",
       "heatOrder": 90,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21577,7 +22182,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:07",
       "heatOrder": 90,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21589,7 +22195,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:07",
       "heatOrder": 90,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21601,7 +22208,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:07",
       "heatOrder": 90,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21613,7 +22221,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:07",
       "heatOrder": 90,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21625,7 +22234,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:07",
       "heatOrder": 90,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21637,7 +22247,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:07",
       "heatOrder": 90,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21649,7 +22260,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:07",
       "heatOrder": 90,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21661,7 +22273,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:09",
       "heatOrder": 91,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21673,7 +22286,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:09",
       "heatOrder": 91,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21685,7 +22299,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:09",
       "heatOrder": 91,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21697,7 +22312,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:09",
       "heatOrder": 91,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21709,7 +22325,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:09",
       "heatOrder": 91,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21721,7 +22338,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:09",
       "heatOrder": 91,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21733,7 +22351,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:09",
       "heatOrder": 91,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21745,7 +22364,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:09",
       "heatOrder": 91,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21757,7 +22377,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:14",
       "heatOrder": 92,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21769,7 +22390,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:14",
       "heatOrder": 92,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21781,7 +22403,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:14",
       "heatOrder": 92,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21793,7 +22416,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:14",
       "heatOrder": 92,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21805,7 +22429,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:17",
       "heatOrder": 93,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21817,7 +22442,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:17",
       "heatOrder": 93,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21829,7 +22455,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:17",
       "heatOrder": 93,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21841,7 +22468,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:17",
       "heatOrder": 93,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21853,7 +22481,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:17",
       "heatOrder": 93,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21865,7 +22494,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:19",
       "heatOrder": 94,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21877,7 +22507,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:19",
       "heatOrder": 94,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21889,7 +22520,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:19",
       "heatOrder": 94,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21901,7 +22533,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:19",
       "heatOrder": 94,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21913,7 +22546,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:19",
       "heatOrder": 94,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21925,7 +22559,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:19",
       "heatOrder": 94,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21937,7 +22572,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:19",
       "heatOrder": 94,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21949,7 +22585,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:19",
       "heatOrder": 94,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21961,7 +22598,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:21",
       "heatOrder": 95,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21973,7 +22611,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:21",
       "heatOrder": 95,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21985,7 +22624,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:21",
       "heatOrder": 95,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -21997,7 +22637,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:21",
       "heatOrder": 95,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -22009,7 +22650,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:21",
       "heatOrder": 95,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -22021,7 +22663,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:21",
       "heatOrder": 95,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -22033,7 +22676,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:21",
       "heatOrder": 95,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -22045,7 +22689,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:21",
       "heatOrder": 95,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -22057,7 +22702,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:24",
       "heatOrder": 96,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -22069,7 +22715,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:24",
       "heatOrder": 96,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -22081,7 +22728,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:24",
       "heatOrder": 96,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -22093,7 +22741,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:24",
       "heatOrder": 96,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -22105,7 +22754,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:24",
       "heatOrder": 96,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -22117,7 +22767,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:24",
       "heatOrder": 96,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -22129,7 +22780,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:24",
       "heatOrder": 96,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "100sf",
@@ -22141,7 +22793,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:24",
       "heatOrder": 96,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22153,7 +22806,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:28",
       "heatOrder": 97,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22165,7 +22819,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:28",
       "heatOrder": 97,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22177,7 +22832,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:28",
       "heatOrder": 97,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22189,7 +22845,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:28",
       "heatOrder": 97,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22201,7 +22858,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:32",
       "heatOrder": 98,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22213,7 +22871,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:32",
       "heatOrder": 98,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22225,7 +22884,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:32",
       "heatOrder": 98,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22237,7 +22897,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:32",
       "heatOrder": 98,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22249,7 +22910,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:32",
       "heatOrder": 98,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22261,7 +22923,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:32",
       "heatOrder": 98,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22273,7 +22936,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:32",
       "heatOrder": 98,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22285,7 +22949,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:32",
       "heatOrder": 98,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22297,7 +22962,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:36",
       "heatOrder": 99,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22309,7 +22975,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:36",
       "heatOrder": 99,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22321,7 +22988,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:36",
       "heatOrder": 99,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22333,7 +23001,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:36",
       "heatOrder": 99,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22345,7 +23014,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:36",
       "heatOrder": 99,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22357,7 +23027,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:36",
       "heatOrder": 99,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22369,7 +23040,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:36",
       "heatOrder": 99,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22381,7 +23053,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:36",
       "heatOrder": 99,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22393,7 +23066,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:40",
       "heatOrder": 100,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22405,7 +23079,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:40",
       "heatOrder": 100,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22417,7 +23092,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:40",
       "heatOrder": 100,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22429,7 +23105,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:40",
       "heatOrder": 100,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22441,7 +23118,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:40",
       "heatOrder": 100,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22453,7 +23131,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:40",
       "heatOrder": 100,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22465,7 +23144,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:40",
       "heatOrder": 100,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22477,7 +23157,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:40",
       "heatOrder": 100,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22489,7 +23170,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:43",
       "heatOrder": 101,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22501,7 +23183,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:43",
       "heatOrder": 101,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22513,7 +23196,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:43",
       "heatOrder": 101,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22525,7 +23209,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:43",
       "heatOrder": 101,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22537,7 +23222,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:43",
       "heatOrder": 101,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22549,7 +23235,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:43",
       "heatOrder": 101,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22561,7 +23248,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:43",
       "heatOrder": 101,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22573,7 +23261,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:43",
       "heatOrder": 101,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22585,7 +23274,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:49",
       "heatOrder": 102,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22597,7 +23287,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:49",
       "heatOrder": 102,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22609,7 +23300,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:49",
       "heatOrder": 102,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22621,7 +23313,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:49",
       "heatOrder": 102,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22633,7 +23326,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:53",
       "heatOrder": 103,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22645,7 +23339,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:53",
       "heatOrder": 103,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22657,7 +23352,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:53",
       "heatOrder": 103,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22669,7 +23365,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:53",
       "heatOrder": 103,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22681,7 +23378,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:53",
       "heatOrder": 103,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22693,7 +23391,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:53",
       "heatOrder": 103,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22705,7 +23404,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:53",
       "heatOrder": 103,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22717,7 +23417,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:53",
       "heatOrder": 103,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22729,7 +23430,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:57",
       "heatOrder": 104,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22741,7 +23443,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:57",
       "heatOrder": 104,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22753,7 +23456,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:57",
       "heatOrder": 104,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22765,7 +23469,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:57",
       "heatOrder": 104,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22777,7 +23482,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:57",
       "heatOrder": 104,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22789,7 +23495,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:57",
       "heatOrder": 104,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22801,7 +23508,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:57",
       "heatOrder": 104,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22813,7 +23521,8 @@ window.SPEAKER_DATA = {
       "startTime": "09:57",
       "heatOrder": 104,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22825,7 +23534,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:00",
       "heatOrder": 105,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22837,7 +23547,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:00",
       "heatOrder": 105,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22849,7 +23560,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:00",
       "heatOrder": 105,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22861,7 +23573,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:00",
       "heatOrder": 105,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22873,7 +23586,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:00",
       "heatOrder": 105,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22885,7 +23599,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:00",
       "heatOrder": 105,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22897,7 +23612,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:00",
       "heatOrder": 105,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "200bi",
@@ -22909,7 +23625,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:00",
       "heatOrder": 105,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -22921,7 +23638,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:06",
       "heatOrder": 106,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -22933,7 +23651,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:06",
       "heatOrder": 106,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -22945,7 +23664,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:06",
       "heatOrder": 106,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -22957,7 +23677,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:06",
       "heatOrder": 106,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -22969,7 +23690,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:06",
       "heatOrder": 106,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -22981,7 +23703,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:20",
       "heatOrder": 107,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -22993,7 +23716,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:20",
       "heatOrder": 107,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -23005,7 +23729,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:20",
       "heatOrder": 107,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -23017,7 +23742,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:20",
       "heatOrder": 107,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -23029,7 +23755,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:20",
       "heatOrder": 107,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -23041,7 +23768,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:20",
       "heatOrder": 107,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -23053,7 +23781,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:20",
       "heatOrder": 107,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -23065,7 +23794,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:20",
       "heatOrder": 107,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23077,7 +23807,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:35",
       "heatOrder": 108,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23089,7 +23820,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:35",
       "heatOrder": 108,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23101,7 +23833,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:35",
       "heatOrder": 108,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23113,7 +23846,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:35",
       "heatOrder": 108,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23125,7 +23859,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:35",
       "heatOrder": 108,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23137,7 +23872,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:35",
       "heatOrder": 108,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23149,7 +23885,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:35",
       "heatOrder": 108,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23161,7 +23898,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:44",
       "heatOrder": 109,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23173,7 +23911,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:44",
       "heatOrder": 109,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23185,7 +23924,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:44",
       "heatOrder": 109,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "4x100sb",
@@ -23197,7 +23937,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:52",
       "heatOrder": 110,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "4x100sb",
@@ -23209,7 +23950,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:52",
       "heatOrder": 110,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "4x100sb",
@@ -23221,7 +23963,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:52",
       "heatOrder": 110,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "4x100sb",
@@ -23233,7 +23976,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:52",
       "heatOrder": 110,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "4x100sb",
@@ -23245,7 +23989,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:52",
       "heatOrder": 110,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "4x100sb",
@@ -23257,7 +24002,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:52",
       "heatOrder": 110,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "4x100sb",
@@ -23269,7 +24015,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:52",
       "heatOrder": 110,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "4x100sb",
@@ -23281,7 +24028,8 @@ window.SPEAKER_DATA = {
       "startTime": "10:52",
       "heatOrder": 110,
       "session": "7",
-      "sessionLabel": "Dimanche 1er juin - Session du matin"
+      "sessionLabel": "Dimanche 1er juin - Session du matin",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -23293,7 +24041,8 @@ window.SPEAKER_DATA = {
       "startTime": "15:49",
       "heatOrder": 111,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -23305,7 +24054,8 @@ window.SPEAKER_DATA = {
       "startTime": "15:49",
       "heatOrder": 111,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -23317,7 +24067,8 @@ window.SPEAKER_DATA = {
       "startTime": "15:49",
       "heatOrder": 111,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -23329,7 +24080,8 @@ window.SPEAKER_DATA = {
       "startTime": "15:49",
       "heatOrder": 111,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -23341,7 +24093,8 @@ window.SPEAKER_DATA = {
       "startTime": "15:49",
       "heatOrder": 111,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -23353,7 +24106,8 @@ window.SPEAKER_DATA = {
       "startTime": "15:49",
       "heatOrder": 111,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -23365,7 +24119,8 @@ window.SPEAKER_DATA = {
       "startTime": "15:49",
       "heatOrder": 111,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -23377,7 +24132,8 @@ window.SPEAKER_DATA = {
       "startTime": "15:49",
       "heatOrder": 111,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -23389,7 +24145,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:01",
       "heatOrder": 112,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -23401,7 +24158,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:01",
       "heatOrder": 112,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -23413,7 +24171,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:01",
       "heatOrder": 112,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -23425,7 +24184,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:01",
       "heatOrder": 112,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -23437,7 +24197,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:01",
       "heatOrder": 112,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -23449,7 +24210,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:01",
       "heatOrder": 112,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -23461,7 +24223,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:01",
       "heatOrder": 112,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "800sf",
@@ -23473,7 +24236,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:01",
       "heatOrder": 112,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23485,7 +24249,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:14",
       "heatOrder": 113,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23497,7 +24262,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:14",
       "heatOrder": 113,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23509,7 +24275,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:14",
       "heatOrder": 113,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23521,7 +24288,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:14",
       "heatOrder": 113,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23533,7 +24301,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:14",
       "heatOrder": 113,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23545,7 +24314,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:14",
       "heatOrder": 113,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23557,7 +24327,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:14",
       "heatOrder": 113,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23569,7 +24340,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:14",
       "heatOrder": 113,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23581,7 +24353,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:21",
       "heatOrder": 114,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23593,7 +24366,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:21",
       "heatOrder": 114,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23605,7 +24379,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:21",
       "heatOrder": 114,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23617,7 +24392,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:21",
       "heatOrder": 114,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23629,7 +24405,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:21",
       "heatOrder": 114,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23641,7 +24418,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:21",
       "heatOrder": 114,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23653,7 +24431,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:21",
       "heatOrder": 114,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "400is",
@@ -23665,7 +24444,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:21",
       "heatOrder": 114,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x100sb",
@@ -23677,7 +24457,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:29",
       "heatOrder": 115,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x100sb",
@@ -23689,7 +24470,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:29",
       "heatOrder": 115,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x100sb",
@@ -23701,7 +24483,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:29",
       "heatOrder": 115,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x100sb",
@@ -23713,7 +24496,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:29",
       "heatOrder": 115,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x100sb",
@@ -23725,7 +24509,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:29",
       "heatOrder": 115,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x100sb",
@@ -23737,7 +24522,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:29",
       "heatOrder": 115,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x100sb",
@@ -23749,7 +24535,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:29",
       "heatOrder": 115,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     },
     {
       "eventId": "4x100sb",
@@ -23761,7 +24548,8 @@ window.SPEAKER_DATA = {
       "startTime": "16:29",
       "heatOrder": 115,
       "session": "8",
-      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi"
+      "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
+      "stage": "series"
     }
   ],
   "program": [
@@ -23829,60 +24617,60 @@ window.SPEAKER_DATA = {
       "eventId": "1500sf",
       "sex": "F",
       "order": 7,
-      "label": "1500 m surface",
+      "label": "1500 m surface - Meilleure série",
       "session": "1",
       "sessionLabel": "Jeudi 29 mai - Session du matin",
-      "stage": "series",
+      "stage": "meilleure-serie",
       "hasEntrants": true
     },
     {
       "eventId": "1500sf",
       "sex": "M",
       "order": 8,
-      "label": "1500 m surface",
+      "label": "1500 m surface - Meilleure série",
       "session": "1",
       "sessionLabel": "Jeudi 29 mai - Session du matin",
-      "stage": "series",
+      "stage": "meilleure-serie",
       "hasEntrants": true
     },
     {
       "eventId": "1500sf",
       "sex": "F",
       "order": 9,
-      "label": "1500 m surface",
+      "label": "1500 m surface - Meilleure série",
       "session": "2",
       "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
-      "stage": "series",
+      "stage": "meilleure-serie",
       "hasEntrants": true
     },
     {
       "eventId": "1500sf",
       "sex": "M",
       "order": 10,
-      "label": "1500 m surface",
+      "label": "1500 m surface - Meilleure série",
       "session": "2",
       "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
-      "stage": "series",
+      "stage": "meilleure-serie",
       "hasEntrants": true
     },
     {
       "eventId": "4x100sf",
       "sex": "F",
       "order": 11,
-      "label": "4x100 m surface",
+      "label": "4x100 m surface - Meilleure série",
       "session": "2",
       "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
-      "stage": "series",
+      "stage": "meilleure-serie",
       "hasEntrants": true
     },
     {
       "eventId": "4x100sf",
       "sex": "M",
       "order": 12,
-      "label": "4x100 m surface",
+      "label": "4x100 m surface - Meilleure série",
       "session": "2",
       "sessionLabel": "Jeudi 29 mai - Session de l'après-midi",
-      "stage": "series",
+      "stage": "meilleure-serie",
       "hasEntrants": true
     },
     {
@@ -23949,20 +24737,20 @@ window.SPEAKER_DATA = {
       "eventId": "4x200sf",
       "sex": "F",
       "order": 19,
-      "label": "4x200 m surface",
+      "label": "4x200 m surface - Meilleure série",
       "session": "4",
       "sessionLabel": "Vendredi 30 mai - Session de l'après-midi",
-      "stage": "series",
+      "stage": "meilleure-serie",
       "hasEntrants": true
     },
     {
       "eventId": "4x200sf",
       "sex": "M",
       "order": 20,
-      "label": "4x200 m surface",
+      "label": "4x200 m surface - Meilleure série",
       "session": "4",
       "sessionLabel": "Vendredi 30 mai - Session de l'après-midi",
-      "stage": "series",
+      "stage": "meilleure-serie",
       "hasEntrants": true
     },
     {
@@ -24029,30 +24817,30 @@ window.SPEAKER_DATA = {
       "eventId": "4x100bix",
       "sex": "X",
       "order": 27,
-      "label": "4x100 m bipalmes mixte",
+      "label": "4x100 m bipalmes mixte - Meilleure série",
       "session": "6",
       "sessionLabel": "Samedi 31 mai - Session de l'après-midi",
-      "stage": "series",
+      "stage": "meilleure-serie",
       "hasEntrants": true
     },
     {
       "eventId": "4x50sf",
       "sex": "F",
       "order": 28,
-      "label": "4x50 m surface",
+      "label": "4x50 m surface - Meilleure série",
       "session": "6",
       "sessionLabel": "Samedi 31 mai - Session de l'après-midi",
-      "stage": "series",
+      "stage": "meilleure-serie",
       "hasEntrants": true
     },
     {
       "eventId": "4x50sf",
       "sex": "M",
       "order": 29,
-      "label": "4x50 m surface",
+      "label": "4x50 m surface - Meilleure série",
       "session": "6",
       "sessionLabel": "Samedi 31 mai - Session de l'après-midi",
-      "stage": "series",
+      "stage": "meilleure-serie",
       "hasEntrants": true
     },
     {
@@ -24099,100 +24887,100 @@ window.SPEAKER_DATA = {
       "eventId": "800sf",
       "sex": "F",
       "order": 34,
-      "label": "800 m surface",
+      "label": "800 m surface - Meilleure série",
       "session": "7",
       "sessionLabel": "Dimanche 1er juin - Session du matin",
-      "stage": "series",
+      "stage": "meilleure-serie",
       "hasEntrants": true
     },
     {
       "eventId": "800sf",
       "sex": "M",
       "order": 35,
-      "label": "800 m surface",
+      "label": "800 m surface - Meilleure série",
       "session": "7",
       "sessionLabel": "Dimanche 1er juin - Session du matin",
-      "stage": "series",
+      "stage": "meilleure-serie",
       "hasEntrants": true
     },
     {
       "eventId": "400is",
       "sex": "F",
       "order": 36,
-      "label": "400 m immersion",
+      "label": "400 m immersion - Meilleure série",
       "session": "7",
       "sessionLabel": "Dimanche 1er juin - Session du matin",
-      "stage": "series",
+      "stage": "meilleure-serie",
       "hasEntrants": true
     },
     {
       "eventId": "400is",
       "sex": "M",
       "order": 37,
-      "label": "400 m immersion",
+      "label": "400 m immersion - Meilleure série",
       "session": "7",
       "sessionLabel": "Dimanche 1er juin - Session du matin",
-      "stage": "series",
+      "stage": "meilleure-serie",
       "hasEntrants": true
     },
     {
       "eventId": "4x100sb",
       "sex": "X",
       "order": 38,
-      "label": "4x100 m SB mixte",
+      "label": "4x100 m SB mixte - Meilleure série",
       "session": "7",
       "sessionLabel": "Dimanche 1er juin - Session du matin",
-      "stage": "series",
+      "stage": "meilleure-serie",
       "hasEntrants": true
     },
     {
       "eventId": "800sf",
       "sex": "F",
       "order": 39,
-      "label": "800 m surface",
+      "label": "800 m surface - Meilleure série",
       "session": "8",
       "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
-      "stage": "series",
+      "stage": "meilleure-serie",
       "hasEntrants": true
     },
     {
       "eventId": "800sf",
       "sex": "M",
       "order": 40,
-      "label": "800 m surface",
+      "label": "800 m surface - Meilleure série",
       "session": "8",
       "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
-      "stage": "series",
+      "stage": "meilleure-serie",
       "hasEntrants": true
     },
     {
       "eventId": "400is",
       "sex": "F",
       "order": 41,
-      "label": "400 m immersion",
+      "label": "400 m immersion - Meilleure série",
       "session": "8",
       "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
-      "stage": "series",
+      "stage": "meilleure-serie",
       "hasEntrants": true
     },
     {
       "eventId": "400is",
       "sex": "M",
       "order": 42,
-      "label": "400 m immersion",
+      "label": "400 m immersion - Meilleure série",
       "session": "8",
       "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
-      "stage": "series",
+      "stage": "meilleure-serie",
       "hasEntrants": true
     },
     {
       "eventId": "4x100sb",
       "sex": "X",
       "order": 43,
-      "label": "4x100 m SB mixte",
+      "label": "4x100 m SB mixte - Meilleure série",
       "session": "8",
       "sessionLabel": "Dimanche 1er juin - Session de l'après-midi",
-      "stage": "series",
+      "stage": "meilleure-serie",
       "hasEntrants": true
     }
   ],
@@ -29814,10 +30602,24 @@ window.SPEAKER_DATA = {
       "personKey": "F|camille julien"
     }
   ],
-  "sourceVersion": "4fbe419a42fa5ee6e0ce0001e2e5a1fbd94e1bdd",
+  "sourceVersion": "446b492fcdb1cea9b34fe6c78e156fc037229833",
   "notes": {
     "sourceMode": "series",
-    "sourceLabel": "Séries speaker",
-    "sourceFile": "ISERIES_Speaker_Equipe_2025-05-26_22-07-38.pdf"
+    "sourceLabel": "Séries",
+    "sourceFile": "ISERIES_Speaker_Equipe_2025-05-26_22-07-38.pdf",
+    "generatedAt": "15/05/2026 23:37",
+    "seriesFiles": [
+      "ISERIES_Speaker_Equipe_2025-05-26_22-07-38.pdf"
+    ],
+    "resultFiles": [
+      "Résultats Dijon France Club.txt",
+      "Résultats meeting Aix.txt",
+      "Résultats Meeting Rennes.txt",
+      "Résultats Rennes 2025.txt",
+      "Résultats Vittel 2025.txt"
+    ],
+    "entrantCount": 788,
+    "seriesLineCount": 788,
+    "programCount": 43
   }
 };
