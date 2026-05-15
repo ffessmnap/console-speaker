@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Speaker Nage avec Palmes - France 2026 Limoges</title>
-    <link rel="stylesheet" href="styles.css?v=20260514-2">
+    <link rel="stylesheet" href="styles.css?v=20260515-speaker">
   </head>
   <body>
     <header class="topbar">
       <div>
-        <p class="eyebrow">Championnat de France 2026 - Limoges</p>
+        <p id="meetEyebrow" class="eyebrow">Championnat de France 2026 - Limoges</p>
         <h1>Console speaker</h1>
       </div>
       <div class="top-actions">
@@ -31,6 +31,10 @@
           <label for="eventSelect">Course</label>
           <select id="eventSelect"></select>
         </div>
+        <div class="field session-field">
+          <label>Sessions</label>
+          <div id="sessionControls" class="session-controls"></div>
+        </div>
         <div class="field series-field">
           <label>Séries</label>
           <div id="seriesControls" class="series-controls"></div>
@@ -39,6 +43,7 @@
         <div class="segmented" role="group" aria-label="Sexe">
           <button class="segment active" data-sex="F">Femmes</button>
           <button class="segment" data-sex="M">Hommes</button>
+          <button class="segment" data-sex="X">Mixte</button>
         </div>
         <div class="field">
           <label for="searchInput">Recherche engagé</label>
@@ -79,6 +84,7 @@
             <div class="panel-title">
               <h3 id="entrantsTitle">Engagés 2026</h3>
               <div class="panel-actions">
+                <button id="lineOrderBtn" class="line-order-button" type="button" title="Inverser l'ordre des lignes">Lignes 1→8</button>
                 <span id="filteredCount" class="soft-count">0 affichés</span>
               </div>
             </div>
@@ -126,7 +132,7 @@
       </section>
     </main>
 
-    <script src="data.generated.js?v=20260514-2"></script>
-    <script src="app.js?v=20260514-2"></script>
+    <script src="data.generated.js?v=20260515-speaker"></script>
+    <script src="app.js?v=20260515-speaker"></script>
   </body>
 </html>

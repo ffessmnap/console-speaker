@@ -53,13 +53,24 @@ button,
 
 .data-status {
   margin: 12px 18px 0;
-  padding: 10px 12px;
-  border: 1px solid #f2c94c;
+  padding: 8px 12px;
+  border: 1px solid #c9d8e5;
   border-radius: 8px;
+  background: #f5f9fc;
+  color: #42566b;
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.data-status.warning {
+  border-color: #f2c94c;
   background: #fff8db;
   color: #6f5100;
-  font-size: 0.9rem;
-  font-weight: 800;
+}
+
+.data-status.source {
+  display: inline-flex;
+  width: fit-content;
 }
 
 .eyebrow {
@@ -194,7 +205,7 @@ textarea {
 
 .segmented {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
   gap: 4px;
   padding: 4px;
   background: #e8eef1;
@@ -215,17 +226,24 @@ textarea {
   box-shadow: 0 2px 8px rgba(18, 38, 48, 0.08);
 }
 
-.series-field {
+.series-field,
+.session-field {
   gap: 8px;
 }
 
-.series-controls {
+.series-controls,
+.session-controls {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
 }
 
-.series-chip {
+.series-chip,
+.session-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
   min-width: 34px;
   min-height: 32px;
   padding: 0 10px;
@@ -236,14 +254,34 @@ textarea {
   font-weight: 850;
 }
 
-.series-chip.active {
+.series-chip span {
+  font-size: 0.72rem;
+  font-weight: 800;
+  opacity: 0.78;
+}
+
+.series-chip.active,
+.session-chip.active {
   border-color: var(--accent);
   background: var(--accent);
   color: #ffffff;
 }
 
-.series-chip:hover {
+.series-chip:hover,
+.session-chip:hover {
   border-color: var(--accent-dark);
+}
+
+.no-series-note {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  padding: 0 9px;
+  border: 1px dashed var(--line);
+  border-radius: 7px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 850;
 }
 
 .stat-strip {
@@ -338,6 +376,17 @@ textarea {
   color: var(--ink);
   font-size: 0.72rem;
   text-transform: uppercase;
+}
+
+.qualification-chip {
+  border-color: #9db2c6;
+  background: #f5f8fb;
+  color: #42566b;
+  border-style: dashed;
+}
+
+.qualification-chip strong {
+  color: #42566b;
 }
 
 .header-ref-details {
@@ -468,6 +517,22 @@ textarea {
   font-weight: 800;
 }
 
+.line-order-button {
+  min-height: 28px;
+  padding: 0 8px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #f8fafb;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 850;
+}
+
+.line-order-button:hover {
+  border-color: var(--accent);
+  color: var(--accent-dark);
+}
+
 .table-wrap {
   overflow: auto;
   max-height: 410px;
@@ -475,11 +540,47 @@ textarea {
   border-radius: 8px;
 }
 
+.table-wrap.series-table {
+  max-height: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
   background: #ffffff;
   min-width: 600px;
+}
+
+.series-table table {
+  table-layout: fixed;
+  min-width: 780px;
+}
+
+.series-table th:nth-child(1),
+.series-table td:nth-child(1) {
+  width: 54px;
+}
+
+.series-table th:nth-child(2),
+.series-table td:nth-child(2) {
+  width: 38%;
+}
+
+.series-table th:nth-child(3),
+.series-table td:nth-child(3) {
+  width: 88px;
+}
+
+.series-table th:nth-child(4),
+.series-table td:nth-child(4) {
+  width: 96px;
+}
+
+.series-table th:nth-child(5),
+.series-table td:nth-child(5) {
+  width: 27%;
 }
 
 th,
@@ -502,6 +603,46 @@ th {
 
 td {
   font-size: 0.88rem;
+}
+
+.series-table th,
+.series-table td {
+  padding: 5px 7px;
+}
+
+.series-table tbody tr {
+  height: 46px;
+}
+
+.series-table .name-cell,
+.series-table .time-cell,
+.series-table td:nth-child(5) {
+  overflow: hidden;
+}
+
+.series-table .swimmer-button,
+.series-table .club-name,
+.series-table .seed-source {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.series-table .swimmer-button {
+  display: block;
+}
+
+.series-table .reference-badges {
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.series-table .badge {
+  min-height: 24px;
+  padding: 0 7px;
+  font-size: 0.72rem;
+  white-space: nowrap;
 }
 
 .entrants-panel {
