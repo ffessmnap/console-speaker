@@ -60,14 +60,15 @@ const sampleData = window.SPEAKER_DATA || fallbackData;
 
 let data = loadData();
 function createRoleState(role = "speaker") {
+  const initial = initialProgramPosition();
   return {
-  eventId: data.events[0]?.id || "",
-  sex: "F",
+  eventId: initial.eventId || data.events[0]?.id || "",
+  sex: initial.sex || "F",
   search: "",
   category: "all",
-  series: "all",
-  session: "all",
-  programKey: "",
+  series: initial.series || "all",
+  session: initial.session || "all",
+  programKey: initial.programKey || "",
   lineOrder: "asc",
   selectedSwimmerId: "",
   selectedRecordKey: "",
@@ -113,6 +114,7 @@ let expandedHistories = {
   role: false
 };
 let isFullscreenMode = Boolean(document.fullscreenElement);
+let refereeTabletMode = false;
 
 const eventSelect = document.querySelector("#eventSelect");
 const searchInput = document.querySelector("#searchInput");
@@ -127,6 +129,7 @@ const previousSeriesFloatBtn = document.querySelector("#previousSeriesFloatBtn")
 const nextSeriesFloatBtn = document.querySelector("#nextSeriesFloatBtn");
 const programBtn = document.querySelector("#programBtn");
 const programFloatBtn = document.querySelector("#programFloatBtn");
+const refereeTabletModeBtn = document.querySelector("#refereeTabletModeBtn");
 const lineOrderBtn = document.querySelector("#lineOrderBtn");
 const entrantsBody = document.querySelector("#entrantsBody");
 const entrantCount = document.querySelector("#entrantCount");
@@ -546,6 +549,72 @@ function sessionRows() {
   return [...bySession.values()].sort((a, b) => Number(a.number) - Number(b.number) || a.order - b.order);
 }
 
+function firstSessionNumber() {
+  return sessionRows()[0]?.number || "all";
+}
+
+function firstProgramRowForSession(sessionNumber) {
+  const rows = (data.program || [])
+    .filter((row) => !sessionNumber || sessionNumber === "all" || row.session === sessionNumber)
+    .filter((row) => row.hasEntrants === false || hasRowsForProgram(row))
+    .sort((a, b) => Number(a.order || 9999) - Number(b.order || 9999));
+  return rows[0] || null;
+}
+
+function firstSeriesForRace(eventId, sex, sessionNumber) {
+  const rows = (data.series || [])
+    .filter((row) => row.eventId === eventId && row.sex === sex)
+    .filter((row) => sessionNumber === "all" || !row.session || row.session === sessionNumber);
+  const firstRegular = rows
+    .filter((row) => !isFinalStage(row.stage))
+    .map((row) => Number(row.series))
+    .filter(Number.isFinite)
+    .sort((a, b) => a - b)[0];
+  if (firstRegular) return String(firstRegular);
+  return rows.find((row) => isFinalStage(row.stage))?.stage || "all";
+}
+
+function initialProgramPosition() {
+  const session = firstSessionNumber();
+  const row = firstProgramRowForSession(session);
+  if (!row) {
+    return {
+      eventId: data.events[0]?.id || "",
+      sex: "F",
+      session,
+      series: "all",
+      programKey: ""
+    };
+  }
+  return {
+    eventId: row.eventId,
+    sex: row.sex,
+    session: row.session || session,
+    series: firstSeriesForRace(row.eventId, row.sex, row.session || session),
+    programKey: programKey(row)
+  };
+}
+
+function normalizeLivePosition() {
+  const sessions = sessionRows();
+  if (!sessions.length) {
+    state.session = "all";
+    return;
+  }
+  if (state.session === "all" || !sessions.some((session) => session.number === state.session)) {
+    const initial = initialProgramPosition();
+    state.session = initial.session;
+    state.eventId = initial.eventId;
+    state.sex = initial.sex;
+    state.programKey = initial.programKey;
+    state.series = initial.series;
+    return;
+  }
+  if (state.series === "all") {
+    state.series = firstSeriesSelectionForCurrentRace();
+  }
+}
+
 function programRowsForSession() {
   const rows = data.program || [];
   if (state.session === "all") return rows;
@@ -579,6 +648,34 @@ function currentProgramIndex() {
   const current = selectedProgramRow();
   if (!current) return -1;
   return programRows().findIndex((row) => programKey(row) === programKey(current));
+}
+
+function isLastRaceOfCurrentSession() {
+  if (state.session === "all") return false;
+  const rows = programRows();
+  const index = currentProgramIndex();
+  return rows.length > 0 && index === rows.length - 1;
+}
+
+function isLastSeriesOfCurrentSession() {
+  if (state.session === "all" || state.series === "all") return false;
+  return isLastRaceOfCurrentSession() && String(state.series) === String(lastSeriesSelectionForCurrentRace());
+}
+
+function isSplitRaceAcrossSessions(eventId = state.eventId, sex = state.sex) {
+  const sessions = new Set((data.series || [])
+    .filter((row) => row.eventId === eventId && row.sex === sex && row.session)
+    .map((row) => row.session));
+  return sessions.size > 1;
+}
+
+function shouldShowSplitRaceNote() {
+  return ["live", "speaker"].includes(state.role);
+}
+
+function splitRaceNote(eventId = state.eventId, sex = state.sex) {
+  if (!shouldShowSplitRaceNote() || !isSplitRaceAcrossSessions(eventId, sex)) return "";
+  return `<span class="session-end-note">[séries lentes matin, série rapide soir]</span>`;
 }
 
 function raceSeries() {
@@ -730,11 +827,16 @@ function render() {
   document.body.classList.toggle("role-referee", state.role === "referee");
   document.body.classList.toggle("role-video", state.role === "video");
   document.body.classList.toggle("role-computer", state.role === "computer");
+  document.body.classList.toggle("referee-tablet-mode", state.role === "referee" && refereeTabletMode);
   document.querySelectorAll(".role-chip").forEach((button) => {
     button.classList.toggle("active", button.dataset.role === state.role);
   });
   if (roleBadge) roleBadge.textContent = ROLE_LABELS[state.role] || "Console";
   if (fullscreenBtn) fullscreenBtn.textContent = isFullscreenMode ? "Quitter plein écran" : "Plein écran";
+  if (refereeTabletModeBtn) {
+    refereeTabletModeBtn.classList.toggle("active", refereeTabletMode);
+    refereeTabletModeBtn.textContent = refereeTabletMode ? "Affichage normal" : "Affichage tablette";
+  }
   if (!data.events.length) {
     data.events = structuredClone(sampleData.events);
     state.eventId = data.events[0].id;
@@ -742,6 +844,7 @@ function render() {
   if (!data.events.some((event) => event.id === state.eventId)) {
     state.eventId = data.events[0].id;
   }
+  normalizeLivePosition();
   const availableSexes = availableSexesForEvent();
   if (availableSexes.length && !availableSexes.includes(state.sex)) {
     state.sex = availableSexes[0];
@@ -773,17 +876,14 @@ function renderSessionControls() {
     return;
   }
   sessionControls.closest(".top-session-field")?.removeAttribute("hidden");
-  if (state.session !== "all" && !sessions.some((session) => session.number === state.session)) {
-    state.session = "all";
+  if (state.session === "all" || !sessions.some((session) => session.number === state.session)) {
+    state.session = sessions[0].number;
   }
-  sessionControls.innerHTML = [
-    `<button class="session-chip ${state.session === "all" ? "active" : ""}" type="button" data-session="all">Toutes</button>`,
-    ...sessions.map((session) => `
+  sessionControls.innerHTML = sessions.map((session) => `
       <button class="session-chip ${state.session === session.number ? "active" : ""}" type="button" data-session="${escapeHtml(session.number)}" title="${escapeHtml(session.label)}">
         S${escapeHtml(session.number)}
       </button>
-    `)
-  ].join("");
+    `).join("");
 }
 
 function currentRoleAlertFilter(alert) {
@@ -1663,13 +1763,15 @@ function renderSeriesControls() {
   const finalRows = finalProgramRowsForRace();
   const finalStages = finalRows.map((row) => row.stage);
   if (isFinalStage(state.series) && !finalStages.includes(state.series)) {
-    state.series = numbers.length ? "all" : (finalStages[0] || "all");
+    state.series = String(numbers[0] || finalStages[0] || "all");
   }
   if (!isFinalStage(state.series) && state.series !== "all" && !numbers.includes(Number(state.series))) {
-    state.series = "all";
+    state.series = String(numbers[0] || finalStages[0] || "all");
   }
   if (!numbers.length && finalStages.length && state.series === "all") {
     state.series = finalStages[0];
+  } else if (numbers.length && state.series === "all") {
+    state.series = String(numbers[0]);
   }
   const preview = raceSeries().some((row) => row.isPreview);
   const programRow = selectedProgramRow();
@@ -1684,7 +1786,6 @@ function renderSeriesControls() {
     return;
   }
   const controls = [
-    ...(numbers.length ? [`<button class="series-chip ${state.series === "all" ? "active" : ""}" type="button" data-series="all">Toutes</button>`] : []),
     ...numbers.map((number) => {
       const time = (data.series || [])
         .filter(matchesRace)
@@ -1710,12 +1811,12 @@ function renderSeriesControls() {
     : state.series !== "all" && Number(state.series) >= numbers[numbers.length - 1];
   const atFirstCurrentRace = isFinalStage(state.series)
     ? !numbers.length && finalStages.indexOf(state.series) <= 0
-    : state.series === "all" || Number(state.series) <= numbers[0];
+    : Number(state.series) <= numbers[0];
   setSeriesNavigation(
     atFirstCurrentRace && !hasPreviousProgramSeries(),
     atFirstCurrentRace ? "Course précédente" : "Série précédente",
     (!numbers.length && !finalStages.length) || (atLastCurrentRace && !hasNextProgramSeries()),
-    state.series === "all" ? "Choisir une série" : (atLastCurrentRace ? "Course suivante" : "Série suivante")
+    atLastCurrentRace ? "Course suivante" : "Série suivante"
   );
   seriesControls.title = preview ? "Aperçu généré automatiquement en attendant le fichier officiel des séries" : "";
 }
@@ -1762,15 +1863,33 @@ function programSeriesItems(row) {
   return [...bySeries.values()];
 }
 
+function programItemMatchesState(row, item, compareState) {
+  return row.eventId === compareState.eventId &&
+    row.sex === compareState.sex &&
+    (!row.session || compareState.session === "all" || row.session === compareState.session) &&
+    (
+      (item.stage && isFinalStage(item.stage) && compareState.series === item.stage) ||
+      (!isFinalStage(item.stage) && String(compareState.series) === String(item.series))
+    );
+}
+
 function programItemIsCurrent(row, item) {
   const viewState = ["video", "computer"].includes(state.role) ? (roleStates.speaker || state) : state;
-  return row.eventId === viewState.eventId &&
-    row.sex === viewState.sex &&
-    (!row.session || viewState.session === "all" || row.session === viewState.session) &&
-    (
-      (item.stage && isFinalStage(item.stage) && viewState.series === item.stage) ||
-      (!isFinalStage(item.stage) && String(viewState.series) === String(item.series))
-    );
+  return programItemMatchesState(row, item, viewState);
+}
+
+function programItemIsSpeakerCurrent(row, item) {
+  if (state.role !== "referee") return false;
+  return programItemMatchesState(row, item, roleStates.speaker || state);
+}
+
+function speakerProgramPositionLabel() {
+  const speakerState = roleStates.speaker || state;
+  const event = data.events.find((item) => item.id === speakerState.eventId);
+  const seriesLabel = isFinalStage(speakerState.series)
+    ? finalStageLabel(speakerState.series)
+    : `Série ${speakerState.series || "-"}`;
+  return `Repère speaker : ${speakerState.session && speakerState.session !== "all" ? `S${speakerState.session} - ` : ""}${event?.label || "Course"} ${sexDisplayLabel(speakerState.sex)} - ${seriesLabel}`;
 }
 
 function renderProgramModal() {
@@ -1789,6 +1908,7 @@ function renderProgramModal() {
           <span>Avancement</span>
           <h2>Programme simplifié</h2>
           <p>${viewState.session === "all" ? "Toutes les sessions" : `Session ${escapeHtml(viewState.session)}`} - courses, séries et horaires indicatifs.</p>
+          ${state.role === "referee" ? `<p class="speaker-program-marker">${escapeHtml(speakerProgramPositionLabel())}</p>` : ""}
         </div>
         <button class="decision-close" type="button" data-program-close aria-label="Fermer">×</button>
       </div>
@@ -1801,13 +1921,13 @@ function renderProgramModal() {
           return `
             <div class="program-row ${rowCurrent ? "current-race" : ""} ${readOnlyProgram ? "readonly-program-row" : ""}" data-program-row="${escapeHtml(programKey(row))}">
               <button class="program-race-button" type="button" ${readOnlyProgram ? "disabled" : `data-program-race="${escapeHtml(programKey(row))}"`}>
-                <span>${row.session ? `S${escapeHtml(row.session)} · ` : ""}${escapeHtml(event?.label || row.label || row.eventId)} ${escapeHtml(sexDisplayLabel(row.sex))}</span>
+                <span>${row.session ? `S${escapeHtml(row.session)} · ` : ""}${escapeHtml(event?.label || row.label || row.eventId)} ${escapeHtml(sexDisplayLabel(row.sex))}${splitRaceNote(row.eventId, row.sex)}</span>
                 ${row.startTime ? `<small>${escapeHtml(row.startTime)}</small>` : ""}
               </button>
               <div class="program-series-line">
                 ${items.length ? items.map((item) => `
-                  <button class="program-series-chip ${programItemIsCurrent(row, item) ? "current" : ""}" type="button" ${readOnlyProgram ? "disabled" : `data-program-race="${escapeHtml(programKey(row))}" data-program-series="${escapeHtml(item.series)}" data-program-stage="${escapeHtml(item.stage || "series")}"`}>
-                    <strong>${escapeHtml(item.label)}</strong>${item.time ? `<span>${escapeHtml(item.time)}</span>` : ""}
+                  <button class="program-series-chip ${programItemIsCurrent(row, item) ? "current" : ""} ${programItemIsSpeakerCurrent(row, item) ? "speaker-current" : ""}" type="button" ${readOnlyProgram ? "disabled" : `data-program-race="${escapeHtml(programKey(row))}" data-program-series="${escapeHtml(item.series)}" data-program-stage="${escapeHtml(item.stage || "series")}"`}>
+                    <strong>${escapeHtml(item.label)}</strong>${item.time ? `<span>${escapeHtml(item.time)}</span>` : ""}${programItemIsSpeakerCurrent(row, item) ? `<em>speaker</em>` : ""}
                   </button>
                 `).join("") : `<span class="no-series-note">Aucune série</span>`}
               </div>
@@ -1853,7 +1973,8 @@ function renderCategorySelect() {
 function renderHeader() {
   const event = currentEvent();
   const sexLabel = sexDisplayLabel(state.sex);
-  raceTitle.textContent = `${event?.label || "Course"} - ${sexLabel}`;
+  const title = `${event?.label || "Course"} - ${sexLabel}`;
+  raceTitle.innerHTML = `${escapeHtml(title)}${isLastRaceOfCurrentSession() ? ` <span class="session-end-note">[dernière course de la session]</span>` : ""}`;
   const meta = [event?.discipline, event?.distance].filter(Boolean).join(" - ");
   raceMeta.textContent = meta;
   raceSexBadge.textContent = sexLabel;
@@ -1932,9 +2053,13 @@ function renderEntrants() {
   const seriesLabel = isFinalStage(state.series)
     ? finalStageLabel(state.series)
     : `Série ${selectedSeries} / ${selectedSeriesCount}`;
-  entrantsTitle.textContent = hasSeriesFilter
-    ? seriesLabel
+  const tabletRacePrefix = state.role === "referee" && refereeTabletMode && hasSeriesFilter
+    ? `${currentEvent()?.label || "Course"} ${sexDisplayLabel(state.sex)} - `
+    : "";
+  const entrantsTitleText = hasSeriesFilter
+    ? `${tabletRacePrefix}${seriesLabel}`
     : (state.role === "referee" ? "Participants" : `${entrantWord(2).replace(/^./, (letter) => letter.toUpperCase())} 2026`);
+  entrantsTitle.innerHTML = `${escapeHtml(entrantsTitleText)}${hasSeriesFilter ? splitRaceNote() : ""}${isLastSeriesOfCurrentSession() ? ` <span class="session-end-note">[dernière série de la session]</span>` : ""}`;
   if (entrantsSubtitle) {
     entrantsSubtitle.textContent = hasSeriesFilter
       ? [seriesTime ? `Horaire ${seriesTime}` : "", `${visibleEntrants.length} ${swimmerWord(visibleEntrants.length)}`].filter(Boolean).join(" - ")
@@ -2556,7 +2681,7 @@ sessionControls?.addEventListener("click", (event) => {
   }
   clearSearch();
   state.category = "all";
-  state.series = state.session === "all" ? "all" : firstSeriesSelectionForCurrentRace();
+  state.series = firstSeriesSelectionForCurrentRace();
   state.selectedSwimmerId = "";
   state.selectedRecordKey = "";
   render();
@@ -2592,6 +2717,10 @@ seriesControls.addEventListener("click", (event) => {
 });
 
 programBtn?.addEventListener("click", openProgramModal);
+refereeTabletModeBtn?.addEventListener("click", () => {
+  refereeTabletMode = !refereeTabletMode;
+  render();
+});
 
 programModal?.addEventListener("click", (event) => {
   if (event.target === programModal || event.target.closest("[data-program-close]")) {

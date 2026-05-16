@@ -209,6 +209,20 @@ h2 {
   font-size: clamp(1.35rem, 2.8vw, 2rem);
 }
 
+.session-end-note {
+  margin-left: 6px;
+  color: #8a5a00;
+  font-size: 0.72rem;
+  font-weight: 900;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.program-race-button .session-end-note {
+  font-size: 0.68rem;
+  color: #7a5a12;
+}
+
 h3 {
   font-size: 1rem;
 }
@@ -257,6 +271,22 @@ h3 {
   border: 1px solid color-mix(in srgb, var(--role-accent) 28%, #d8e0e5);
   background: var(--role-accent-soft);
   color: var(--role-accent);
+}
+
+.referee-tablet-toggle {
+  display: none;
+}
+
+body.role-referee .referee-tablet-toggle {
+  display: inline-flex;
+  border: 1px solid color-mix(in srgb, var(--role-accent) 28%, #d8e0e5);
+  background: var(--role-accent-soft);
+  color: var(--role-accent);
+}
+
+.referee-tablet-toggle.active {
+  background: var(--role-accent);
+  color: #ffffff;
 }
 
 .primary-button {
@@ -972,11 +1002,41 @@ textarea {
   font-size: 0.72rem;
 }
 
+.program-series-chip em {
+  padding: 1px 5px;
+  border-radius: 999px;
+  background: #eef4f7;
+  color: #52616b;
+  font-size: 0.62rem;
+  font-style: normal;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
 .program-series-chip.current {
   border-color: #bf1e2e;
   background: #fff0f2;
   color: #a31927;
   box-shadow: inset 0 0 0 2px rgba(191, 30, 46, 0.14);
+}
+
+.program-series-chip.speaker-current {
+  border-color: #7dc3d1;
+  background: #f0fbfd;
+  color: #075866;
+}
+
+.program-series-chip.current.speaker-current {
+  border-color: #bf1e2e;
+  background: #fff0f2;
+  color: #a31927;
+}
+
+.speaker-program-marker {
+  margin-top: 4px;
+  color: #52616b;
+  font-size: 0.76rem;
+  font-weight: 850;
 }
 
 .readonly-program-row button {
@@ -2595,6 +2655,11 @@ tbody tr:hover,
     font-size: 1.12rem;
   }
 
+  .session-end-note {
+    display: inline-block;
+    margin: 5px 0 0;
+  }
+
   .entrants-panel {
     padding: 8px;
   }
@@ -2669,6 +2734,138 @@ tbody tr:hover,
   .live-mode #previousSeriesInlineBtn,
   .live-mode #nextSeriesInlineBtn {
     display: none;
+  }
+
+  .role-referee.referee-tablet-mode .topbar {
+    gap: 6px;
+  }
+
+  .role-referee.referee-tablet-mode .topbar > div:first-child,
+  .role-referee.referee-tablet-mode .top-actions,
+  .role-referee.referee-tablet-mode .top-session-field {
+    display: none;
+  }
+
+  .role-referee.referee-tablet-mode .role-switch {
+    width: 100%;
+  }
+
+  .role-referee.referee-tablet-mode .app-shell {
+    padding: 6px;
+    gap: 6px;
+  }
+
+  .role-referee.referee-tablet-mode .sidebar {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 6px;
+    border-radius: 8px;
+  }
+
+  .role-referee.referee-tablet-mode .sidebar .field:first-child,
+  .role-referee.referee-tablet-mode .series-controls,
+  .role-referee.referee-tablet-mode .category-field,
+  .role-referee.referee-tablet-mode .series-nav {
+    display: none;
+  }
+
+  .role-referee.referee-tablet-mode .program-button {
+    min-height: 34px;
+    width: 100%;
+  }
+
+  .role-referee.referee-tablet-mode .race-panel {
+    gap: 6px;
+  }
+
+  .role-referee.referee-tablet-mode .race-header,
+  .role-referee.referee-tablet-mode .decision-panel,
+  .role-referee.referee-tablet-mode .role-history,
+  .role-referee.referee-tablet-mode .reference-grid,
+  .role-referee.referee-tablet-mode .footer-status,
+  .role-referee.referee-tablet-mode .panel-actions .soft-count,
+  .role-referee.referee-tablet-mode #lineOrderBtn {
+    display: none;
+  }
+
+  .role-referee.referee-tablet-mode .entrants-panel {
+    padding: 6px;
+    border-radius: 8px;
+  }
+
+  .role-referee.referee-tablet-mode .entrants-panel .panel-title {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+  }
+
+  .role-referee.referee-tablet-mode #entrantsTitle {
+    font-size: 1rem;
+  }
+
+  .role-referee.referee-tablet-mode .panel-subtitle {
+    font-size: 0.72rem;
+  }
+
+  .role-referee.referee-tablet-mode .panel-actions {
+    display: none;
+  }
+
+  .role-referee.referee-tablet-mode .table-wrap.series-table {
+    overflow-x: hidden;
+  }
+
+  .role-referee.referee-tablet-mode .series-table table {
+    min-width: 0;
+    table-layout: fixed;
+  }
+
+  .role-referee.referee-tablet-mode .series-table th,
+  .role-referee.referee-tablet-mode .series-table td {
+    padding: 3px 4px;
+    font-size: 0.72rem;
+  }
+
+  .role-referee.referee-tablet-mode .series-table tbody tr {
+    height: 38px;
+  }
+
+  .role-referee.referee-tablet-mode th:nth-child(5),
+  .role-referee.referee-tablet-mode td:nth-child(5) {
+    display: none;
+  }
+
+  .role-referee.referee-tablet-mode th:first-child,
+  .role-referee.referee-tablet-mode td:first-child {
+    width: 36px;
+  }
+
+  .role-referee.referee-tablet-mode th:nth-child(3),
+  .role-referee.referee-tablet-mode td:nth-child(3) {
+    width: 56px;
+  }
+
+  .role-referee.referee-tablet-mode th:nth-child(4),
+  .role-referee.referee-tablet-mode td:nth-child(4) {
+    width: 72px;
+  }
+
+  .role-referee.referee-tablet-mode .swimmer-button {
+    font-size: 0.8rem;
+  }
+
+  .role-referee.referee-tablet-mode .club-name {
+    font-size: 0.68rem;
+  }
+
+  .role-referee.referee-tablet-mode .floating-series-nav {
+    display: grid;
+  }
+
+  .role-referee.referee-tablet-mode .floating-next {
+    display: inline-flex;
+    min-height: 42px;
+    font-size: 0.78rem;
   }
 
   .ranking-columns {
