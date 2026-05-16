@@ -835,7 +835,7 @@ function render() {
   if (fullscreenBtn) fullscreenBtn.textContent = isFullscreenMode ? "Quitter plein écran" : "Plein écran";
   if (refereeTabletModeBtn) {
     refereeTabletModeBtn.classList.toggle("active", refereeTabletMode);
-    refereeTabletModeBtn.textContent = refereeTabletMode ? "Affichage normal" : "Affichage tablette";
+    refereeTabletModeBtn.textContent = refereeTabletMode ? "Affichage normal" : "Affichage smartphone";
   }
   if (!data.events.length) {
     data.events = structuredClone(sampleData.events);
