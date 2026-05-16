@@ -1,6 +1,7 @@
 ﻿const STORAGE_KEY = "napSpeakerFrance2026:v15";
 const ALERTS_KEY = "napSpeakerFrance2026:alerts:v1";
 const LIVE_DISMISSED_ALERTS_KEY = "napSpeakerFrance2026:live-dismissed-alerts:v1";
+const SERIES_VALIDATIONS_KEY = "napSpeakerFrance2026:series-validations:v1";
 const fallbackData = {
   meet: {
     name: "Championnat de France 2026",
@@ -107,6 +108,7 @@ let roleStates = {
 
 let alerts = loadAlerts();
 let liveDismissedAlertIds = loadLiveDismissedAlerts();
+let seriesValidations = loadSeriesValidations();
 let decisionDraft = createDecisionDraft();
 
 const eventSelect = document.querySelector("#eventSelect");
@@ -116,10 +118,13 @@ const sessionControls = document.querySelector("#sessionControls");
 const seriesControls = document.querySelector("#seriesControls");
 const previousSeriesBtn = document.querySelector("#previousSeriesBtn");
 const nextSeriesBtn = document.querySelector("#nextSeriesBtn");
+const validateSeriesBtn = document.querySelector("#validateSeriesBtn");
 const previousSeriesInlineBtn = document.querySelector("#previousSeriesInlineBtn");
 const nextSeriesInlineBtn = document.querySelector("#nextSeriesInlineBtn");
+const validateSeriesInlineBtn = document.querySelector("#validateSeriesInlineBtn");
 const previousSeriesFloatBtn = document.querySelector("#previousSeriesFloatBtn");
 const nextSeriesFloatBtn = document.querySelector("#nextSeriesFloatBtn");
+const validateSeriesFloatBtn = document.querySelector("#validateSeriesFloatBtn");
 const programBtn = document.querySelector("#programBtn");
 const lineOrderBtn = document.querySelector("#lineOrderBtn");
 const entrantsBody = document.querySelector("#entrantsBody");
@@ -193,6 +198,21 @@ function loadLiveDismissedAlerts() {
 
 function saveLiveDismissedAlerts() {
   localStorage.setItem(LIVE_DISMISSED_ALERTS_KEY, JSON.stringify(liveDismissedAlertIds));
+}
+
+function loadSeriesValidations() {
+  const saved = localStorage.getItem(SERIES_VALIDATIONS_KEY);
+  if (!saved) return {};
+  try {
+    const parsed = JSON.parse(saved);
+    return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed : {};
+  } catch {
+    return {};
+  }
+}
+
+function saveSeriesValidations() {
+  localStorage.setItem(SERIES_VALIDATIONS_KEY, JSON.stringify(seriesValidations));
 }
 
 function resetHistory() {
@@ -624,6 +644,36 @@ function selectedSeriesTime() {
       "";
   }
   return raceSeries().find((row) => Number(row.series) === Number(state.series))?.startTime || "";
+}
+
+function currentSeriesValidationKey() {
+  if (!state.eventId || !state.sex || state.series === "all") return "";
+  const row = selectedProgramRow();
+  const session = row?.session || (state.session === "all" ? "" : state.session);
+  return [session, state.eventId, state.sex, state.series].join("|");
+}
+
+function seriesValidationKey(row, item) {
+  if (!row || !item) return "";
+  return [row.session || "", row.eventId, row.sex, item.stage && isFinalStage(item.stage) ? item.stage : item.series].join("|");
+}
+
+function currentSeriesValidation() {
+  const key = currentSeriesValidationKey();
+  return key ? seriesValidations[key] : null;
+}
+
+function markCurrentSeriesValidated() {
+  if (state.role !== "referee") return false;
+  const key = currentSeriesValidationKey();
+  if (!key) return false;
+  seriesValidations[key] = {
+    validatedAt: new Date().toISOString(),
+    role: state.role
+  };
+  saveSeriesValidations();
+  goToNextSeries();
+  return true;
 }
 
 function hasNextProgramSeries() {
@@ -1692,10 +1742,25 @@ function renderSeriesControls() {
 }
 
 function setSeriesNavigation(previousDisabled, previousLabel, nextDisabled, nextLabel) {
+  const validation = currentSeriesValidation();
+  const isAllSeries = state.series === "all";
+  const canValidateSeries = state.role === "referee" && !isAllSeries && !validation;
+  const validationDisabled = !canValidateSeries;
+  const validationLabel = validation ? `Validée JA ${formatAlertTime(validation.validatedAt) || ""}`.trim() : "⏳ À valider JA";
   [previousSeriesBtn, previousSeriesInlineBtn, previousSeriesFloatBtn].forEach((button) => {
     if (!button) return;
     button.disabled = previousDisabled;
     button.textContent = previousLabel;
+  });
+  [validateSeriesBtn, validateSeriesInlineBtn, validateSeriesFloatBtn].forEach((button) => {
+    if (!button) return;
+    button.hidden = isAllSeries;
+    button.disabled = validationDisabled;
+    button.setAttribute("aria-disabled", String(validationDisabled));
+    button.textContent = validationLabel;
+    button.classList.toggle("is-validated", Boolean(validation));
+    button.classList.toggle("is-pending", !validation && !isAllSeries);
+    button.classList.toggle("is-readonly", state.role !== "referee");
   });
   [nextSeriesBtn, nextSeriesInlineBtn, nextSeriesFloatBtn].forEach((button) => {
     if (!button) return;
@@ -1773,11 +1838,14 @@ function renderProgramModal() {
                 ${row.startTime ? `<small>${escapeHtml(row.startTime)}</small>` : ""}
               </button>
               <div class="program-series-line">
-                ${items.length ? items.map((item) => `
-                  <button class="program-series-chip ${programItemIsCurrent(row, item) ? "current" : ""}" type="button" data-program-race="${escapeHtml(programKey(row))}" data-program-series="${escapeHtml(item.series)}" data-program-stage="${escapeHtml(item.stage || "series")}">
-                    <strong>${escapeHtml(item.label)}</strong>${item.time ? `<span>${escapeHtml(item.time)}</span>` : ""}
-                  </button>
-                `).join("") : `<span class="no-series-note">Aucune série</span>`}
+                ${items.length ? items.map((item) => {
+                  const validation = seriesValidations[seriesValidationKey(row, item)];
+                  return `
+                    <button class="program-series-chip ${programItemIsCurrent(row, item) ? "current" : ""} ${validation ? "validated" : ""}" type="button" data-program-race="${escapeHtml(programKey(row))}" data-program-series="${escapeHtml(item.series)}" data-program-stage="${escapeHtml(item.stage || "series")}">
+                      <strong>${escapeHtml(item.label)}</strong>${item.time ? `<span>${escapeHtml(item.time)}</span>` : ""}${validation ? `<em>JA</em>` : ""}
+                    </button>
+                  `;
+                }).join("") : `<span class="no-series-note">Aucune série</span>`}
               </div>
             </div>
           `;
@@ -2777,6 +2845,9 @@ function toggleAntoineOverlay() {
 previousSeriesBtn?.addEventListener("click", goToPreviousSeries);
 previousSeriesInlineBtn?.addEventListener("click", goToPreviousSeries);
 previousSeriesFloatBtn?.addEventListener("click", goToPreviousSeries);
+validateSeriesBtn?.addEventListener("click", markCurrentSeriesValidated);
+validateSeriesInlineBtn?.addEventListener("click", markCurrentSeriesValidated);
+validateSeriesFloatBtn?.addEventListener("click", markCurrentSeriesValidated);
 nextSeriesBtn?.addEventListener("click", goToNextSeries);
 nextSeriesInlineBtn?.addEventListener("click", goToNextSeries);
 nextSeriesFloatBtn?.addEventListener("click", goToNextSeries);

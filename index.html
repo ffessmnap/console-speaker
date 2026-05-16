@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Speaker Nage avec Palmes - France 2026 Limoges</title>
-    <link rel="stylesheet" href="styles.css?v=20260516-programme">
+    <link rel="stylesheet" href="styles.css?v=20260516-validation">
   </head>
   <body>
     <header class="topbar">
@@ -41,6 +41,7 @@
           <div id="seriesControls" class="series-controls"></div>
           <div class="series-nav">
             <button id="previousSeriesBtn" class="ghost-button compact" type="button">S&eacute;rie pr&eacute;c&eacute;dente</button>
+            <button id="validateSeriesBtn" class="ghost-button compact validate-series-button" type="button">⏳ &Agrave; valider JA</button>
             <button id="nextSeriesBtn" class="ghost-button compact" type="button">S&eacute;rie suivante</button>
           </div>
         </div>
@@ -81,6 +82,7 @@
               </div>
               <div class="panel-actions">
                 <button id="previousSeriesInlineBtn" class="ghost-button compact" type="button">S&eacute;rie pr&eacute;c&eacute;dente</button>
+                <button id="validateSeriesInlineBtn" class="ghost-button compact validate-series-button" type="button">⏳ &Agrave; valider JA</button>
                 <button id="nextSeriesInlineBtn" class="ghost-button compact" type="button">S&eacute;rie suivante</button>
                 <button id="lineOrderBtn" class="line-order-button" type="button" title="Inverser l'ordre des lignes">Lignes 1-8</button>
                 <span id="filteredCount" class="soft-count">0 affich&eacute;s</span>
@@ -129,6 +131,7 @@
 
     <div class="floating-series-nav">
       <button id="previousSeriesFloatBtn" class="floating-next floating-previous" type="button">S&eacute;rie pr&eacute;c&eacute;dente</button>
+      <button id="validateSeriesFloatBtn" class="floating-next floating-validate" type="button">⏳ JA</button>
       <button id="nextSeriesFloatBtn" class="floating-next" type="button">S&eacute;rie suivante</button>
     </div>
     <div id="antoineOverlay" class="antoine-overlay" hidden>
@@ -138,7 +141,7 @@
     <div id="alertDetailModal" class="decision-modal alert-detail-modal" hidden></div>
     <div id="programModal" class="decision-modal program-modal" hidden></div>
 
-    <script src="data.generated.js?v=20260516-programme"></script>
-    <script src="app.js?v=20260516-programme"></script>
+    <script src="data.generated.js?v=20260516-validation"></script>
+    <script src="app.js?v=20260516-validation"></script>
   </body>
 </html>
