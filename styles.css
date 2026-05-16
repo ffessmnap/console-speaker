@@ -7,6 +7,8 @@
   --paper: #f3f6f7;
   --accent: #0b7285;
   --accent-dark: #075866;
+  --role-accent: #0b7285;
+  --role-accent-soft: #e7f5f7;
   --warm: #f59f00;
   --good: #2b8a3e;
   --soft: #e7f5f7;
@@ -23,6 +25,31 @@ body {
   color: var(--ink);
   background: var(--paper);
   font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+body.role-live {
+  --role-accent: #0b7285;
+  --role-accent-soft: #e7f5f7;
+}
+
+body.role-speaker {
+  --role-accent: #d71920;
+  --role-accent-soft: #fff0f0;
+}
+
+body.role-referee {
+  --role-accent: #2b8a3e;
+  --role-accent-soft: #eefaf1;
+}
+
+body.role-video {
+  --role-accent: #6741d9;
+  --role-accent-soft: #f0ecff;
+}
+
+body.role-computer {
+  --role-accent: #e67700;
+  --role-accent-soft: #fff4e6;
 }
 
 button,
@@ -46,6 +73,7 @@ button,
   padding: 12px 20px;
   background: #ffffff;
   border-bottom: 1px solid var(--line);
+  border-top: 4px solid var(--role-accent);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -90,7 +118,7 @@ button,
 }
 
 .role-chip.active {
-  background: var(--accent);
+  background: var(--role-accent);
   color: #ffffff;
 }
 
@@ -135,6 +163,19 @@ button,
 
 .footer-status {
   padding: 0 12px 12px;
+}
+
+body.fullscreen-mode .footer-status {
+  display: none;
+}
+
+body.fullscreen-mode .topbar {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+body.fullscreen-mode .top-actions .ghost-button:not(#fullscreenBtn) {
+  display: none;
 }
 
 .footer-credit {
@@ -210,6 +251,12 @@ h3 {
 .file-button {
   background: #edf2f4;
   color: var(--ink);
+}
+
+#fullscreenBtn {
+  border: 1px solid color-mix(in srgb, var(--role-accent) 28%, #d8e0e5);
+  background: var(--role-accent-soft);
+  color: var(--role-accent);
 }
 
 .primary-button {
@@ -299,34 +346,6 @@ textarea {
 .program-button {
   min-height: 36px;
   justify-content: center;
-}
-
-.validate-series-button {
-  border-color: #f2d28a;
-  background: #fff8db;
-  color: #735100;
-  font-weight: 950;
-}
-
-.validate-series-button[hidden],
-.floating-validate[hidden] {
-  display: none !important;
-}
-
-.validate-series-button.is-validated,
-.validate-series-button.is-validated:disabled {
-  opacity: 0.88;
-  border-color: #5daa7a;
-  background: #d9f3e2;
-  color: #176232;
-}
-
-.validate-series-button.is-readonly {
-  cursor: default;
-}
-
-.validate-series-button.is-readonly:disabled {
-  opacity: 1;
 }
 
 .series-chip,
@@ -553,6 +572,30 @@ textarea {
 .history-list {
   display: grid;
   gap: 6px;
+}
+
+.history-list.compact-scroll {
+  max-height: 268px;
+  overflow-y: auto;
+  padding-right: 4px;
+  scrollbar-gutter: stable;
+}
+
+.history-list.expanded {
+  max-height: none;
+  overflow: visible;
+}
+
+.history-toggle {
+  min-height: 30px;
+  padding: 0 10px;
+  border-radius: 7px;
+  border: 1px solid color-mix(in srgb, var(--role-accent) 34%, #ffffff);
+  background: var(--role-accent-soft);
+  color: var(--role-accent);
+  font-size: 0.74rem;
+  font-weight: 950;
+  cursor: pointer;
 }
 
 .history-item {
@@ -936,23 +979,12 @@ textarea {
   box-shadow: inset 0 0 0 2px rgba(191, 30, 46, 0.14);
 }
 
-.program-series-chip.validated {
-  border-color: #8cc9a3;
-  background: #edf9f1;
-  color: #176232;
+.readonly-program-row button {
+  cursor: default;
 }
 
-.program-series-chip em {
-  display: inline-flex;
-  align-items: center;
-  min-height: 18px;
-  padding: 0 5px;
-  border-radius: 999px;
-  background: #1f8a4c;
-  color: #ffffff;
-  font-size: 0.68rem;
-  font-style: normal;
-  font-weight: 950;
+.readonly-program-row button:disabled {
+  opacity: 1;
 }
 
 .alert-detail-status {
@@ -1107,8 +1139,36 @@ body:not(.role-computer) .computer-only {
 .role-computer .entrants-panel,
 .role-video .reference-grid,
 .role-computer .reference-grid,
+.role-video .top-session-field,
+.role-computer .top-session-field,
+.role-video .sidebar .field,
+.role-computer .sidebar .field,
+.role-video .series-field,
+.role-computer .series-field {
+  display: none !important;
+}
+
+.role-video .sidebar,
+.role-computer .sidebar {
+  position: static;
+  display: block;
+}
+
+.role-video .program-button,
+.role-computer .program-button {
+  display: inline-flex;
+  width: min(280px, 100%);
+}
+
 .role-video .floating-series-nav,
 .role-computer .floating-series-nav {
+  grid-template-columns: 1fr;
+}
+
+.role-video .floating-previous,
+.role-computer .floating-previous,
+.role-video #nextSeriesFloatBtn,
+.role-computer #nextSeriesFloatBtn {
   display: none !important;
 }
 
@@ -1294,8 +1354,9 @@ body:not(.role-computer) .computer-only {
 }
 
 .badge.muted {
-  background: #eef2f4;
-  color: var(--muted);
+  background: var(--role-accent-soft);
+  color: var(--role-accent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--role-accent) 30%, #ffffff);
 }
 
 .record-alert {
@@ -1524,7 +1585,7 @@ td {
   bottom: 12px;
   z-index: 30;
   display: none;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 0.85fr 1fr;
 }
 
 .floating-series-nav .floating-next {
@@ -1535,12 +1596,8 @@ td {
   background: #3f5f66;
 }
 
-.floating-validate {
-  background: #b88500;
-}
-
-.floating-validate.is-validated {
-  background: #1f8a4c;
+.floating-program {
+  background: #176c7b;
 }
 
 .floating-next:disabled {
@@ -2481,6 +2538,10 @@ tbody tr:hover,
   .history-action {
     grid-column: 1;
     justify-self: stretch;
+  }
+
+  .history-list.compact-scroll {
+    max-height: 520px;
   }
 
   .decision-modal {

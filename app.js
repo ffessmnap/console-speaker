@@ -1,7 +1,6 @@
 ﻿const STORAGE_KEY = "napSpeakerFrance2026:v15";
 const ALERTS_KEY = "napSpeakerFrance2026:alerts:v1";
 const LIVE_DISMISSED_ALERTS_KEY = "napSpeakerFrance2026:live-dismissed-alerts:v1";
-const SERIES_VALIDATIONS_KEY = "napSpeakerFrance2026:series-validations:v1";
 const fallbackData = {
   meet: {
     name: "Championnat de France 2026",
@@ -108,8 +107,12 @@ let roleStates = {
 
 let alerts = loadAlerts();
 let liveDismissedAlertIds = loadLiveDismissedAlerts();
-let seriesValidations = loadSeriesValidations();
 let decisionDraft = createDecisionDraft();
+let expandedHistories = {
+  speaker: false,
+  role: false
+};
+let isFullscreenMode = Boolean(document.fullscreenElement);
 
 const eventSelect = document.querySelector("#eventSelect");
 const searchInput = document.querySelector("#searchInput");
@@ -118,14 +121,12 @@ const sessionControls = document.querySelector("#sessionControls");
 const seriesControls = document.querySelector("#seriesControls");
 const previousSeriesBtn = document.querySelector("#previousSeriesBtn");
 const nextSeriesBtn = document.querySelector("#nextSeriesBtn");
-const validateSeriesBtn = document.querySelector("#validateSeriesBtn");
 const previousSeriesInlineBtn = document.querySelector("#previousSeriesInlineBtn");
 const nextSeriesInlineBtn = document.querySelector("#nextSeriesInlineBtn");
-const validateSeriesInlineBtn = document.querySelector("#validateSeriesInlineBtn");
 const previousSeriesFloatBtn = document.querySelector("#previousSeriesFloatBtn");
 const nextSeriesFloatBtn = document.querySelector("#nextSeriesFloatBtn");
-const validateSeriesFloatBtn = document.querySelector("#validateSeriesFloatBtn");
 const programBtn = document.querySelector("#programBtn");
+const programFloatBtn = document.querySelector("#programFloatBtn");
 const lineOrderBtn = document.querySelector("#lineOrderBtn");
 const entrantsBody = document.querySelector("#entrantsBody");
 const entrantCount = document.querySelector("#entrantCount");
@@ -155,6 +156,7 @@ const roleQueue = document.querySelector("#roleQueue");
 const roleHistory = document.querySelector("#roleHistory");
 const speakerHistory = document.querySelector("#speakerHistory");
 const roleBadge = document.querySelector("#roleBadge");
+const fullscreenBtn = document.querySelector("#fullscreenBtn");
 const jsonInput = document.querySelector("#jsonInput");
 const csvInput = document.querySelector("#csvInput");
 const swimmerDetails = document.querySelector("#swimmerDetails");
@@ -198,21 +200,6 @@ function loadLiveDismissedAlerts() {
 
 function saveLiveDismissedAlerts() {
   localStorage.setItem(LIVE_DISMISSED_ALERTS_KEY, JSON.stringify(liveDismissedAlertIds));
-}
-
-function loadSeriesValidations() {
-  const saved = localStorage.getItem(SERIES_VALIDATIONS_KEY);
-  if (!saved) return {};
-  try {
-    const parsed = JSON.parse(saved);
-    return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed : {};
-  } catch {
-    return {};
-  }
-}
-
-function saveSeriesValidations() {
-  localStorage.setItem(SERIES_VALIDATIONS_KEY, JSON.stringify(seriesValidations));
 }
 
 function resetHistory() {
@@ -646,36 +633,6 @@ function selectedSeriesTime() {
   return raceSeries().find((row) => Number(row.series) === Number(state.series))?.startTime || "";
 }
 
-function currentSeriesValidationKey() {
-  if (!state.eventId || !state.sex || state.series === "all") return "";
-  const row = selectedProgramRow();
-  const session = row?.session || (state.session === "all" ? "" : state.session);
-  return [session, state.eventId, state.sex, state.series].join("|");
-}
-
-function seriesValidationKey(row, item) {
-  if (!row || !item) return "";
-  return [row.session || "", row.eventId, row.sex, item.stage && isFinalStage(item.stage) ? item.stage : item.series].join("|");
-}
-
-function currentSeriesValidation() {
-  const key = currentSeriesValidationKey();
-  return key ? seriesValidations[key] : null;
-}
-
-function markCurrentSeriesValidated() {
-  if (state.role !== "referee") return false;
-  const key = currentSeriesValidationKey();
-  if (!key) return false;
-  seriesValidations[key] = {
-    validatedAt: new Date().toISOString(),
-    role: state.role
-  };
-  saveSeriesValidations();
-  goToNextSeries();
-  return true;
-}
-
 function hasNextProgramSeries() {
   const rows = programRows();
   const index = currentProgramIndex();
@@ -767,6 +724,7 @@ function lastSeriesSelectionForCurrentRace() {
 
 function render() {
   document.body.classList.add("live-mode");
+  document.body.classList.toggle("fullscreen-mode", isFullscreenMode);
   document.body.classList.toggle("role-speaker", state.role === "speaker");
   document.body.classList.toggle("role-live", state.role === "live");
   document.body.classList.toggle("role-referee", state.role === "referee");
@@ -776,6 +734,7 @@ function render() {
     button.classList.toggle("active", button.dataset.role === state.role);
   });
   if (roleBadge) roleBadge.textContent = ROLE_LABELS[state.role] || "Console";
+  if (fullscreenBtn) fullscreenBtn.textContent = isFullscreenMode ? "Quitter plein écran" : "Plein écran";
   if (!data.events.length) {
     data.events = structuredClone(sampleData.events);
     state.eventId = data.events[0].id;
@@ -859,6 +818,15 @@ function alertRaceLabel(alert) {
 
 function alertSwimmerLabel(alert) {
   return `${alert.displayName || "Concurrent"}${alert.club ? ` - ${alert.club}` : ""}`;
+}
+
+function alertIdentityLabel(alert) {
+  if (state.role === "video") return "Concurrent non affiché";
+  return `${alert.displayName || "Concurrent"}${alertClubShortLabel(alert) ? ` - ${alertClubShortLabel(alert)}` : ""}`;
+}
+
+function fullAlertIdentityLabel(alert) {
+  return `${alert.displayName || "Concurrent"}${alertClubShortLabel(alert) ? ` - ${alertClubShortLabel(alert)}` : ""}`;
 }
 
 function alertClubShortLabel(alert) {
@@ -992,7 +960,9 @@ function renderAlertCard(alert, actionLabel = "") {
   const detail = alertDetailLabel(alert);
   if (isSpeakerView()) {
     const sentence = speakerAlertSentence(alert);
-    const alertTitle = isRequalificationAlert(alert) ? "Requalification à annoncer" : "Disqualification à annoncer";
+    const alertTitle = state.role === "live"
+      ? (isRequalificationAlert(alert) ? "Requalification signalée" : "Disqualification signalée")
+      : (isRequalificationAlert(alert) ? "Requalification à annoncer" : "Disqualification à annoncer");
     return `
       <div class="alert-card speaker-alert-card" data-alert-id="${escapeHtml(alert.id)}">
         <div>
@@ -1045,7 +1015,7 @@ function renderRolePanels() {
 
 function renderOfficialAlerts() {
   if (!officialAlerts) return;
-  const showVideoInfo = ["live", "speaker", "computer"].includes(state.role);
+  const showVideoInfo = ["live", "speaker"].includes(state.role);
   if (!isSpeakerView() && !showVideoInfo) {
     officialAlerts.hidden = true;
     officialAlerts.innerHTML = "";
@@ -1153,7 +1123,7 @@ function renderHistoryItem(alert, options = {}) {
     : `Série ${alert.series || "-"}`;
   const courseLine = `${event?.label || alert.eventId} ${sexLabel} - ${seriesLabel} - Ligne ${alert.line || "-"}`;
   const motif = decisionMotifLabel(alert);
-  const identity = `${alert.displayName || "Concurrent"}${alertClubShortLabel(alert) ? ` - ${alertClubShortLabel(alert)}` : ""}`;
+  const identity = options.showIdentity ? fullAlertIdentityLabel(alert) : alertIdentityLabel(alert);
   const action = historyActionForAlert(alert);
   return `
     <div class="history-item ${alertStatusClass(alert)} ${options.compact ? "compact-history-item" : ""}" data-history-alert-id="${escapeHtml(alert.id)}">
@@ -1179,11 +1149,11 @@ function openAlertDetail(alertId) {
   const seriesLabel = alert.stage && isFinalStage(alert.stage)
     ? finalStageLabel(alert.stage)
     : `Série ${alert.series || "-"}`;
-  const identity = `${alert.displayName || "Concurrent"}${alertClubShortLabel(alert) ? ` - ${alertClubShortLabel(alert)}` : ""}`;
+  const identity = alertIdentityLabel(alert);
   const comment = alertCommentLabel(alert);
   const timeline = alertTimelineItems(alert);
-  const speakerSentence = isSpeakerView() || alert.speakerStatus !== "none" ? speakerAlertSentence(alert) : null;
-  const clickedSentence = clickedAlert.id !== alert.id ? speakerAlertSentence(clickedAlert) : null;
+  const speakerSentence = state.role !== "video" && (isSpeakerView() || alert.speakerStatus !== "none") ? speakerAlertSentence(alert) : null;
+  const clickedSentence = state.role !== "video" && clickedAlert.id !== alert.id ? speakerAlertSentence(clickedAlert) : null;
   alertDetailModal.hidden = false;
   alertDetailModal.innerHTML = `
     <div class="decision-dialog alert-detail-dialog" role="dialog" aria-modal="true" aria-label="Détail de décision">
@@ -1250,8 +1220,7 @@ function renderSpeakerHistory() {
   const doneAlerts = alerts
     .filter((alert) => !isRequalificationAlert(alert))
     .filter((alert) => alert.speakerStatus === "done" || (alert.cancelledAt && alert.speakerAnnouncedAt))
-    .sort((a, b) => String(b.speakerAnnouncedAt || b.updatedAt).localeCompare(String(a.speakerAnnouncedAt || a.updatedAt)))
-    .slice(0, 8);
+    .sort((a, b) => String(b.speakerAnnouncedAt || b.updatedAt).localeCompare(String(a.speakerAnnouncedAt || a.updatedAt)));
   if (!doneAlerts.length) {
     speakerHistory.hidden = true;
     speakerHistory.innerHTML = "";
@@ -1261,8 +1230,9 @@ function renderSpeakerHistory() {
   speakerHistory.innerHTML = `
     <div class="panel-title">
       <h3>Disqualifications annoncées</h3>
+      ${historyToggleButton("speaker", doneAlerts.length)}
     </div>
-    <div class="history-list">
+    <div class="history-list ${expandedHistories.speaker ? "expanded" : "compact-scroll"}">
       ${doneAlerts.map((alert) => {
         return renderHistoryItem(alert, { compact: false, timeValue: alert.cancelledAt || alert.speakerAnnouncedAt || alert.updatedAt });
       }).join("")}
@@ -1290,8 +1260,7 @@ function renderRoleHistory() {
     rows = alerts.filter((alert) => alert.informaticsStatus === "done" && !isRequalificationAlert(alert));
   }
   rows = rows
-    .sort((a, b) => String(b.updatedAt || b.createdAt).localeCompare(String(a.updatedAt || a.createdAt)))
-    .slice(0, 12);
+    .sort((a, b) => String(b.updatedAt || b.createdAt).localeCompare(String(a.updatedAt || a.createdAt)));
   if (!rows.length) {
     roleHistory.hidden = true;
     roleHistory.innerHTML = "";
@@ -1301,11 +1270,18 @@ function renderRoleHistory() {
   roleHistory.innerHTML = `
     <div class="panel-title">
       <h3>${escapeHtml(title)}</h3>
+      ${historyToggleButton("role", rows.length)}
     </div>
-    <div class="history-list">
-      ${rows.map((alert) => renderHistoryItem(alert, { timeValue: alert.cancelledAt || alert.createdAt })).join("")}
+    <div class="history-list ${expandedHistories.role ? "expanded" : "compact-scroll"}">
+      ${rows.map((alert) => renderHistoryItem(alert, { timeValue: alert.cancelledAt || alert.createdAt, showIdentity: state.role === "video" })).join("")}
     </div>
   `;
+}
+
+function historyToggleButton(historyKey, rowCount) {
+  if (rowCount <= 5) return "";
+  const expanded = Boolean(expandedHistories[historyKey]);
+  return `<button class="history-toggle" type="button" data-history-toggle="${escapeHtml(historyKey)}">${expanded ? "Réduire" : "Tout afficher"}</button>`;
 }
 
 function selectedEntrant() {
@@ -1576,13 +1552,16 @@ function renderQueueItem(alert) {
     : "";
   const title = state.role === "video" ? "Demande arbitrage vidéo à traiter" : "Décision à saisir";
   const detail = alertCommentLabel(alert);
+  const identityLine = state.role === "video"
+    ? "Concurrent non affiché"
+    : `${alertSwimmerLabel(alert)}${detail ? ` - ${detail}` : ""}`;
   return `
     <div class="queue-item urgent-queue-item" data-alert-id="${escapeHtml(alert.id)}">
       <div>
         <strong class="alert-title"><span aria-hidden="true">!</span> ${escapeHtml(title)}</strong>
         <strong>${escapeHtml(decisionMotifLabel(alert))}</strong>
         <span>${escapeHtml(alertRaceLabel(alert))}</span>
-        <span>${escapeHtml(alertSwimmerLabel(alert))}${detail ? ` - ${escapeHtml(detail)}` : ""}</span>
+        <span>${escapeHtml(identityLine)}</span>
       </div>
       <div class="queue-actions">${videoActions}${computerActions}</div>
     </div>
@@ -1742,25 +1721,10 @@ function renderSeriesControls() {
 }
 
 function setSeriesNavigation(previousDisabled, previousLabel, nextDisabled, nextLabel) {
-  const validation = currentSeriesValidation();
-  const isAllSeries = state.series === "all";
-  const canValidateSeries = state.role === "referee" && !isAllSeries && !validation;
-  const validationDisabled = !canValidateSeries;
-  const validationLabel = validation ? `Validée JA ${formatAlertTime(validation.validatedAt) || ""}`.trim() : "⏳ À valider JA";
   [previousSeriesBtn, previousSeriesInlineBtn, previousSeriesFloatBtn].forEach((button) => {
     if (!button) return;
     button.disabled = previousDisabled;
     button.textContent = previousLabel;
-  });
-  [validateSeriesBtn, validateSeriesInlineBtn, validateSeriesFloatBtn].forEach((button) => {
-    if (!button) return;
-    button.hidden = isAllSeries;
-    button.disabled = validationDisabled;
-    button.setAttribute("aria-disabled", String(validationDisabled));
-    button.textContent = validationLabel;
-    button.classList.toggle("is-validated", Boolean(validation));
-    button.classList.toggle("is-pending", !validation && !isAllSeries);
-    button.classList.toggle("is-readonly", state.role !== "referee");
   });
   [nextSeriesBtn, nextSeriesInlineBtn, nextSeriesFloatBtn].forEach((button) => {
     if (!button) return;
@@ -1799,29 +1763,32 @@ function programSeriesItems(row) {
 }
 
 function programItemIsCurrent(row, item) {
-  return row.eventId === state.eventId &&
-    row.sex === state.sex &&
-    (!row.session || state.session === "all" || row.session === state.session) &&
+  const viewState = ["video", "computer"].includes(state.role) ? (roleStates.speaker || state) : state;
+  return row.eventId === viewState.eventId &&
+    row.sex === viewState.sex &&
+    (!row.session || viewState.session === "all" || row.session === viewState.session) &&
     (
-      (item.stage && isFinalStage(item.stage) && state.series === item.stage) ||
-      (!isFinalStage(item.stage) && String(state.series) === String(item.series))
+      (item.stage && isFinalStage(item.stage) && viewState.series === item.stage) ||
+      (!isFinalStage(item.stage) && String(viewState.series) === String(item.series))
     );
 }
 
 function renderProgramModal() {
   if (!programModal || programModal.hidden) return;
+  const viewState = ["video", "computer"].includes(state.role) ? (roleStates.speaker || state) : state;
+  const readOnlyProgram = ["video", "computer"].includes(state.role);
   const rows = (data.program || [])
-    .filter((row) => state.session === "all" || !row.session || row.session === state.session)
+    .filter((row) => viewState.session === "all" || !row.session || row.session === viewState.session)
     .filter((row) => row.hasEntrants === false || hasRowsForProgram(row))
     .sort((a, b) => Number(a.session || 0) - Number(b.session || 0) || Number(a.order || 9999) - Number(b.order || 9999));
-  const currentKey = raceOptionKey(state.eventId, state.sex);
+  const currentKey = raceOptionKey(viewState.eventId, viewState.sex);
   programModal.innerHTML = `
     <div class="decision-dialog program-dialog" role="dialog" aria-modal="true" aria-label="Programme">
       <div class="decision-modal-head">
         <div>
           <span>Avancement</span>
           <h2>Programme simplifié</h2>
-          <p>${state.session === "all" ? "Toutes les sessions" : `Session ${escapeHtml(state.session)}`} - courses, séries et horaires indicatifs.</p>
+          <p>${viewState.session === "all" ? "Toutes les sessions" : `Session ${escapeHtml(viewState.session)}`} - courses, séries et horaires indicatifs.</p>
         </div>
         <button class="decision-close" type="button" data-program-close aria-label="Fermer">×</button>
       </div>
@@ -1832,20 +1799,17 @@ function renderProgramModal() {
           const rowCurrent = rowKey === currentKey && (!row.session || state.session === "all" || row.session === state.session);
           const items = programSeriesItems(row);
           return `
-            <div class="program-row ${rowCurrent ? "current-race" : ""}" data-program-row="${escapeHtml(programKey(row))}">
-              <button class="program-race-button" type="button" data-program-race="${escapeHtml(programKey(row))}">
+            <div class="program-row ${rowCurrent ? "current-race" : ""} ${readOnlyProgram ? "readonly-program-row" : ""}" data-program-row="${escapeHtml(programKey(row))}">
+              <button class="program-race-button" type="button" ${readOnlyProgram ? "disabled" : `data-program-race="${escapeHtml(programKey(row))}"`}>
                 <span>${row.session ? `S${escapeHtml(row.session)} · ` : ""}${escapeHtml(event?.label || row.label || row.eventId)} ${escapeHtml(sexDisplayLabel(row.sex))}</span>
                 ${row.startTime ? `<small>${escapeHtml(row.startTime)}</small>` : ""}
               </button>
               <div class="program-series-line">
-                ${items.length ? items.map((item) => {
-                  const validation = seriesValidations[seriesValidationKey(row, item)];
-                  return `
-                    <button class="program-series-chip ${programItemIsCurrent(row, item) ? "current" : ""} ${validation ? "validated" : ""}" type="button" data-program-race="${escapeHtml(programKey(row))}" data-program-series="${escapeHtml(item.series)}" data-program-stage="${escapeHtml(item.stage || "series")}">
-                      <strong>${escapeHtml(item.label)}</strong>${item.time ? `<span>${escapeHtml(item.time)}</span>` : ""}${validation ? `<em>JA</em>` : ""}
-                    </button>
-                  `;
-                }).join("") : `<span class="no-series-note">Aucune série</span>`}
+                ${items.length ? items.map((item) => `
+                  <button class="program-series-chip ${programItemIsCurrent(row, item) ? "current" : ""}" type="button" ${readOnlyProgram ? "disabled" : `data-program-race="${escapeHtml(programKey(row))}" data-program-series="${escapeHtml(item.series)}" data-program-stage="${escapeHtml(item.stage || "series")}"`}>
+                    <strong>${escapeHtml(item.label)}</strong>${item.time ? `<span>${escapeHtml(item.time)}</span>` : ""}
+                  </button>
+                `).join("") : `<span class="no-series-note">Aucune série</span>`}
               </div>
             </div>
           `;
@@ -2634,6 +2598,7 @@ programModal?.addEventListener("click", (event) => {
     closeProgramModal();
     return;
   }
+  if (["video", "computer"].includes(state.role)) return;
   const button = event.target.closest("[data-program-race]");
   if (!button) return;
   const row = (data.program || []).find((item) => programKey(item) === button.dataset.programRace);
@@ -2665,10 +2630,7 @@ officialAlerts?.addEventListener("click", (event) => {
     dismissLiveAlert(card.dataset.alertId);
     return;
   }
-  if (!button) {
-    openAlertDetail(card.dataset.alertId);
-    return;
-  }
+  if (!button) return;
   if (button.dataset.alertAction === "Annoncé") {
     updateAlert(card.dataset.alertId, { speakerStatus: "done", speakerAnnouncedAt: new Date().toISOString() });
   }
@@ -2740,10 +2702,7 @@ roleQueue?.addEventListener("click", (event) => {
   const button = event.target.closest("[data-queue-action]");
   const item = event.target.closest("[data-alert-id]");
   if (!item) return;
-  if (!button) {
-    openAlertDetail(item.dataset.alertId);
-    return;
-  }
+  if (!button) return;
   const id = item.dataset.alertId;
   if (button.dataset.queueAction === "confirm-video") {
     updateAlert(id, { videoStatus: "confirmed", videoConfirmedAt: new Date().toISOString(), speakerStatus: "pending", informaticsStatus: "pending" });
@@ -2755,6 +2714,13 @@ roleQueue?.addEventListener("click", (event) => {
 });
 
 roleHistory?.addEventListener("click", (event) => {
+  const toggle = event.target.closest("[data-history-toggle]");
+  if (toggle) {
+    const key = toggle.dataset.historyToggle;
+    expandedHistories[key] = !expandedHistories[key];
+    renderRoleHistory();
+    return;
+  }
   const button = event.target.closest("[data-history-action]");
   const item = event.target.closest("[data-history-alert-id]");
   if (!item) return;
@@ -2774,9 +2740,37 @@ roleHistory?.addEventListener("click", (event) => {
 });
 
 speakerHistory?.addEventListener("click", (event) => {
+  const toggle = event.target.closest("[data-history-toggle]");
+  if (toggle) {
+    const key = toggle.dataset.historyToggle;
+    expandedHistories[key] = !expandedHistories[key];
+    renderSpeakerHistory();
+    return;
+  }
   const item = event.target.closest("[data-history-alert-id]");
   if (!item) return;
   openAlertDetail(item.dataset.historyAlertId);
+});
+
+fullscreenBtn?.addEventListener("click", async () => {
+  try {
+    if (document.fullscreenElement) {
+      await document.exitFullscreen();
+    } else if (document.documentElement.requestFullscreen) {
+      await document.documentElement.requestFullscreen();
+    } else {
+      isFullscreenMode = !isFullscreenMode;
+      render();
+    }
+  } catch {
+    isFullscreenMode = !isFullscreenMode;
+    render();
+  }
+});
+
+document.addEventListener("fullscreenchange", () => {
+  isFullscreenMode = Boolean(document.fullscreenElement);
+  render();
 });
 
 function goToNextSeries() {
@@ -2845,12 +2839,10 @@ function toggleAntoineOverlay() {
 previousSeriesBtn?.addEventListener("click", goToPreviousSeries);
 previousSeriesInlineBtn?.addEventListener("click", goToPreviousSeries);
 previousSeriesFloatBtn?.addEventListener("click", goToPreviousSeries);
-validateSeriesBtn?.addEventListener("click", markCurrentSeriesValidated);
-validateSeriesInlineBtn?.addEventListener("click", markCurrentSeriesValidated);
-validateSeriesFloatBtn?.addEventListener("click", markCurrentSeriesValidated);
 nextSeriesBtn?.addEventListener("click", goToNextSeries);
 nextSeriesInlineBtn?.addEventListener("click", goToNextSeries);
 nextSeriesFloatBtn?.addEventListener("click", goToNextSeries);
+programFloatBtn?.addEventListener("click", openProgramModal);
 
 document.addEventListener("keydown", (event) => {
   const target = event.target;
