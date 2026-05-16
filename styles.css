@@ -2781,7 +2781,6 @@ tbody tr:hover,
 
   .role-referee.referee-tablet-mode .race-header,
   .role-referee.referee-tablet-mode .decision-panel,
-  .role-referee.referee-tablet-mode .role-history,
   .role-referee.referee-tablet-mode .reference-grid,
   .role-referee.referee-tablet-mode .footer-status,
   .role-referee.referee-tablet-mode .panel-actions .soft-count,
@@ -2866,6 +2865,32 @@ tbody tr:hover,
     display: inline-flex;
     min-height: 42px;
     font-size: 0.78rem;
+  }
+
+  .role-referee.referee-tablet-mode .role-history {
+    display: grid;
+    padding: 7px;
+  }
+
+  .role-referee.referee-tablet-mode .role-history .panel-title {
+    margin-bottom: 6px;
+  }
+
+  .role-referee.referee-tablet-mode .role-history h3 {
+    font-size: 0.88rem;
+  }
+
+  .role-referee.referee-tablet-mode .history-list.compact-scroll {
+    max-height: 230px;
+  }
+
+  .role-referee.referee-tablet-mode .history-item {
+    padding: 6px 7px;
+    font-size: 0.72rem;
+  }
+
+  .role-referee.referee-tablet-mode .time-cell .line-alert-badges {
+    margin-left: 0;
   }
 
   .ranking-columns {

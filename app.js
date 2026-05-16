@@ -2104,9 +2104,11 @@ function renderEntrants() {
         </td>
         <td><span class="category-pill">${escapeHtml(categoryLabel(entrant.category, entrant.sex))}</span></td>
         <td class="time-cell">
-          <span class="time">${escapeHtml(entrant.seedTime || "-")}</span>
-          ${isSpeakerView() ? renderRecordGapAlert(entrant) : ""}
-          ${isSpeakerView() && entrant.seedSource ? `<span class="seed-source">${escapeHtml(entrant.seedSource)}</span>` : ""}
+          ${state.role === "referee" && refereeTabletMode && lineAlerts.length
+            ? renderLineAlertBadges(lineAlerts)
+            : `<span class="time">${escapeHtml(entrant.seedTime || "-")}</span>`}
+          ${!(state.role === "referee" && refereeTabletMode && lineAlerts.length) && isSpeakerView() ? renderRecordGapAlert(entrant) : ""}
+          ${!(state.role === "referee" && refereeTabletMode && lineAlerts.length) && isSpeakerView() && entrant.seedSource ? `<span class="seed-source">${escapeHtml(entrant.seedSource)}</span>` : ""}
         </td>
         <td>${reference}</td>
       </tr>
