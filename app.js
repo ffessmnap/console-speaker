@@ -114,9 +114,13 @@ const searchInput = document.querySelector("#searchInput");
 const categorySelect = document.querySelector("#categorySelect");
 const sessionControls = document.querySelector("#sessionControls");
 const seriesControls = document.querySelector("#seriesControls");
+const previousSeriesBtn = document.querySelector("#previousSeriesBtn");
 const nextSeriesBtn = document.querySelector("#nextSeriesBtn");
+const previousSeriesInlineBtn = document.querySelector("#previousSeriesInlineBtn");
 const nextSeriesInlineBtn = document.querySelector("#nextSeriesInlineBtn");
+const previousSeriesFloatBtn = document.querySelector("#previousSeriesFloatBtn");
 const nextSeriesFloatBtn = document.querySelector("#nextSeriesFloatBtn");
+const programBtn = document.querySelector("#programBtn");
 const lineOrderBtn = document.querySelector("#lineOrderBtn");
 const entrantsBody = document.querySelector("#entrantsBody");
 const entrantCount = document.querySelector("#entrantCount");
@@ -141,6 +145,7 @@ const officialAlerts = document.querySelector("#officialAlerts");
 const decisionPanel = document.querySelector("#decisionPanel");
 const decisionModal = document.querySelector("#decisionModal");
 const alertDetailModal = document.querySelector("#alertDetailModal");
+const programModal = document.querySelector("#programModal");
 const roleQueue = document.querySelector("#roleQueue");
 const roleHistory = document.querySelector("#roleHistory");
 const speakerHistory = document.querySelector("#speakerHistory");
@@ -337,6 +342,12 @@ function isFemaleContext(sex = state.sex) {
   return sex === "F";
 }
 
+function sexDisplayLabel(sex = state.sex) {
+  if (sex === "F") return "Femmes";
+  if (sex === "M") return "Hommes";
+  return "Mixte";
+}
+
 function categoryLabel(category, sex = state.sex) {
   if (isFemaleContext(sex)) {
     if (sameCategory(category, "Cadet")) return "Cadette";
@@ -439,27 +450,48 @@ function updateEventSelect() {
     const options = [];
     const seen = new Set();
     rows.forEach((row) => {
-      if (seen.has(row.eventId)) return;
+      const optionKey = raceOptionKey(row.eventId, row.sex);
+      if (seen.has(optionKey)) return;
       const event = data.events.find((item) => item.id === row.eventId);
-      seen.add(row.eventId);
+      seen.add(optionKey);
       options.push({
-        id: row.eventId,
-        label: event?.label || row.label || row.eventId.toUpperCase()
+        id: optionKey,
+        label: `${event?.label || row.label || row.eventId.toUpperCase()} ${sexDisplayLabel(row.sex)}`
       });
     });
-    if (!options.some((option) => option.id === state.eventId)) {
+    if (!options.some((option) => option.id === raceOptionKey(state.eventId, state.sex))) {
       applyProgramRow(rows[0]);
     }
     eventSelect.innerHTML = options.map((option) => (
       `<option value="${escapeHtml(option.id)}">${escapeHtml(option.label)}</option>`
     )).join("");
-    eventSelect.value = state.eventId;
+    eventSelect.value = raceOptionKey(state.eventId, state.sex);
     return;
   }
-  eventSelect.innerHTML = data.events.map((event) => (
-    `<option value="${escapeHtml(event.id)}">${escapeHtml(event.label)}</option>`
+  const fallbackOptions = [];
+  data.events.forEach((event) => {
+    const sexes = availableSexesForEvent(event.id);
+    (sexes.length ? sexes : ["F", "M"]).forEach((sex) => {
+      fallbackOptions.push({
+        id: raceOptionKey(event.id, sex),
+        label: `${event.label} ${sexDisplayLabel(sex)}`
+      });
+    });
+  });
+  eventSelect.innerHTML = fallbackOptions.map((option) => (
+    `<option value="${escapeHtml(option.id)}">${escapeHtml(option.label)}</option>`
   )).join("");
-  eventSelect.value = state.eventId;
+  eventSelect.value = raceOptionKey(state.eventId, state.sex);
+}
+
+function raceOptionKey(eventId, sex) {
+  return `${eventId || ""}|${sex || ""}`;
+}
+
+function programRowFromRaceOption(value) {
+  const [eventId, sex] = String(value || "").split("|");
+  return programRows().find((row) => row.eventId === eventId && row.sex === sex)
+    || { eventId, sex };
 }
 
 function programKey(row) {
@@ -467,7 +499,7 @@ function programKey(row) {
 }
 
 function programLabel(row) {
-  const sexLabel = row.sex === "F" ? "Femmes" : (row.sex === "M" ? "Hommes" : "Mixte");
+  const sexLabel = sexDisplayLabel(row.sex);
   const time = row.startTime ? ` - ${row.startTime}` : "";
   const session = row.session ? `S${row.session} - ` : "";
   return `${session}${row.label} - ${sexLabel}${time}`;
@@ -600,6 +632,12 @@ function hasNextProgramSeries() {
   return index >= 0 && index < rows.length - 1;
 }
 
+function hasPreviousProgramSeries() {
+  const rows = programRows();
+  const index = currentProgramIndex();
+  return index > 0;
+}
+
 function goToNextProgramRace() {
   const rows = programRows();
   const programIndex = currentProgramIndex();
@@ -677,15 +715,6 @@ function lastSeriesSelectionForCurrentRace() {
   return "all";
 }
 
-function syncSexSegments() {
-  const available = availableSexesForEvent();
-  document.querySelectorAll(".segment").forEach((button) => {
-    const isAvailable = available.length ? available.includes(button.dataset.sex) : button.dataset.sex !== "X";
-    button.hidden = !isAvailable;
-    button.classList.toggle("active", button.dataset.sex === state.sex);
-  });
-}
-
 function render() {
   document.body.classList.add("live-mode");
   document.body.classList.toggle("role-speaker", state.role === "speaker");
@@ -714,7 +743,6 @@ function render() {
   }
   updateEventSelect();
   renderSessionControls();
-  syncSexSegments();
   renderSeriesControls();
   renderCategorySelect();
   renderHeader();
@@ -940,6 +968,23 @@ function renderAlertCard(alert, actionLabel = "") {
   `;
 }
 
+function renderVideoInfoCard(alert) {
+  const event = data.events.find((item) => item.id === alert.eventId);
+  const seriesLabel = alert.stage && isFinalStage(alert.stage)
+    ? finalStageLabel(alert.stage)
+    : `série ${alert.series || "-"}`;
+  return `
+    <div class="alert-card video-info-card" aria-live="polite">
+      <div>
+        <strong class="alert-title"><span aria-hidden="true">⏳</span> Arbitrage vidéo en cours</strong>
+        <span class="speaker-alert-line">
+          <span class="speaker-alert-text">Arbitrage vidéo en cours sur la ${escapeHtml(seriesLabel)} du ${escapeHtml(event?.label || alert.eventId)} ${escapeHtml(sexDisplayLabel(alert.sex))}.</span>
+        </span>
+      </div>
+    </div>
+  `;
+}
+
 function renderRolePanels() {
   renderOfficialAlerts();
   renderDecisionPanel();
@@ -950,22 +995,31 @@ function renderRolePanels() {
 
 function renderOfficialAlerts() {
   if (!officialAlerts) return;
-  if (!isSpeakerView()) {
+  const showVideoInfo = ["live", "speaker", "computer"].includes(state.role);
+  if (!isSpeakerView() && !showVideoInfo) {
     officialAlerts.hidden = true;
     officialAlerts.innerHTML = "";
     return;
   }
+  const videoInfos = showVideoInfo
+    ? alerts
+      .filter((alert) => !alert.cancelledAt && alert.requiresVideo && alert.videoStatus === "pending")
+      .sort((a, b) => String(a.createdAt).localeCompare(String(b.createdAt)))
+    : [];
   const official = alerts
     .filter(currentRoleAlertFilter)
     .sort((a, b) => String(a.createdAt).localeCompare(String(b.createdAt)));
-  if (!official.length) {
+  if (!official.length && !videoInfos.length) {
     officialAlerts.hidden = true;
     officialAlerts.innerHTML = "";
     return;
   }
   const action = state.role === "speaker" ? "Annoncé" : (state.role === "live" ? "Masquer" : "");
   officialAlerts.hidden = false;
-  officialAlerts.innerHTML = official.map((alert) => renderAlertCard(alert, action)).join("");
+  officialAlerts.innerHTML = [
+    ...videoInfos.map(renderVideoInfoCard),
+    ...official.map((alert) => renderAlertCard(alert, action))
+  ].join("");
 }
 
 function formatAlertTime(value) {
@@ -1592,7 +1646,12 @@ function renderSeriesControls() {
   const programRow = selectedProgramRow();
   if (programRow?.hasEntrants === false) {
     seriesControls.innerHTML = `<span class="no-series-note">${escapeHtml(programRow.startTime ? `Finale - ${programRow.startTime}` : "Finale")}</span>`;
-    setNextSeriesButtons(!hasNextProgramSeries(), "Course suivante");
+    setSeriesNavigation(
+      !hasPreviousProgramSeries(),
+      "Course précédente",
+      !hasNextProgramSeries(),
+      "Course suivante"
+    );
     return;
   }
   const controls = [
@@ -1620,19 +1679,124 @@ function renderSeriesControls() {
   const atLastCurrentRace = isFinalStage(state.series)
     ? finalStages.indexOf(state.series) >= finalStages.length - 1
     : state.series !== "all" && Number(state.series) >= numbers[numbers.length - 1];
-  setNextSeriesButtons(
+  const atFirstCurrentRace = isFinalStage(state.series)
+    ? !numbers.length && finalStages.indexOf(state.series) <= 0
+    : state.series === "all" || Number(state.series) <= numbers[0];
+  setSeriesNavigation(
+    atFirstCurrentRace && !hasPreviousProgramSeries(),
+    atFirstCurrentRace ? "Course précédente" : "Série précédente",
     (!numbers.length && !finalStages.length) || (atLastCurrentRace && !hasNextProgramSeries()),
     state.series === "all" ? "Choisir une série" : (atLastCurrentRace ? "Course suivante" : "Série suivante")
   );
   seriesControls.title = preview ? "Aperçu généré automatiquement en attendant le fichier officiel des séries" : "";
 }
 
-function setNextSeriesButtons(disabled, label) {
+function setSeriesNavigation(previousDisabled, previousLabel, nextDisabled, nextLabel) {
+  [previousSeriesBtn, previousSeriesInlineBtn, previousSeriesFloatBtn].forEach((button) => {
+    if (!button) return;
+    button.disabled = previousDisabled;
+    button.textContent = previousLabel;
+  });
   [nextSeriesBtn, nextSeriesInlineBtn, nextSeriesFloatBtn].forEach((button) => {
     if (!button) return;
-    button.disabled = disabled;
-    button.textContent = label;
+    button.disabled = nextDisabled;
+    button.textContent = nextLabel;
   });
+}
+
+function programSeriesItems(row) {
+  if (!row) return [];
+  if (isFinalStage(row.stage) || row.hasEntrants === false) {
+    return [{
+      series: row.stage || "finale",
+      label: row.stage ? finalStageLabel(row.stage) : "Finale",
+      time: row.startTime || "",
+      stage: row.stage || "finale"
+    }];
+  }
+  const rows = (data.series || [])
+    .filter((seriesRow) => seriesRow.eventId === row.eventId && seriesRow.sex === row.sex)
+    .filter((seriesRow) => !row.session || !seriesRow.session || seriesRow.session === row.session)
+    .filter((seriesRow) => !isFinalStage(seriesRow.stage))
+    .sort((a, b) => Number(a.series || 999) - Number(b.series || 999) || Number(a.line || 99) - Number(b.line || 99));
+  const bySeries = new Map();
+  rows.forEach((seriesRow) => {
+    const key = String(seriesRow.series || "");
+    if (!key || bySeries.has(key)) return;
+    bySeries.set(key, {
+      series: key,
+      label: `Série ${key}`,
+      time: seriesRow.startTime || "",
+      stage: "series"
+    });
+  });
+  return [...bySeries.values()];
+}
+
+function programItemIsCurrent(row, item) {
+  return row.eventId === state.eventId &&
+    row.sex === state.sex &&
+    (!row.session || state.session === "all" || row.session === state.session) &&
+    (
+      (item.stage && isFinalStage(item.stage) && state.series === item.stage) ||
+      (!isFinalStage(item.stage) && String(state.series) === String(item.series))
+    );
+}
+
+function renderProgramModal() {
+  if (!programModal || programModal.hidden) return;
+  const rows = (data.program || [])
+    .filter((row) => state.session === "all" || !row.session || row.session === state.session)
+    .filter((row) => row.hasEntrants === false || hasRowsForProgram(row))
+    .sort((a, b) => Number(a.session || 0) - Number(b.session || 0) || Number(a.order || 9999) - Number(b.order || 9999));
+  const currentKey = raceOptionKey(state.eventId, state.sex);
+  programModal.innerHTML = `
+    <div class="decision-dialog program-dialog" role="dialog" aria-modal="true" aria-label="Programme">
+      <div class="decision-modal-head">
+        <div>
+          <span>Avancement</span>
+          <h2>Programme simplifié</h2>
+          <p>${state.session === "all" ? "Toutes les sessions" : `Session ${escapeHtml(state.session)}`} - courses, séries et horaires indicatifs.</p>
+        </div>
+        <button class="decision-close" type="button" data-program-close aria-label="Fermer">×</button>
+      </div>
+      <div class="program-list">
+        ${rows.length ? rows.map((row) => {
+          const event = data.events.find((item) => item.id === row.eventId);
+          const rowKey = raceOptionKey(row.eventId, row.sex);
+          const rowCurrent = rowKey === currentKey && (!row.session || state.session === "all" || row.session === state.session);
+          const items = programSeriesItems(row);
+          return `
+            <div class="program-row ${rowCurrent ? "current-race" : ""}" data-program-row="${escapeHtml(programKey(row))}">
+              <button class="program-race-button" type="button" data-program-race="${escapeHtml(programKey(row))}">
+                <span>${row.session ? `S${escapeHtml(row.session)} · ` : ""}${escapeHtml(event?.label || row.label || row.eventId)} ${escapeHtml(sexDisplayLabel(row.sex))}</span>
+                ${row.startTime ? `<small>${escapeHtml(row.startTime)}</small>` : ""}
+              </button>
+              <div class="program-series-line">
+                ${items.length ? items.map((item) => `
+                  <button class="program-series-chip ${programItemIsCurrent(row, item) ? "current" : ""}" type="button" data-program-race="${escapeHtml(programKey(row))}" data-program-series="${escapeHtml(item.series)}" data-program-stage="${escapeHtml(item.stage || "series")}">
+                    <strong>${escapeHtml(item.label)}</strong>${item.time ? `<span>${escapeHtml(item.time)}</span>` : ""}
+                  </button>
+                `).join("") : `<span class="no-series-note">Aucune série</span>`}
+              </div>
+            </div>
+          `;
+        }).join("") : `<p class="empty">Aucun programme disponible.</p>`}
+      </div>
+    </div>
+  `;
+}
+
+function openProgramModal() {
+  if (!programModal) return;
+  programModal.hidden = false;
+  renderProgramModal();
+}
+
+function closeProgramModal() {
+  if (!programModal) return;
+  programModal.hidden = true;
+  programModal.innerHTML = "";
 }
 
 function renderCategorySelect() {
@@ -1656,7 +1820,7 @@ function renderCategorySelect() {
 
 function renderHeader() {
   const event = currentEvent();
-  const sexLabel = state.sex === "F" ? "Femmes" : (state.sex === "M" ? "Hommes" : "Mixte");
+  const sexLabel = sexDisplayLabel(state.sex);
   raceTitle.textContent = `${event?.label || "Course"} - ${sexLabel}`;
   const meta = [event?.discipline, event?.distance].filter(Boolean).join(" - ");
   raceMeta.textContent = meta;
@@ -2338,11 +2502,13 @@ function escapeHtml(value) {
 }
 
 eventSelect.addEventListener("change", () => {
-  state.eventId = eventSelect.value;
-  state.programKey = "";
+  const row = programRowFromRaceOption(eventSelect.value);
+  if (row.eventId) state.eventId = row.eventId;
+  if (row.sex) state.sex = row.sex;
+  state.programKey = row.order ? programKey(row) : "";
   clearSearch();
   state.category = "all";
-  state.series = "all";
+  state.series = firstSeriesSelectionForCurrentRace();
   state.selectedSwimmerId = "";
   state.selectedRecordKey = "";
   render();
@@ -2362,20 +2528,6 @@ sessionControls?.addEventListener("click", (event) => {
   state.selectedSwimmerId = "";
   state.selectedRecordKey = "";
   render();
-});
-
-document.querySelectorAll(".segment").forEach((button) => {
-  button.addEventListener("click", () => {
-    document.querySelectorAll(".segment").forEach((item) => item.classList.remove("active"));
-    button.classList.add("active");
-    state.sex = button.dataset.sex;
-    clearSearch();
-    state.category = "all";
-    state.series = "all";
-    state.selectedSwimmerId = "";
-    state.selectedRecordKey = "";
-    render();
-  });
 });
 
 document.querySelectorAll(".role-chip").forEach((button) => {
@@ -2404,6 +2556,36 @@ seriesControls.addEventListener("click", (event) => {
   if (!button) return;
   state.series = button.dataset.series;
   state.selectedSwimmerId = "";
+  render();
+});
+
+programBtn?.addEventListener("click", openProgramModal);
+
+programModal?.addEventListener("click", (event) => {
+  if (event.target === programModal || event.target.closest("[data-program-close]")) {
+    closeProgramModal();
+    return;
+  }
+  const button = event.target.closest("[data-program-race]");
+  if (!button) return;
+  const row = (data.program || []).find((item) => programKey(item) === button.dataset.programRace);
+  if (!row) return;
+  applyProgramRow(row);
+  if (row.session) state.session = row.session;
+  const stage = button.dataset.programStage;
+  const series = button.dataset.programSeries;
+  if (stage && isFinalStage(stage)) {
+    state.series = stage;
+  } else if (series) {
+    state.series = String(series);
+  } else {
+    state.series = firstSeriesSelectionForCurrentRace();
+  }
+  clearSearch();
+  state.category = "all";
+  state.selectedSwimmerId = "";
+  state.selectedRecordKey = "";
+  closeProgramModal();
   render();
 });
 
@@ -2592,6 +2774,9 @@ function toggleAntoineOverlay() {
   antoineOverlay.hidden = !antoineOverlay.hidden;
 }
 
+previousSeriesBtn?.addEventListener("click", goToPreviousSeries);
+previousSeriesInlineBtn?.addEventListener("click", goToPreviousSeries);
+previousSeriesFloatBtn?.addEventListener("click", goToPreviousSeries);
 nextSeriesBtn?.addEventListener("click", goToNextSeries);
 nextSeriesInlineBtn?.addEventListener("click", goToNextSeries);
 nextSeriesFloatBtn?.addEventListener("click", goToNextSeries);
@@ -2689,7 +2874,6 @@ function applyFreshData(freshData, resetView = false) {
     if (!isSpeakerView()) {
       state.series = firstSeriesSelectionForCurrentRace();
     }
-    document.querySelectorAll(".segment").forEach((item) => item.classList.toggle("active", item.dataset.sex === "F"));
   } else {
     if (!data.events.some((event) => event.id === state.eventId)) {
       state.eventId = data.events[0]?.id || "";

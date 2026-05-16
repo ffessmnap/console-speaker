@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Speaker Nage avec Palmes - France 2026 Limoges</title>
-    <link rel="stylesheet" href="styles.css?v=20260516-series">
+    <link rel="stylesheet" href="styles.css?v=20260516-programme">
   </head>
   <body>
     <header class="topbar">
@@ -39,13 +39,12 @@
         <div class="field series-field">
           <label>S&eacute;ries</label>
           <div id="seriesControls" class="series-controls"></div>
-          <button id="nextSeriesBtn" class="ghost-button compact" type="button">S&eacute;rie suivante</button>
+          <div class="series-nav">
+            <button id="previousSeriesBtn" class="ghost-button compact" type="button">S&eacute;rie pr&eacute;c&eacute;dente</button>
+            <button id="nextSeriesBtn" class="ghost-button compact" type="button">S&eacute;rie suivante</button>
+          </div>
         </div>
-        <div class="segmented" role="group" aria-label="Sexe">
-          <button class="segment active" data-sex="F">Femmes</button>
-          <button class="segment" data-sex="M">Hommes</button>
-          <button class="segment" data-sex="X">Mixte</button>
-        </div>
+        <button id="programBtn" class="ghost-button program-button" type="button">Programme</button>
         <div class="field category-field">
           <label for="categorySelect">Cat&eacute;gorie</label>
           <select id="categorySelect"></select>
@@ -81,6 +80,7 @@
                 <p id="entrantsSubtitle" class="panel-subtitle"></p>
               </div>
               <div class="panel-actions">
+                <button id="previousSeriesInlineBtn" class="ghost-button compact" type="button">S&eacute;rie pr&eacute;c&eacute;dente</button>
                 <button id="nextSeriesInlineBtn" class="ghost-button compact" type="button">S&eacute;rie suivante</button>
                 <button id="lineOrderBtn" class="line-order-button" type="button" title="Inverser l'ordre des lignes">Lignes 1-8</button>
                 <span id="filteredCount" class="soft-count">0 affich&eacute;s</span>
@@ -127,14 +127,18 @@
       <div id="dataStatus" class="data-status" hidden></div>
     </footer>
 
-    <button id="nextSeriesFloatBtn" class="floating-next" type="button">S&eacute;rie suivante</button>
+    <div class="floating-series-nav">
+      <button id="previousSeriesFloatBtn" class="floating-next floating-previous" type="button">S&eacute;rie pr&eacute;c&eacute;dente</button>
+      <button id="nextSeriesFloatBtn" class="floating-next" type="button">S&eacute;rie suivante</button>
+    </div>
     <div id="antoineOverlay" class="antoine-overlay" hidden>
       <div>Vive Antoine Fauveau</div>
     </div>
     <div id="decisionModal" class="decision-modal" hidden></div>
     <div id="alertDetailModal" class="decision-modal alert-detail-modal" hidden></div>
+    <div id="programModal" class="decision-modal program-modal" hidden></div>
 
-    <script src="data.generated.js?v=20260516-series"></script>
-    <script src="app.js?v=20260516-series"></script>
+    <script src="data.generated.js?v=20260516-programme"></script>
+    <script src="app.js?v=20260516-programme"></script>
   </body>
 </html>
