@@ -1,4 +1,6 @@
-# Outil speaker - Championnat de France 2026 Nage avec Palmes
+# LivePalmes
+
+Outil de suivi live pour la nage avec palmes : console Live, Speaker, Juge arbitre, Juge video et Informatique.
 
 En local, double-clique sur `Demarrer la console.bat`.
 
@@ -7,22 +9,14 @@ Ce lanceur :
 - regenere les donnees au demarrage ;
 - ouvre la console dans le navigateur ;
 - surveille les fichiers sources ;
-- regenere automatiquement `data.generated.js` et `donnees-speaker-france-2026.json` quand un fichier d'engagements ou une source change.
-- permet aussi de relancer la regeneration depuis le bouton `Regenerer les donnees` dans la console.
+- regenere automatiquement `data.generated.js` et `donnees-speaker-france-2026.json` quand une source change ;
+- permet aussi de relancer la regeneration depuis le bouton `Regenerer les donnees`.
 
-Garde la fenetre ouverte pendant l'utilisation de la console.
+Garde la fenetre ouverte pendant l'utilisation locale de la console.
 
-## Organisation conseillee des fichiers
+## Organisation du dossier
 
-Depose les fichiers sources dans ces dossiers :
-
-- `series` : le PDF des series a utiliser pour la console. S'il contient un PDF, il est prioritaire sur les engagements.
-- `Resultats` : les resultats des meetings qui servent a retrouver le lieu du temps d'engagement.
-- fichiers d'engagements : a garder a la racine pour le championnat de France si aucun PDF de series n'est utilise.
-
-Si tu remplaces le PDF dans `series`, clique sur `Regenerer les donnees` ou laisse la console locale ouverte : elle relancera automatiquement la generation. Si plusieurs PDF sont presents dans `series`, le plus recent est utilise.
-
-Sur GitHub Pages, publie le dossier complet avec au minimum :
+Les fichiers visibles en ligne restent a la racine :
 
 - `index.html`
 - `styles.css`
@@ -30,42 +24,47 @@ Sur GitHub Pages, publie le dossier complet avec au minimum :
 - `data.generated.js`
 - `donnees-speaker-france-2026.json`
 
-Si `data.generated.js` ou `donnees-speaker-france-2026.json` manque, la console s'ouvre mais les donnees officielles ne se chargent pas.
+Les fichiers de travail sont ranges dans `sources` :
 
-## Ce que fait la premiere version
+- `sources/series` : PDF des series. Le plus recent est utilise comme mise a jour active.
+- `sources/resultats` : resultats des meetings et protocole France 2025.
+- `sources/engagements` : fichiers TXT d'engagements, utiles si aucun PDF de series n'est disponible.
+- `sources/records` : pages FFESSM records et MPF.
+- `sources/qualifs` : temps EDF TSP/TRP.
+- `sources/edf` : membres EDF et medailles internationales.
 
-- selection d'une course et du sexe, les courses restant toutes categories confondues ;
-- affichage des 8 meilleurs engagements 2026 par defaut, avec bouton pour voir toute la liste ;
-- filtre optionnel par categorie ;
-- fiche nageur au clic, avec toutes les courses ou il est engage ;
-- affichage du Top 5 France 2025 par categorie Cadet, Junior et Senior ;
-- affichage des temps de qualification Equipe de France seniors 2026 TSP/TRP ;
-- affichage des MPF cadets/cadettes et des records France junior/senior ;
-- notes libres par course ;
-- import/export JSON pour remplacer les donnees d'exemple par les donnees officielles ;
-- ajout rapide d'engages par collage CSV.
+Les scripts sont ranges dans `outils` :
 
-## Format CSV pour ajouter des engages
+- `outils/build_data.py` : regenere les donnees.
+- `outils/start_console.py` : demarre la console locale.
+- `outils/watch_data.py` : surveille les sources.
 
-```csv
-ligne;nom;prenom;club;categorie;temps;note
-4;DURAND;Camille;Club Limoges;Junior;00:42.81;Finaliste 2025
-```
+## Utilisation simple
 
-## Donnees generees
+Pour changer les series :
 
-Les fichiers `data.generated.js` et `donnees-speaker-france-2026.json` sont produits depuis les fichiers d'engagements, le protocole PDF 2025, les exports CSV des temps EDF et les pages FFESSM records/MPF avec `build_data.py`.
+1. Depose le nouveau PDF dans `sources/series`.
+2. Lance la console locale avec `Demarrer la console.bat`.
+3. Clique sur `Regenerer les donnees` si la console est deja ouverte.
+4. Verifie l'affichage.
+5. Publie ensuite les fichiers a jour sur GitHub/Firebase.
 
-Les records affichent le titulaire, le club, la date et le lieu lorsque ces informations sont disponibles dans les pages FFESSM.
+Si plusieurs PDF sont presents dans `sources/series`, le fichier le plus recent sert de mise a jour active.
 
-## Mise a jour des donnees sur GitHub
+## Mise en ligne
 
-GitHub Pages ne lance pas Python et ne relit pas directement les fichiers `.txt`.
+Pour GitHub ou Firebase Hosting, publie au minimum :
 
-Quand les engagements changent, il faut regenerer `data.generated.js` et `donnees-speaker-france-2026.json`. Le workflow GitHub `Regenerer les donnees speaker` peut le faire automatiquement quand tu pousses de nouveaux fichiers source. Il peut aussi etre lance manuellement depuis l'onglet `Actions` du depot.
+- `index.html`
+- `styles.css`
+- `app.js`
+- `data.generated.js`
+- `donnees-speaker-france-2026.json`
 
-Pour que GitHub Pages fonctionne, active Pages sur la branche qui contient `index.html`, puis ouvre l'URL publique fournie par GitHub Pages.
+Firebase/GitHub ne relisent pas automatiquement les PDF ou les TXT. Il faut d'abord regenerer les donnees en local, puis publier les fichiers generes.
 
-## Prochaine etape conseillee
+## Historique DSQ
 
-Deposer dans ce dossier les resultats 2025 en PDF et les engagements 2026. A partir de ces fichiers, les donnees d'exemple pourront etre remplacees par un export JSON propre pour alimenter l'outil.
+L'historique des disqualifications, forfaits et abandons est stocke dans le navigateur pendant l'utilisation. Le bouton `RAZ historique` est disponible sur la console Informatique.
+
+L'export PDF de l'historique est disponible sur les consoles Juge arbitre, Juge video et Informatique.

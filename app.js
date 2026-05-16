@@ -193,6 +193,11 @@ function saveLiveDismissedAlerts() {
 function resetHistory() {
   const ok = window.confirm("Effacer tout l'historique DSQ, forfaits, abandons et requalifications sur cet ordinateur ? Cette action est irréversible.");
   if (!ok) return;
+  const confirmation = window.prompt('Pour confirmer, écris RAZ en majuscules.');
+  if (confirmation !== "RAZ") {
+    window.alert("RAZ annulée.");
+    return;
+  }
   alerts = [];
   liveDismissedAlertIds = [];
   saveAlerts();
@@ -1561,7 +1566,6 @@ function renderDataStatus(message = "") {
       <span>${escapeHtml(String(seriesCount))} lignes de séries</span>
       <span>${escapeHtml(results)}</span>
       ${generatedAt ? `<span>mise à jour ${escapeHtml(generatedAt)}</span>` : ""}
-      <span class="footer-credit">outil développé par AF</span>
     `;
     dataStatus.classList.add("source");
     return;
@@ -2263,12 +2267,13 @@ function buildDsqReportHtml() {
     const event = data.events.find((item) => item.id === alert.eventId);
     const sexLabel = alert.sex === "F" ? "Femmes" : (alert.sex === "M" ? "Hommes" : "Mixte");
     const seriesLabel = alert.stage && isFinalStage(alert.stage) ? finalStageLabel(alert.stage) : `Série ${alert.series || "-"}`;
+    const sessionLabel = alert.session && alert.session !== "all" ? `Session ${alert.session}` : "Session -";
     const identity = `${alert.displayName || "Concurrent"}${alertClubShortLabel(alert) ? ` - ${alertClubShortLabel(alert)}` : ""}`;
     const timeline = alertTimelineItems(alert).map(([label, value]) => `${label} ${formatAlertDateTime(value)}`).join(" | ");
     return `
       <tr>
         <td>${index + 1}</td>
-        <td>${escapeHtml(event?.label || alert.eventId)} ${escapeHtml(sexLabel)}<br><small>${escapeHtml(seriesLabel)} - ligne ${escapeHtml(alert.line || "-")}</small></td>
+        <td>${escapeHtml(event?.label || alert.eventId)} ${escapeHtml(sexLabel)}<br><small>${escapeHtml(sessionLabel)} - ${escapeHtml(seriesLabel)} - ligne ${escapeHtml(alert.line || "-")}</small></td>
         <td>${escapeHtml(identity)}</td>
         <td>${escapeHtml(decisionMotifLabel(alert))}<br><small>${escapeHtml(alertStatusLabel(alert))}</small></td>
         <td>${escapeHtml(timeline || "-")}</td>
@@ -2302,7 +2307,7 @@ function buildDsqReportHtml() {
   <p>${escapeHtml(meetName)} - généré le ${escapeHtml(generatedAt)} - ${rows.length} DSQ</p>
   <table>
     <thead>
-      <tr><th>#</th><th>Course</th><th>Nageur / relais</th><th>Décision</th><th>Vie de la DSQ</th></tr>
+      <tr><th>#</th><th>Course / session</th><th>Nageur / relais</th><th>Décision</th><th>Vie de la DSQ</th></tr>
     </thead>
     <tbody>${body}</tbody>
   </table>
